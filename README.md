@@ -40,7 +40,7 @@ Copy `.env.example` to `.env`. Never commit `.env`.
 |----------|----------|-------|
 | `MONGODB_URI` | Yes | MongoDB Atlas or local |
 | `JWT_SECRET` | Yes | Long random string |
-| `CORS_ORIGIN` | Yes | Web app URL(s), comma-separated |
+| `CORS_ORIGIN` | Yes | Web app URL(s), comma-separated (include Vercel URL in production) |
 | `AWS_*` | Yes | S3 for images & PDFs |
 | `OPENAI_API_KEY` | No | Smart Match AI parsing |
 
