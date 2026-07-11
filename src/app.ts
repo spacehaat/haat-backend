@@ -20,8 +20,13 @@ import { devicesRouter } from './modules/devices/devices.routes.js';
 export function createApp() {
   const app = express();
 
+  const corsOrigins = env.CORS_ORIGIN.split(',').map((o) => o.trim()).filter(Boolean);
+
   app.use(helmet());
-  app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
+  app.use(cors({
+    origin: corsOrigins.length <= 1 ? corsOrigins[0] : corsOrigins,
+    credentials: true,
+  }));
   app.use(express.json({ limit: '2mb' }));
   app.use(cookieParser());
   app.use(morgan('dev'));

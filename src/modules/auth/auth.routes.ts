@@ -19,7 +19,8 @@ function cookieOptions() {
   return {
     httpOnly: true,
     secure: isProd,
-    sameSite: 'lax' as const,
+    // Cross-origin web (e.g. Vercel) → API (Render) needs None in production.
+    sameSite: isProd ? ('none' as const) : ('lax' as const),
     path: '/',
     maxAge: COOKIE_MAX_AGE_MS,
   };
