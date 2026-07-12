@@ -35,19 +35,38 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
         title: message.title,
         body: message.body,
         channelId: 'default',
+        priority: 'high',
         data: message.data || {},
       }))),
     });
     const json = await res.json().catch(() => null) as
-      | { data?: Array<{ status?: string; message?: string; details?: unknown }> }
+      | {
+        data?: Array<{
+          status?: string;
+          message?: string;
+          details?: { error?: string };
+          id?: string;
+        }>;
+      }
       | null;
+
+    const staleTokens: string[] = [];
     if (json?.data) {
-      for (const item of json.data) {
+      json.data.forEach((item, index) => {
         if (item.status === 'error') {
           // eslint-disable-next-line no-console
           console.error('[push] Expo send error:', item.message, item.details);
+          if (item.details?.error === 'DeviceNotRegistered' && batch[index]) {
+            staleTokens.push(batch[index]!);
+          }
         }
-      }
+      });
+    }
+
+    if (staleTokens.length) {
+      await Device.deleteMany({ token: { $in: staleTokens } });
+      // eslint-disable-next-line no-console
+      console.warn(`[push] removed ${staleTokens.length} stale device token(s)`);
     }
   }));
 }
