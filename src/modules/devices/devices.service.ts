@@ -78,6 +78,11 @@ async function tokensForUser(userId: string) {
 
 export async function notifyUser(userId: string, message: PushMessage) {
   const tokens = await tokensForUser(userId);
+  if (!tokens.length) {
+    // eslint-disable-next-line no-console
+    console.warn(`[push] no registered devices for user ${userId} — skip "${message.title}"`);
+    return;
+  }
   await sendExpoPush(tokens, message);
 }
 
