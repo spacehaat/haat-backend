@@ -23,7 +23,7 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
   }
 
   await Promise.all(chunks.map(async (batch) => {
-    await fetch('https://exp.host/--/api/v2/push/send', {
+    const res = await fetch('https://exp.host/--/api/v2/push/send', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -34,9 +34,21 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
         sound: 'default',
         title: message.title,
         body: message.body,
+        channelId: 'default',
         data: message.data || {},
       }))),
     });
+    const json = await res.json().catch(() => null) as
+      | { data?: Array<{ status?: string; message?: string; details?: unknown }> }
+      | null;
+    if (json?.data) {
+      for (const item of json.data) {
+        if (item.status === 'error') {
+          // eslint-disable-next-line no-console
+          console.error('[push] Expo send error:', item.message, item.details);
+        }
+      }
+    }
   }));
 }
 
