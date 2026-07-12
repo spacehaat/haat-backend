@@ -9,6 +9,7 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "seed": "tsx src/seed/seed.ts",
+    "seed:admin": "tsx src/seed/seed-admin.ts",
     "seed:leads": "tsx src/seed/seed-leads.ts",
     "lint": "tsc -p tsconfig.json --noEmit"
   },

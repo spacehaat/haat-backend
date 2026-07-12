@@ -19,7 +19,7 @@ import {
 } from './leads.assign.js';
 import { buildParseContext } from '../smart-match/smart-match.service.js';
 import { listListings } from '../listings/listings.service.js';
-import { notifyLeadAssigned } from '../devices/devices.service.js';
+import { notifyLeadAssigned, notifyMembersOfNewLead } from '../devices/devices.service.js';
 
 type LegacyLeadDoc = LeadDoc & {
   title?: string;
@@ -143,12 +143,16 @@ async function upsertClientDirectory(
 
 function leadQueryForUser(user: AuthUser) {
   if (isAdmin(user)) return {};
-  return {
-    $or: [
-      { assigneeId: new Types.ObjectId(user.id) },
-      { createdBy: new Types.ObjectId(user.id) },
-    ],
-  };
+  const scope = cityScope(user);
+  const or: Record<string, unknown>[] = [
+    { assigneeId: new Types.ObjectId(user.id) },
+    { createdBy: new Types.ObjectId(user.id) },
+  ];
+  // Members scoped to cities can see leads in those cities (e.g. admin-created leads).
+  if (scope && scope.length) {
+    or.push({ city: { $in: scope } });
+  }
+  return { $or: or };
 }
 
 function combineFilters(...filters: Record<string, unknown>[]): Record<string, unknown> {
@@ -246,7 +250,11 @@ async function getLeadDoc(id: string, actor: AuthUser) {
   if (!isAdmin(actor)) {
     const owner = String(doc.createdBy) === actor.id;
     const assignee = doc.assigneeId && String(doc.assigneeId) === actor.id;
-    if (!owner && !assignee) throw new ApiError(403, 'You do not have access to this lead', 'FORBIDDEN');
+    const scope = cityScope(actor);
+    const inCity = !!(scope && scope.length && doc.city && scope.includes(doc.city));
+    if (!owner && !assignee && !inCity) {
+      throw new ApiError(403, 'You do not have access to this lead', 'FORBIDDEN');
+    }
   }
   return doc;
 }
@@ -351,9 +359,14 @@ export async function createLead(input: LeadCreateInput, actor: AuthUser) {
   const title = buildDisplayTitle(doc);
   await logLeadActivity(actor.name, 'created a lead', title);
 
-  if (assigneeId && assigneeId !== actor.id) {
-    void notifyLeadAssigned(assigneeId, title, String(doc._id));
-  }
+  // Notify city members; never notify the person who created the lead (e.g. admin).
+  void notifyMembersOfNewLead({
+    leadId: String(doc._id),
+    leadTitle: title,
+    city,
+    excludeUserId: actor.id,
+    assigneeId,
+  });
 
   const [item] = await attachAssigneeNames([toLeadDetail(doc)]);
   return item;
@@ -457,7 +470,7 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
   if (input.assigneeId !== undefined) {
     await logLeadActivity(actor.name, 'updated lead assignment', buildDisplayTitle(normalized));
     const newAssigneeId = String(doc.assigneeId);
-    if (newAssigneeId && newAssigneeId !== prevAssigneeId) {
+    if (newAssigneeId && newAssigneeId !== prevAssigneeId && newAssigneeId !== actor.id) {
       void notifyLeadAssigned(newAssigneeId, buildDisplayTitle(normalized), String(doc._id));
     }
   }
