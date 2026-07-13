@@ -417,6 +417,14 @@ export async function getLead(id: string, actor: AuthUser) {
   return item;
 }
 
+export async function deleteLead(id: string, actor: AuthUser) {
+  const doc = await getLeadDoc(id, actor);
+  const title = buildDisplayTitle(normalizeLegacyLead(doc as LegacyLeadDoc));
+  await doc.deleteOne();
+  await logLeadActivity(actor.name, 'deleted lead', title);
+  return { id: String(doc._id), deleted: true };
+}
+
 export async function updateLead(id: string, input: LeadUpdateInput, actor: AuthUser) {
   const doc = await getLeadDoc(id, actor);
   const prevAssigneeId = doc.assigneeId ? String(doc.assigneeId) : '';

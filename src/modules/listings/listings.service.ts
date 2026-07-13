@@ -180,3 +180,9 @@ export async function verifyListing(id: string) {
   if (!doc) return null;
   return doc;
 }
+
+export async function deleteListing(id: string) {
+  const doc = await Listing.findByIdAndDelete(id).lean().exec();
+  if (!doc) return null;
+  return mapListingRow(doc as ListingDoc);
+}

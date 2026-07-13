@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { validateBody } from '../../middleware/validate.js';
-import { requirePermission } from '../auth/auth.middleware.js';
+import { requirePermission, requireRole } from '../auth/auth.middleware.js';
 import { PERMISSIONS } from '../auth/permissions.js';
 import {
   LeadCreateSchema,
@@ -13,6 +13,7 @@ import {
   addLeadNote,
   createLead,
   createLeadFromMatch,
+  deleteLead,
   getLead,
   listClients,
   listLeads,
@@ -94,6 +95,11 @@ leadsRouter.patch(
     res.json({ item });
   },
 );
+
+leadsRouter.delete('/leads/:id', requireRole('admin'), async (req, res) => {
+  const result = await deleteLead(String(req.params.id), req.user!);
+  res.json(result);
+});
 
 leadsRouter.post(
   '/leads/:id/notes',

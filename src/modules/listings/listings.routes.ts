@@ -1,11 +1,12 @@
 import { Router } from 'express';
 import { validateBody } from '../../middleware/validate.js';
 import { ApiError } from '../../utils/apiError.js';
-import { requirePermission } from '../auth/auth.middleware.js';
+import { requirePermission, requireRole } from '../auth/auth.middleware.js';
 import { PERMISSIONS, cityScope } from '../auth/permissions.js';
 import { ListingCreateSchema, ListingUpdateSchema } from './listings.schema.js';
 import {
   createListing,
+  deleteListing,
   getListing,
   listListings,
   updateListing,
@@ -129,3 +130,9 @@ listingsRouter.post(
     res.json({ item });
   },
 );
+
+listingsRouter.delete('/listings/:id', requireRole('admin'), async (req, res) => {
+  const item = await deleteListing(String(req.params.id));
+  if (!item) throw new ApiError(404, 'Listing not found', 'NOT_FOUND');
+  res.json({ item, deleted: true });
+});
