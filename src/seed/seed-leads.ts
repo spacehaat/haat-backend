@@ -83,7 +83,7 @@ const DUMMY_LEADS = [
     email: 'vikram@singhlaw.in',
     company: 'Singh & Associates',
     interestedIn: ['Private office'],
-    city: 'Delhi NCR',
+    city: 'Gurugram',
     microlocation: 'Cyber City, Gurgaon',
     seats: 16,
     stage: 'visit_scheduled',

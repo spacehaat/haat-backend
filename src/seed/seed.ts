@@ -90,7 +90,7 @@ const DUMMY_LISTINGS = [
   },
   {
     operator: 'Innov8',
-    city: 'Delhi NCR',
+    city: 'Gurugram',
     micro: 'Cyber City, Gurgaon',
     type: 'Private cabin',
     seats: 16,
