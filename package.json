@@ -11,6 +11,7 @@
     "seed": "tsx src/seed/seed.ts",
     "seed:admin": "tsx src/seed/seed-admin.ts",
     "seed:leads": "tsx src/seed/seed-leads.ts",
+    "seed:delhi": "python3 src/seed/map-delhi-csv.py && tsx src/seed/seed-delhi-csv.ts",
     "lint": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
