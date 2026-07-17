@@ -88,15 +88,22 @@ function normalizeLegacyLead(doc: LegacyLeadDoc) {
   } as LegacyLeadDoc;
 }
 
+function seatDisplayLabel(lead: { seats?: number; seatRange?: string }) {
+  if (lead.seatRange?.trim()) return `${lead.seatRange.trim()} seats`;
+  if (lead.seats) return `${lead.seats} seats`;
+  return '';
+}
+
 function buildDisplayTitle(lead: {
   name?: string;
   company?: string;
   seats?: number;
+  seatRange?: string;
   microlocation?: string;
   city?: string;
 }) {
   const who = lead.company || lead.name || 'New lead';
-  const seats = lead.seats ? `${lead.seats} seats` : '';
+  const seats = seatDisplayLabel(lead);
   const place = lead.microlocation || lead.city || '';
   const parts = [who, [seats, place].filter(Boolean).join(' · ')].filter(Boolean);
   return parts.join(' — ').slice(0, 200);
@@ -202,6 +209,7 @@ function toLeadSummary(doc: LegacyLeadDoc) {
     city: lead.city || '',
     microlocation: lead.microlocation || '',
     seats: lead.seats || 0,
+    seatRange: lead.seatRange || '',
     stage: lead.stage || 'new',
     source: lead.source || 'manual',
     budget: lead.budget || 0,
@@ -339,6 +347,7 @@ export async function createLead(input: LeadCreateInput, actor: AuthUser) {
     city: input.city || '',
     microlocation: input.microlocation || '',
     seats: input.seats || 0,
+    seatRange: input.seatRange || '',
     stage: input.stage || 'new',
     source: input.source || 'manual',
     budget: input.budget || 0,
@@ -388,6 +397,7 @@ export async function createLeadFromMatch(input: LeadFromMatchInput, actor: Auth
       city: input.city || '',
       microlocation: input.microlocation || input.locality || '',
       seats: input.seats ?? input.teamSize ?? 0,
+      seatRange: '',
       budget: input.budget ?? input.budgetPerSeat ?? 0,
       moveIn: input.moveIn || '',
       amenities: input.amenities || [],
@@ -452,6 +462,7 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
   if (input.city !== undefined) doc.city = input.city;
   if (input.microlocation !== undefined) doc.microlocation = input.microlocation;
   if (input.seats !== undefined) doc.seats = input.seats;
+  if (input.seatRange !== undefined) doc.seatRange = input.seatRange;
   if (input.stage !== undefined) doc.stage = input.stage;
   if (input.source !== undefined) doc.source = input.source;
   if (input.budget !== undefined) doc.budget = input.budget;

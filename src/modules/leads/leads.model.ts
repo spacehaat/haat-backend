@@ -50,6 +50,7 @@ export const LeadSchema = new Schema(
     city: { type: String, default: '', trim: true, index: true },
     microlocation: { type: String, default: '', trim: true, index: true },
     seats: { type: Number, default: 0, min: 0 },
+    seatRange: { type: String, default: '', trim: true },
     stage: { type: String, enum: LEAD_STAGES, default: 'new', index: true },
     source: { type: String, enum: LEAD_SOURCES, default: 'manual', index: true },
     budget: { type: Number, default: 0, min: 0 },
