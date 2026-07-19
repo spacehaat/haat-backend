@@ -82,8 +82,6 @@ export async function registerDevice(input: DeviceRegisterInput, user: AuthUser)
     },
     { upsert: true, new: true, setDefaultsOnInsert: true },
   );
-
-  await notifyOverdueLeads(user.id).catch(() => {});
 }
 
 export async function unregisterDevice(token: string, user: AuthUser) {

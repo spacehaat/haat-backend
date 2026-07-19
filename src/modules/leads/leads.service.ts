@@ -195,6 +195,85 @@ function cityFilterForUser(user: AuthUser, city?: string) {
   return {};
 }
 
+function parseLeadDateBound(value?: string, endExclusive = false) {
+  if (!value) return null;
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return null;
+  return d;
+}
+
+function leadDateFilter(dateFrom?: string, dateTo?: string) {
+  const from = parseLeadDateBound(dateFrom);
+  const to = parseLeadDateBound(dateTo);
+  if (!from && !to) return {};
+
+  const leadDate: Record<string, Date> = {};
+  const createdAt: Record<string, Date> = {};
+  if (from) {
+    leadDate.$gte = from;
+    createdAt.$gte = from;
+  }
+  if (to) {
+    leadDate.$lt = to;
+    createdAt.$lt = to;
+  }
+
+  return {
+    $or: [
+      { leadDate },
+      { $and: [{ $or: [{ leadDate: { $exists: false } }, { leadDate: null }] }, { createdAt }] },
+    ],
+  };
+}
+
+function buildLeadListFilters(
+  actor: AuthUser,
+  options: {
+    assignee?: string;
+    city?: string;
+    source?: string;
+    dateFrom?: string;
+    dateTo?: string;
+  },
+) {
+  const filters: Record<string, unknown>[] = [
+    leadQueryForUser(actor),
+    cityFilterForUser(actor, options.city),
+  ];
+
+  if (options.assignee) {
+    filters.push({ assigneeId: new Types.ObjectId(options.assignee) });
+  }
+  if (options.source) {
+    filters.push({ source: options.source });
+  }
+
+  const dateRange = leadDateFilter(options.dateFrom, options.dateTo);
+  if (Object.keys(dateRange).length) filters.push(dateRange);
+
+  return filters;
+}
+
+async function aggregateLeadStageCounts(q: FilterQuery<LeadDoc>) {
+  const rows = await Lead.aggregate<{ _id: string; count: number }>([
+    { $match: q },
+    {
+      $project: {
+        stageValue: {
+          $ifNull: ['$stage', { $ifNull: ['$status', 'new'] }],
+        },
+      },
+    },
+    { $group: { _id: '$stageValue', count: { $sum: 1 } } },
+  ]).exec();
+
+  const stageCounts: Record<string, number> = {};
+  for (const row of rows) {
+    if (row._id) stageCounts[row._id] = row.count;
+  }
+  return stageCounts;
+}
+
 function toLeadSummary(doc: LegacyLeadDoc) {
   const lead = normalizeLegacyLead(doc);
   return {
@@ -278,6 +357,8 @@ export async function listLeads(
     assignee?: string;
     city?: string;
     source?: string;
+    dateFrom?: string;
+    dateTo?: string;
   } = {},
 ) {
   const page = Math.max(1, options.page ?? 1);
@@ -285,44 +366,47 @@ export async function listLeads(
   const skip = (page - 1) * limit;
 
   const stageFilter = options.stage || options.status;
+  const baseFilters = buildLeadListFilters(actor, {
+    assignee: options.assignee,
+    city: options.city,
+    source: options.source,
+    dateFrom: options.dateFrom,
+    dateTo: options.dateTo,
+  });
 
-  const filters: Record<string, unknown>[] = [
-    leadQueryForUser(actor),
-    cityFilterForUser(actor, options.city),
-  ];
+  const search = options.search?.trim();
+  let searchFilter: Record<string, unknown> = {};
+  if (search) {
+    searchFilter = (await buildLeadSearchFilter(search)) || {};
+  }
 
+  const listFilters = [...baseFilters];
   if (stageFilter) {
-    filters.push({
+    listFilters.push({
       $or: [
         { stage: stageFilter },
         { status: stageFilter },
       ],
     });
   }
-  if (options.assignee) {
-    filters.push({ assigneeId: new Types.ObjectId(options.assignee) });
-  }
-  if (options.source) {
-    filters.push({ source: options.source });
-  }
+  if (Object.keys(searchFilter).length) listFilters.push(searchFilter);
 
-  const search = options.search?.trim();
-  if (search) {
-    const searchFilter = await buildLeadSearchFilter(search);
-    if (searchFilter) filters.push(searchFilter);
-  }
+  const q = asLeadFilter(combineFilters(...listFilters));
+  const countBaseFilters = [...baseFilters];
+  if (Object.keys(searchFilter).length) countBaseFilters.push(searchFilter);
+  const countBaseQ = asLeadFilter(combineFilters(...countBaseFilters));
 
-  const q = asLeadFilter(combineFilters(...filters));
-
-  const [rawRows, total] = await Promise.all([
+  const [rawRows, total, stageCounts] = await Promise.all([
     Lead.find(q).sort({ leadDate: -1, updatedAt: -1 }).skip(skip).limit(limit).lean().exec(),
     Lead.countDocuments(q),
+    aggregateLeadStageCounts(countBaseQ),
   ]);
   const rows = rawRows as LegacyLeadDoc[];
 
   return {
     items: await attachAssigneeNames(rows.map((doc) => toLeadSummary(doc))),
     total,
+    stageCounts,
     page,
     limit,
     pageCount: Math.max(1, Math.ceil(total / limit)),

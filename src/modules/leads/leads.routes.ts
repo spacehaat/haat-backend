@@ -37,6 +37,8 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
   const assignee = typeof req.query.assignee === 'string' ? req.query.assignee : undefined;
   const city = typeof req.query.city === 'string' ? req.query.city : undefined;
   const source = typeof req.query.source === 'string' ? req.query.source : undefined;
+  const dateFrom = typeof req.query.dateFrom === 'string' ? req.query.dateFrom : undefined;
+  const dateTo = typeof req.query.dateTo === 'string' ? req.query.dateTo : undefined;
 
   const result = await listLeads(req.user!, {
     page: Number.isFinite(page) ? page : 1,
@@ -46,6 +48,8 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
     assignee,
     city,
     source,
+    dateFrom,
+    dateTo,
   });
   res.json(result);
 });
