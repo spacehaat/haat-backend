@@ -184,6 +184,7 @@ export async function notifyOverdueLeads(userId: string) {
   const now = new Date();
   const overdue = await Lead.find({
     assigneeId: new Types.ObjectId(userId),
+    reminderSetAt: { $exists: true, $ne: null },
     dueAt: { $lt: now },
     stage: { $nin: ['won', 'lost'] },
   })

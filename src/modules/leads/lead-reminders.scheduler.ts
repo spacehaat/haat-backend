@@ -9,6 +9,7 @@ export async function processDueLeadReminders() {
   const now = new Date();
   const dueLeads = await Lead.find({
     assigneeId: { $exists: true, $ne: null },
+    reminderSetAt: { $exists: true, $ne: null },
     dueAt: { $lte: now },
     stage: { $nin: ['won', 'lost'] },
     $or: [

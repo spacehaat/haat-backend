@@ -109,10 +109,8 @@ function buildDisplayTitle(lead: {
   return parts.join(' — ').slice(0, 200);
 }
 
-function defaultDueAt() {
-  const d = new Date();
-  d.setDate(d.getDate() + 2);
-  return d;
+function activeReminderFilter() {
+  return { reminderSetAt: { $exists: true, $ne: null } };
 }
 
 async function logLeadActivity(who: string, text: string, sub: string) {
@@ -298,6 +296,7 @@ function toLeadSummary(doc: LegacyLeadDoc) {
     proposalCount: lead.proposalIds?.length || 0,
     assigneeId: lead.assigneeId ? String(lead.assigneeId) : '',
     dueAt: lead.dueAt || null,
+    reminderSetAt: lead.reminderSetAt || null,
     createdAt: lead.createdAt || null,
     updatedAt: lead.updatedAt || null,
   };
@@ -444,7 +443,7 @@ export async function createLead(input: LeadCreateInput, actor: AuthUser) {
     proposalIds: [],
     visitIds: [],
     priority: input.priority || 'normal',
-    dueAt: input.dueAt ? new Date(input.dueAt) : defaultDueAt(),
+    dueAt: input.dueAt ? new Date(input.dueAt) : undefined,
     notes: [],
   });
 
@@ -560,6 +559,7 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
     doc.dueAt = nextDue;
     if (prevDueMs !== nextDueMs) {
       doc.reminderSentAt = undefined;
+      doc.reminderSetAt = undefined;
     }
   }
   if (input.lostReason !== undefined) doc.lostReason = input.lostReason;
@@ -598,6 +598,7 @@ export async function setLeadReminder(id: string, input: LeadReminderInput, acto
   }
 
   doc.dueAt = dueAt;
+  doc.reminderSetAt = new Date();
   doc.reminderSentAt = undefined;
 
   const note = input.note?.trim();
@@ -693,6 +694,7 @@ export async function countOverdueLeads(actor: AuthUser) {
     leadQueryForUser(actor),
     cityFilterForUser(actor),
     {
+      ...activeReminderFilter(),
       dueAt: { $lt: new Date() },
       $or: [
         { stage: { $nin: ['won', 'lost'] } },
@@ -708,6 +710,7 @@ export async function listOverdueLeads(actor: AuthUser, limit = 5) {
     leadQueryForUser(actor),
     cityFilterForUser(actor),
     {
+      ...activeReminderFilter(),
       dueAt: { $lt: new Date() },
       $or: [
         { stage: { $nin: ['won', 'lost'] } },
