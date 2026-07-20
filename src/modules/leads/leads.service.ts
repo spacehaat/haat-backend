@@ -8,7 +8,7 @@ import {
   Lead,
   type LeadDoc,
 } from './leads.model.js';
-import type { LeadCreateInput, LeadFromMatchInput, LeadUpdateInput } from './leads.schema.js';
+import type { LeadCreateInput, LeadFromMatchInput, LeadReminderInput, LeadUpdateInput } from './leads.schema.js';
 import { parseLeadFromText } from './leads.parser.js';
 import { buildLeadSearchFilter } from './leads.search.js';
 import {
@@ -553,7 +553,15 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
   if (input.moveIn !== undefined) doc.moveIn = input.moveIn;
   if (input.rawEnquiry !== undefined) doc.rawEnquiry = input.rawEnquiry;
   if (input.priority !== undefined) doc.priority = input.priority;
-  if (input.dueAt !== undefined) doc.dueAt = input.dueAt ? new Date(input.dueAt) : undefined;
+  if (input.dueAt !== undefined) {
+    const nextDue = input.dueAt ? new Date(input.dueAt) : undefined;
+    const prevDueMs = doc.dueAt ? new Date(doc.dueAt).getTime() : null;
+    const nextDueMs = nextDue ? nextDue.getTime() : null;
+    doc.dueAt = nextDue;
+    if (prevDueMs !== nextDueMs) {
+      doc.reminderSentAt = undefined;
+    }
+  }
   if (input.lostReason !== undefined) doc.lostReason = input.lostReason;
   if (input.listingIds) {
     doc.listingIds = input.listingIds
@@ -577,6 +585,33 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
       void notifyLeadAssigned(newAssigneeId, buildDisplayTitle(normalized), String(doc._id));
     }
   }
+
+  const [item] = await attachAssigneeNames([toLeadDetail(doc)]);
+  return item;
+}
+
+export async function setLeadReminder(id: string, input: LeadReminderInput, actor: AuthUser) {
+  const doc = await getLeadDoc(id, actor);
+  const dueAt = new Date(input.dueAt);
+  if (Number.isNaN(dueAt.getTime())) {
+    throw new ApiError(400, 'Invalid reminder date', 'VALIDATION_ERROR');
+  }
+
+  doc.dueAt = dueAt;
+  doc.reminderSentAt = undefined;
+
+  const note = input.note?.trim();
+  if (note) {
+    doc.notes.push({ text: note, who: actor.name, at: new Date() });
+  }
+
+  await doc.save();
+  const normalized = normalizeLegacyLead(doc as LegacyLeadDoc);
+  await logLeadActivity(
+    actor.name,
+    'set a follow-up reminder on',
+    buildDisplayTitle(normalized),
+  );
 
   const [item] = await attachAssigneeNames([toLeadDetail(doc)]);
   return item;

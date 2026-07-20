@@ -54,6 +54,11 @@ export const LeadUpdateSchema = z.object({
   listingIds: z.array(z.string()).optional(),
 });
 
+export const LeadReminderSchema = z.object({
+  dueAt: z.string().min(1),
+  note: z.string().max(2000).optional(),
+});
+
 export const LeadNoteSchema = z.object({
   text: z.string().min(1).max(2000),
 });
@@ -90,4 +95,5 @@ export const LeadFromMatchSchema = z.object({
 
 export type LeadCreateInput = z.infer<typeof LeadCreateSchema>;
 export type LeadUpdateInput = z.infer<typeof LeadUpdateSchema>;
+export type LeadReminderInput = z.infer<typeof LeadReminderSchema>;
 export type LeadFromMatchInput = z.infer<typeof LeadFromMatchSchema>;

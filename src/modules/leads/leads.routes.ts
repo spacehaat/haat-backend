@@ -7,6 +7,7 @@ import {
   LeadFromMatchSchema,
   LeadNoteSchema,
   LeadParseSchema,
+  LeadReminderSchema,
   LeadUpdateSchema,
 } from './leads.schema.js';
 import {
@@ -20,6 +21,7 @@ import {
   listRecentClients,
   parseLeadPaste,
   getLeadAssignees,
+  setLeadReminder,
   updateLead,
 } from './leads.service.js';
 
@@ -104,6 +106,16 @@ leadsRouter.delete('/leads/:id', requireRole('admin'), async (req, res) => {
   const result = await deleteLead(String(req.params.id), req.user!);
   res.json(result);
 });
+
+leadsRouter.post(
+  '/leads/:id/reminder',
+  requirePermission(PERMISSIONS.LEADS_WRITE),
+  validateBody(LeadReminderSchema),
+  async (req, res) => {
+    const item = await setLeadReminder(String(req.params.id), req.body, req.user!);
+    res.json({ item });
+  },
+);
 
 leadsRouter.post(
   '/leads/:id/notes',

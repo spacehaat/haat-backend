@@ -172,6 +172,14 @@ export async function notifyMembersOfNewLead(input: {
   );
 }
 
+export async function notifyLeadReminder(assigneeId: string, leadTitle: string, leadId: string) {
+  await notifyUser(assigneeId, {
+    title: 'Lead follow-up due',
+    body: leadTitle,
+    data: { type: 'lead_reminder', leadId },
+  });
+}
+
 export async function notifyOverdueLeads(userId: string) {
   const now = new Date();
   const overdue = await Lead.find({

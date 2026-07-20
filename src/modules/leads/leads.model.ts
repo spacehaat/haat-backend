@@ -65,6 +65,7 @@ export const LeadSchema = new Schema(
     visitIds: [{ type: Schema.Types.ObjectId }],
     priority: { type: String, enum: LEAD_PRIORITIES, default: 'normal' },
     dueAt: { type: Date, index: true },
+    reminderSentAt: { type: Date, default: null },
     lostReason: { type: String, default: '' },
     notes: { type: [LeadNoteSchema], default: [] },
   },
