@@ -12,6 +12,10 @@
     "seed:admin": "tsx src/seed/seed-admin.ts",
     "seed:leads": "tsx src/seed/seed-leads.ts",
     "seed:delhi": "python3 src/seed/map-delhi-csv.py && tsx src/seed/seed-delhi-csv.ts",
+    "seed:noida": "python3 src/seed/map-noida-csv.py && tsx src/seed/seed-noida-csv.ts",
+    "seed:mumbai": "python3 src/seed/map-mumbai-csv.py && tsx src/seed/seed-mumbai-csv.ts",
+    "seed:pune": "python3 src/seed/map-pune-csv.py && tsx src/seed/seed-pune-csv.ts",
+    "seed:gurugram": "python3 src/seed/map-gurugram-csv.py && tsx src/seed/seed-gurugram-csv.ts",
     "seed:noida-leads": "python3 src/seed/map-noida-csv-leads.py && tsx src/seed/seed-noida-csv-leads.ts",
     "lint": "tsc -p tsconfig.json --noEmit"
   },
