@@ -2,6 +2,8 @@ import mongoose, { Schema, Types } from 'mongoose';
 
 export const LEAD_STAGES = [
   'new',
+  'cna',
+  'cmb',
   'qualified',
   'proposal_sent',
   'visit_scheduled',

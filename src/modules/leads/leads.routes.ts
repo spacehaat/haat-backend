@@ -41,6 +41,7 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
   const source = typeof req.query.source === 'string' ? req.query.source : undefined;
   const dateFrom = typeof req.query.dateFrom === 'string' ? req.query.dateFrom : undefined;
   const dateTo = typeof req.query.dateTo === 'string' ? req.query.dateTo : undefined;
+  const reminder = typeof req.query.reminder === 'string' ? req.query.reminder : undefined;
 
   const result = await listLeads(req.user!, {
     page: Number.isFinite(page) ? page : 1,
@@ -52,6 +53,7 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
     source,
     dateFrom,
     dateTo,
+    reminder,
   });
   res.json(result);
 });

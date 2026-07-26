@@ -1,0 +1,4033 @@
+{
+  "summary": {
+    "csvRows": 195,
+    "dbDelhiListings": 162,
+    "matched": 68,
+    "unmatchedCsv": 125,
+    "unmatchedDb": 94,
+    "matchedWithImages": 66,
+    "matchedDbWithoutImages": 68,
+    "matchedReadyForImageUpload": 66
+  },
+  "matched": [
+    {
+      "csvName": "4U Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Paschim Vihar",
+      "listingId": "6a54a1d2515c8c041ddb0ff8",
+      "dbOperator": "4U",
+      "dbCentreName": "4U Coworks ( Paschim Vihar )",
+      "dbMicro": "Paschim Vihar",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 14,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/aeec0a02b5de84e68319578578c32cd46d383539.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5e22cfb18b53f787ab32e7c3ed53ee63091b68f0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cc9c0514e5ca7286b72c22f28f0afbb31be64aab.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8f80e15188cbbdfc3930aecf3a45c942c600f286.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a37eb109d20b20323ed1a72baf903ab3aaa4479b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/07022755520ff6f3245db605453c2f71c4c00b96.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9f3948eb7072bb67d2fb5c307a0a6bec3833e37f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b713f1a47a03cde1770cca13fbe60795c7eb0b51.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d567f747b3d93b855fb9cc8992e1b846e6ca6632.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0884c9b549af4908ec0238949594f45658df7ce3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/27c514643e97ec7db0a8e9ecc1c822e382c4ac30.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4fb506a06ca2ad8b8682a71c1b1320581c98ae6b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4136c887f8887cbdde7e3dd3b576adba8dfb372c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b3fa7736dae182e29a9ea5c1d6578873e6fabbf8.webp"
+      ]
+    },
+    {
+      "csvName": "Cowork",
+      "csvBrand": "GOHIVE",
+      "csvMicro": "Mayur Vihar",
+      "listingId": "6a54a1d3515c8c041ddb1004",
+      "dbOperator": "Cowork",
+      "dbCentreName": "Cowork Delhi",
+      "dbMicro": "Mayur Vihar",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 9,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/fc50315d94f33f28c873b058fd78835a267852e7.jpg",
+        "https://img.spacehaat.com/images/original/057df1d1192020c687282b1a895f55ea8dae5f26.jpg",
+        "https://img.spacehaat.com/images/original/186a48223698ca1bd94bbedde48e7654e0645533.jpg",
+        "https://img.spacehaat.com/images/original/a80cf259afdabcb6aba8ed2b7a6ad31d35723b4b.jpg",
+        "https://img.spacehaat.com/images/original/562f59f5d90870d5e38f61c1bd3296cc2e4949cd.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5f33c1ad3e3a8e70ace9e3a001850d3b61ccf13e.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/b21c20c76c961cd04d79b0762fe54e99295d4bd1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/658b120f3f83c5e2e2cf0a62d011166a1d634aa0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3a9463dd2d6f6829d189c44305a99105cce29fde.webp"
+      ]
+    },
+    {
+      "csvName": "DesqWorx",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Green Park",
+      "listingId": "6a54a1c4515c8c041ddb0e90",
+      "dbOperator": "DesqWorx",
+      "dbCentreName": "DesqWorx",
+      "dbMicro": "Green Park",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/56c9e1dcd01c88b626eb089a56ca6565f8eef90d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/474509fb61ee5094344c17ce18b6e9377c58f8c7.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f83ec6ef5be47c3e4fd83e435d58fd3f03b024f0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4031b6dc2f5e77e3935efd85c3f3ecb2121cfec9.webp",
+        "https://img.spacehaat.com/images/original/77f320c38769c957d26c552847ae44c7a3e8a9d7.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/840ccc47e92f08c14cbb9428ece3290f46ad3033.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e94a83f9e298a49794d90a46c8995fd82a73e7d3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d4e150c191480ce4d9602457f46e0442bc102605.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/fba1af6c924c6f2233fac26aa791f6620b163951.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5784ae85d8431a5c8859d1b70808b9dbc63ea444.webp",
+        "https://img.spacehaat.com/images/original/46183e1bc12b3fd0af7f1daa116d9bc1f2c59e1b.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/c3c111b1ed3ace6b4f82c06c360140cec352027d.webp"
+      ]
+    },
+    {
+      "csvName": "Fume Coworking 2.0",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Netaji Subhash Place",
+      "listingId": "6a54a1c5515c8c041ddb0eab",
+      "dbOperator": "Fume",
+      "dbCentreName": "Fume Co-working 2.0",
+      "dbMicro": "Netaji Subhash Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 14,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/22fa363504373537e55e809f8e6aaa145c9c3dbf.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/410690d51de22b83da899ceaa0dc3ea6a2d0e957.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d66e07da225cb61075b847d1d3c4aa739cbff170.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0511a51692a6cfbfe808c1e1cfb19175b1a54ba3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/bca313b91fa9a6a8638d94b940769376d5c9286d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/302eff8214d258bd853ed6c542d7f1093f718db1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/25502720a53bb3b3bdbc11da97d107fa0fbab008.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/033772ad3f54feaa794f185f7d215d622a3eccc2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b49d173dec494e646df8c1112fa6c6b7a1a95bea.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/70861541c1f43e16ba9d5ecaaa0dfa1c45ef169c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/818c196cb2b92da65cb6a6eec6a081fee40ca620.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ee9a9c7a6a649c20a3f460800ed18624c0b987e1.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/50118f0f7aaf1cdcfbf7976ada8a77d93629ff81.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c8707115b88ed40b3b2ef076cf33384e005ab07d.webp"
+      ]
+    },
+    {
+      "csvName": "Green Coworking Space",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Green Park",
+      "listingId": "6a54a1c4515c8c041ddb0e93",
+      "dbOperator": "Green",
+      "dbCentreName": "Green Co-working space",
+      "dbMicro": "Green Park",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/37524532c79b138e3c9f3a7879385cc7c14bdbe0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/922b134b92ff636c6114fce8184bf8199ce5abe6.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/602f1a3d8227ef1405b99e52987ce4224bd8a3bb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3caf77139275a6c95cf47cea13b71eceab64acfb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f34d021b5534f3b1ca3cc4de27ae53d868d5c718.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8660c8b5bba4d065b4024bd75894bbe1faaec988.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4a085efb7fdb993396fd1525fd540319fe45fb71.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/033eb0a50a02dce9963161b216bb9bd92f87089d.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7ac20e61e8f7c4a01bd1fa21d1c81ef031918f4f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5feaa3eb69b9501842ffd7ec69df20febd065173.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e736f4db30ea47082dbfd964ca12e5f3f2a8d36d.webp"
+      ]
+    },
+    {
+      "csvName": "Innov8",
+      "csvBrand": "Innov8",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1c9515c8c041ddb0f0e",
+      "dbOperator": "Innov8",
+      "dbCentreName": "Innov8 ( Okhla )",
+      "dbMicro": "Okhla",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 13,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/dcf1a8185f50778641512a7e8f8b14548083193b.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/bda7e56d18707f9f51e61a211d11184311c28baf.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/ceead040cd65cf50e86f6a7959f210f70be5563d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a3b98f04565572f85126c7003b7fe71dcf38991a.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/234ce5073ce113a326d0fdfb09ce94257259868f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/da196a4dfdaee4ee83ae4792670f3af81fe39fca.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/581fe644396e1a82e239c5e7bb836e943f1f047b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5f74935c4b0a817093407bc53e07940acf739c19.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0706d4d28b0a1b2bcca166593b72b32c0c27d262.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ba15c781087be78067819828a2e67e6ed1cebc99.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/431b097dd6b50aadd15da5ac3e04095b68c17ccf.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e8c664be23bbe5fd7f06fe7ed7a0da1663f6c353.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f08fbc11f35d774977e9f8f08165af0095ec522b.webp"
+      ]
+    },
+    {
+      "csvName": "MyDesk",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c7515c8c041ddb0eea",
+      "dbOperator": "Mydesk",
+      "dbCentreName": "Mydesk ( CP )",
+      "dbMicro": "Connaught Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d997979c2fe3ddea6e2c497c06bc2845dbce4481.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/34f9931f82401adf0e86daf498dcdaf40ab00410.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/712f9bde2a39c4402c081fd7488bcf919c25b63b.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9df24ef92ecf29319c7b660ca0a3b11be644fdac.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/bd09b49799b9735bd44ccdc4ba2ad9994345c839.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ab7ea09cd2af8b9b72173761e3b062736fd9dc67.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/87130d388f71501682bafe4ce6e1e699e42d6182.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ac8bcae387ce2c624dd23930c0f247944b2d60aa.webp",
+        "https://img.spacehaat.com/images/original/e2386afee2564ac07990f58e5e146052ad7a84a4.jpg",
+        "https://img.spacehaat.com/images/original/7aee2ffe096e9d9670721037430ba8faaf299440.jpg",
+        "https://img.spacehaat.com/images/original/74491bfa087c9327e125bcd6feca10a072c16608.jpg",
+        "https://img.spacehaat.com/images/original/fcd2d681527df15c3ac7ca517b15678ff4d9b689.jpg"
+      ]
+    },
+    {
+      "csvName": "Office On",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1cd515c8c041ddb0f83",
+      "dbOperator": "Office",
+      "dbCentreName": "Office On ( CP )",
+      "dbMicro": "Connaught Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/0259a57a492fc9729bb64f8d17f37b89e104216b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ba97270ceb4b08e7f276f788e17b66281aede98a.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/334e92edb03f144088b09c86686183f9e29f1d09.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/abc486499c90381a80eede0f02fc8b44cc30b0fc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/49c2dd557525ef7e6dc110cafaa9e491878acaef.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/896f4e4a71e088851b5443c97154bc9254b5f242.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c4dc0a7501f789204a636583856e84f0096a997d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/8e84c3d238838e0d2dc13b7721df412b8c84092f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5c76f359675970223515b0d2b443cff694942db1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/671f1691d450b6fb5d1b3709aced60f8f8183967.webp"
+      ]
+    },
+    {
+      "csvName": "Spaced Out",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Hauz Khas",
+      "listingId": "6a54a1c5515c8c041ddb0ebd",
+      "dbOperator": "Spaced",
+      "dbCentreName": "Spaced out",
+      "dbMicro": "Hauz Khas",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 15,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3fc03f3c152c06ea0fa31707c5e17acb92297fa1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/48fc3300504bd91242f20ab4826189cb3061da26.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9cf1f44b6ad4c729a26dae386a9b318f7b8a53f9.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/158db199538d53decbfd09a0f41a97ae1f6a0bcb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/dec89182f0ec60c94253e7669b60e0eaa2deb847.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/de30a09ee704b1e7df8dc3893aff16415b7b4e4f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/876fbb0baa1adef194e7e815f71a17d083881444.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e8ccac9a31fb427f704ec0995076e0fcfcd47403.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/94340b39a09e8ec80ebf078af02478accd1e7f8a.webp",
+        "https://img.spacehaat.com/images/original/b572503859e4e986a98a57bda6f8ea3ec0f824b2.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/ecba65ee748f3bbd1d1edbcadcc2b23901018e46.webp",
+        "https://img.spacehaat.com/images/original/3dc51eb8b7fcab3fe8c69371ad284c09c48c15bb.jpg",
+        "https://img.spacehaat.com/images/original/d3d13cfa109850a035ca352182c6a67a6fe6c95e.jpg",
+        "https://img.spacehaat.com/images/original/d5af5da10ac63d960ff219f67ca2a56698b7adb4.jpg",
+        "https://img.spacehaat.com/images/original/2b85a18b186072a6de4e1b024f7b79ed2d7373e0.jpg"
+      ]
+    },
+    {
+      "csvName": "Spacify",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1d1515c8c041ddb0fe6",
+      "dbOperator": "Spacify",
+      "dbCentreName": "Spacify",
+      "dbMicro": "Dwarka",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/2d16d161ffb843d9f4eaf9bc9b278c8bdf3586e0.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a0aa081122f2b6e8e2b976e17dedc4bcf6778611.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/04660d35078af5ed2b2341151621559dbfa74c2e.webp",
+        "https://img.spacehaat.com/images/original/58678803107e6802e498e51c9639fa7b6791159d.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d5b564f18a7f771e1394f2cfc55e7915fe365cb5.webp",
+        "https://img.spacehaat.com/images/original/b41337db7c3b13bc2651bd4bd95a0271f5d26f77.jpg",
+        "https://img.spacehaat.com/images/original/8b7d13f40f08701054f8632f18721c6fe0251bb2.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/af0df0c2b8168d918629e03964321a72ec2ff93a.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/47dd8b1a73989c049729beb2ef5be7f310c53592.webp",
+        "https://img.spacehaat.com/images/original/a3e1e0c5ab686029ac26018525f0626a46f409e2.jpg"
+      ]
+    },
+    {
+      "csvName": "Spring House SHDL002",
+      "csvBrand": "Spring House",
+      "csvMicro": "Janakpuri",
+      "listingId": "6a54a1c3515c8c041ddb0e7e",
+      "dbOperator": "Spring",
+      "dbCentreName": "Spring house SHDL002",
+      "dbMicro": "Janakpuri",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/9236a067f3f88991bb6ef51328e5d11ad2d7b4f1.jpg",
+        "https://img.spacehaat.com/images/original/6373d6eb7312117a1249eba263bbfa3172dd7068.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9242256e8966803c94ce9a27453a993a6929b3bc.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5fb992cc4591a2031f0542232aa9c57e41151db3.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/87065ec2205f2d9cb74c09041904ea957d493bba.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/87f9a3b69bbd5646892bc94aa4d2133e4f29d49c.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/b1956db1a630ec585282ad7e6bfacc22555fe261.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/ea33c072294b393892057999a938b317c5fd3d96.webp",
+        "https://img.spacehaat.com/images/original/da29a8e2ba86b5ff83b7547f8ada119c35848f56.jpg",
+        "https://img.spacehaat.com/images/original/d0f6c666bebffa5a0dda8648eb64bea21168e6c3.jpg",
+        "https://img.spacehaat.com/images/original/7e37cd2dd323f6d7959f316af27d1e78c14220a4.jpg"
+      ]
+    },
+    {
+      "csvName": "The Third Space",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Mayur Vihar",
+      "listingId": "6a54a1cf515c8c041ddb0fa1",
+      "dbOperator": "The",
+      "dbCentreName": "The Third Space",
+      "dbMicro": "Mayur Vihar",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/b65bee0b7bb59f29a4ca705d5aefc066f1d066d1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5e40a23da40243228395636f8797a05fa20d9af3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/61f1467fcd6683ae9aa94a29b2113ea101701564.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/35c146e52535fd059f7a4ec7edd108389f24a9e4.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/8a1b20ec507dfe747e15ac18fe724e16c66a7664.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/47252e7aff351f14e7c264be99f4d38498653aba.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/372375247861b6ba9adec9a7566f27c5dfdac988.webp",
+        "https://img.spacehaat.com/images/original/d303bc0a416420432e3da5c82a1961f29c3580df.jpg",
+        "https://img.spacehaat.com/images/original/d32cf4c60eb99705a014313f6e1299c75cf5e7bc.jpg",
+        "https://img.spacehaat.com/images/original/457c1b0d9fa54a5fd6583f595c0c5d92cc6fbd39.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/c01263e8df82b32f0b7551e920e34dad74ae80fd.webp"
+      ]
+    },
+    {
+      "csvName": "Work Exchange",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Netaji Subhash Place",
+      "listingId": "6a54a1c5515c8c041ddb0eb4",
+      "dbOperator": "Work",
+      "dbCentreName": "Work Exchange",
+      "dbMicro": "Netaji Subhash Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 16,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7c5edc8845acb25128180605bc171fbca06cf763.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/44e250b5a58d83828409c34e3e991e30aea5651a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f4588e0eb8dcd515cdf7a7fd021f326107d2771c.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/e0658452a1b6098c464ae02a2753cff75911ac68.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/547b5b79ea3a69f5a1414325ae2895255dbcbdf8.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7c162d305238b41319031ace905479340da3a764.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ef37ead0ef4925b738ea28bd46afd659853a84bd.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1c1dd94952a6b1ad8780f3423a528b901e92e3cb.webp",
+        "https://img.spacehaat.com/images/original/9c8058b27cb718d04e7cf4689bd62ac82af96b2d.jpg",
+        "https://img.spacehaat.com/images/original/881f57b389200a96b703010296b23418400a5aca.jpg",
+        "https://img.spacehaat.com/images/original/69f13c20fcd03a1e194966cff99c14f3162dc520.jpg",
+        "https://img.spacehaat.com/images/original/8425813128dbf1dcac9ed5934d4b49a245728f0a.jpg",
+        "https://img.spacehaat.com/images/original/fe0b86856d71894b1b86f0f736cbc8ac2792223b.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/3c538e7c936025a605eaf48c903ec0010102e9a7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/410c9a13f6bd16f792589725a7780325caf40c5c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/42d874c4199aa2885aed285da72af4534326d775.webp"
+      ]
+    },
+    {
+      "csvName": "Workingdom",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1ca515c8c041ddb0f32",
+      "dbOperator": "Workingdom",
+      "dbCentreName": "Workingdom ( Dwarka )",
+      "dbMicro": "Dwarka",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4d014baf3182071f6eb8ab455e696c417ba65bc8.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f7669a3e460c88b70913144bb90fbff93a2e4f4f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/83e5b22b8511a84ff4c537e70231983114d6c670.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d97312a34a9cb9c3c5911f01a6d136706b7a9750.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0b9bbbd28ca9b9d9c42de6b02e86cab950a24dbf.webp",
+        "https://img.spacehaat.com/images/original/73f308a5127f5c96e5ae46c3454b8d5240cfdfe2.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/3018cacf32d04dbe37d124e1e99ddaf9dc88c692.webp",
+        "https://img.spacehaat.com/images/original/78bcd702159f63a1657f54cc2c8e01fe8bf0b601.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/8b681ced668b6a9a05c1291a1068bfd91c12fe27.webp",
+        "https://img.spacehaat.com/images/original/79d88dc6f56a0b39e0d7eb13a0400dbce39a23ac.jpg",
+        "https://img.spacehaat.com/images/original/2eb36976c6b9ccfeb87d3696c38016d99c2133a6.jpg",
+        "https://img.spacehaat.com/images/original/8df97965d75029659a16676a08059f97a5d4073c.jpg"
+      ]
+    },
+    {
+      "csvName": "eTribe Coworking",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Mayur Vihar",
+      "listingId": "6a54a1d3515c8c041ddb1001",
+      "dbOperator": "Etribe",
+      "dbCentreName": "Etribe Co-working",
+      "dbMicro": "Mayur Vihar",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/fc8ae1c2e037301e6e28aed083f50cc7bf1dc87e.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cd047db77da06fedb3179c8b48fcd3acde77ae0b.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/8e3264f644a06c0c82d1f47832ac852318b8d89e.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a89d5d7d674e7d5cb4b69214fe1c9153f0fd9df8.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7c7d6f619082b2b91f5a7c74280177c60eec0311.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6566bc4ab60c62d6c9f69dae506853ac88de4f65.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c533a12f3231e5d060fbb74a29642965c179430a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ff74e062b33ff5d1c3d213f5f37c7904d36000a7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/301f8668bd69050a21f3bd58ecc20bad190c8f00.webp",
+        "https://img.spacehaat.com/images/original/ae5103a03e466506d6c53735c179a2be0c741198.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/0dda420cc579e348b82321b43e0014121da90ce0.webp"
+      ]
+    },
+    {
+      "csvName": "4U Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Subhash Nagar",
+      "listingId": "6a54a1c2515c8c041ddb0e69",
+      "dbOperator": "4U",
+      "dbCentreName": "4U Coworks",
+      "dbMicro": "Subhash Nagar",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/a7edf5bf69f7b1de73eb5097ae155d40a4a6d036.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d684530e3cf737132ce08ea10bb1b77e3f7d4b14.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/845384c6c2660db95bd5e83ea7ba6d112b2f7c9f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/fa1067318a9c601bdf7ca87cca5825615de72986.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7260e803c74bd978cc73cd79c943c7004717ed9e.webp"
+      ]
+    },
+    {
+      "csvName": "AltF",
+      "csvBrand": "AltF",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1c8515c8c041ddb0f0b",
+      "dbOperator": "Altf",
+      "dbCentreName": "Altf ( Okhla )",
+      "dbMicro": "Okhla",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 7,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/16a8d45bab4842b189bbf8e0023d5bd1aac17f8a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8e384da52625e62969a6d43a2399545a6d7e5593.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8e56f0f71380fb14ef1abff2b85bbe8706096aa2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/48d323d90e25a59421cba1c06db443826bb20418.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b001698745c420e52d8649d7e31ef2da571e0515.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/45e6f170a19d4a0b7b9f38e0c521934d9c7e9c9b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/149f073a528b72f8f3d494e27a6fcf34e791f18a.webp"
+      ]
+    },
+    {
+      "csvName": "Classic Converge",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1c5515c8c041ddb0ea8",
+      "dbOperator": "Classic",
+      "dbCentreName": "Classic Converge",
+      "dbMicro": "Nehru Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/43bf3e7e2ee35f80e488cc4cd70f89624684cddc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3da3dd391af491382523ebaf0f3a12bba4173a2f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/9a33cebffb85ca678c934b7630a7e6aebe92413f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b55814f5fadd9dabe4c978272dfdc9c714c1c6dc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8cb7bc2c916979e35e9e58c0fc248aa0a74ae2bd.webp"
+      ]
+    },
+    {
+      "csvName": "Cubebox",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1d3515c8c041ddb100d",
+      "dbOperator": "Cubebox",
+      "dbCentreName": "Cubebox",
+      "dbMicro": "Saket",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 7,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/5d05ad1c2f9756282ade9b382c90e5caafd8d67d.jpg",
+        "https://img.spacehaat.com/images/original/21bc7e1ee05236a41de38d75de52e99717814d9f.jpg",
+        "https://img.spacehaat.com/images/original/6e6de5181f4c4d5be85be0dd81cbc184d1c4635b.jpg",
+        "https://img.spacehaat.com/images/original/279de6579ab69c5ce15c67373ceb45bff2789adf.jpg",
+        "https://img.spacehaat.com/images/original/8720ee9981b32ed4e44e4c2fd30c661acb5e7945.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/30c2b4cf119b3fc7534aebbbaaf1ff1bfcb51620.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4cf833ab2761327ba860e3fb186c18fa901e6cfb.webp"
+      ]
+    },
+    {
+      "csvName": "Cubeecle Business Centre",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1cb515c8c041ddb0f41",
+      "dbOperator": "Cubeecle",
+      "dbCentreName": "Cubeecle Business Centre",
+      "dbMicro": "Nehru Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/0779cf9ca419f242423278ccd1cf4340e9a7d9bc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/cc125e17789b7d7fc414f207e3536824776d773e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5dddf42a5ba4cbc2bd281f6d5c0e4f1b71eca812.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5ff5e4fbb07e64be17d693dc6742b67d42c633a3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/dd222c31a7cfd7fb4d4b0582c2c2163e6485a7e0.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e99c74eaafeca81434add04f870616c2bd0193a8.webp"
+      ]
+    },
+    {
+      "csvName": "Fume Coworking",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Netaji Subhash Place",
+      "listingId": "6a54a1c5515c8c041ddb0eae",
+      "dbOperator": "Fume",
+      "dbCentreName": "Fume Co-working",
+      "dbMicro": "Netaji Subhash Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 0,
+      "dbImageCount": 0,
+      "images_url": []
+    },
+    {
+      "csvName": "Hub Hive 11",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1cf515c8c041ddb0fad",
+      "dbOperator": "Hub",
+      "dbCentreName": "Hub & Hive 11",
+      "dbMicro": "Okhla",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 7,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/06d597355fc64822c2a1fde7a2cb9bd783593ebd.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1384dd8e7fc3820f1ed71d9578dbefbe186dd433.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f2ff15770e8ee5c9366f55cc1c94041f76b13f20.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ef1f6fa3b011f84891e335074ca78735593f0c72.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5eb32dde2e75230b7fb545a1d756baedd13b18e6.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b5f29b60cc505b960a1fe30c26de8195741e21e7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/918d80d8a2786e4e4ba505d15a3658441f292729.webp"
+      ]
+    },
+    {
+      "csvName": "MIO Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1c3515c8c041ddb0e7b",
+      "dbOperator": "Mio",
+      "dbCentreName": "Mio Coworks",
+      "dbMicro": "Saket",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand_fuzzy",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/6b71b4a68c65ebe3679850647d0e94cc9afc0c73.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/efa3260f45bb13a27a1160a0ce443f538f9deed5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e9c0a6e2d0ee3739e87102a07b4512c0da7e6804.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7aeecd0643a47b3a9044d1aac62ae1cee7e940ae.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ea20175a94edf9f76d0da176d92f37fe9c70feb2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3efb9dfd83d875d3031879ab66e1b1020553a21e.webp"
+      ]
+    },
+    {
+      "csvName": "Miracle Works",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1d0515c8c041ddb0fc5",
+      "dbOperator": "Miracle",
+      "dbCentreName": "Miracle Works",
+      "dbMicro": "Saket",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/46d94f53e5d4740e35034015caadf167704e539a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/140e021cdfbdcddd810cfa058d69894c340b5ad7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/402d71a37c2979ac03fa3a455caf1fe4e50234c6.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1e90770da8322a7e4dbb24ec8fc5e7bb23abf5b5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c551f1d881288a150cab654a9f1db56c3cfe0ef7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e47ece3193887397f57efea27464c92ebd3275fd.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d763747d7b3d2d6cbdb3a6e0b475b7b92a181d3f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ddb681063e792657ab20b01fcc77a812bb0422fa.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e8f43739a0d3c40f39cff27b2e466e8521f58f4d.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/eb4edde72c35eb831af0feeb3b50027212ee18ad.webp"
+      ]
+    },
+    {
+      "csvName": "Onward Workspaces",
+      "csvBrand": "Onward workspaces",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1d1515c8c041ddb0fd4",
+      "dbOperator": "Onward",
+      "dbCentreName": "Onward Workspaces",
+      "dbMicro": "Okhla",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 0,
+      "dbImageCount": 0,
+      "images_url": []
+    },
+    {
+      "csvName": "Peer Share",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Vasant Kunj",
+      "listingId": "6a54a1cc515c8c041ddb0f68",
+      "dbOperator": "Peer",
+      "dbCentreName": "Peer Share ( Vasant Kunj )",
+      "dbMicro": "Vasant Kunj",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/604913caf24e709e99bc434f45b774a32e2946ad.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a64b2fcf1a59510327c7fb51dc13e28cc8e72eef.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b2c78606d578872d8fa1e6809070b69bbc61ed81.webp",
+        "https://img.spacehaat.com/images/original/1f5911086c222058bfc2fb2245f6b9ad567b7693.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/a6701ff1e10cb0299dbab970c2946488aa4b7bf7.webp",
+        "https://img.spacehaat.com/images/original/71673a892e614664ef39b6b708cd4d9ee39de8fc.jpg"
+      ]
+    },
+    {
+      "csvName": "Skootr",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1cf515c8c041ddb0fb6",
+      "dbOperator": "Skootr",
+      "dbCentreName": "Skootr",
+      "dbMicro": "Connaught Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/d38037d0e7fcce087b9de85b791562c2c375b44c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/dc82c3d6020e92cef7b242308aea3be2dbee5803.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/91a3ac75e5e39d2cdf5505ffb1e819afc0f2ae42.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c28810a0aaf699f0c5277724cae6cf361c843736.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e723e322d6f8b7235bcd651626370151709906c1.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/48e5c1361781f6990f115d8262ef73c46a63f69c.webp"
+      ]
+    },
+    {
+      "csvName": "Smartworks",
+      "csvBrand": "Smartworks",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1c4515c8c041ddb0ea5",
+      "dbOperator": "Smartworks",
+      "dbCentreName": "Smartworks (Nehru Place)",
+      "dbMicro": "Nehru Place",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/cd57dd18e8958efa332dbf7d56cdbb0a5daf14e0.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/4949a0887778adfdc42df89b2adc208cb6f12503.webp",
+        "https://img.spacehaat.com/images/original/876af7e9a938113563ed648fb522cbe13ba8bdbf.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/eb393df20f7a0dd24fb6e534afce3173fe9eb0be.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b9c0bd2a1139fd1d86ecc4a2d9f323f81d221ed4.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b60df640a1ffc9fe691af2e8920b0b802a60502e.webp"
+      ]
+    },
+    {
+      "csvName": "Spacetime",
+      "csvBrand": "Spacetime",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1cd515c8c041ddb0f7a",
+      "dbOperator": "Spacetime",
+      "dbCentreName": "Spacetime ( Saket , 261 )",
+      "dbMicro": "Saket",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "brand",
+        "exact_name_micro",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/fde6dd02beeb91f75986a03bc4daa55204f3aca0.jpg",
+        "https://img.spacehaat.com/images/original/1ca7a03a383f0bf510f18248c576a1cc9ff5ef53.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/2f630829b7e47e3ae615edf8f84d6af1e9cb722b.webp",
+        "https://img.spacehaat.com/images/original/3e9582df9bbc7eb643f5fe6d4b606f6a125c42e4.jpg",
+        "https://img.spacehaat.com/images/original/1d593a3fee2192697a59c3cd8c3f7237754f49ca.jpg"
+      ]
+    },
+    {
+      "csvName": "Vision Cowork",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1c2515c8c041ddb0e72",
+      "dbOperator": "Vision",
+      "dbCentreName": "Vision Cowork",
+      "dbMicro": "Saket",
+      "score": 0.96,
+      "reasons": [
+        "centre_name",
+        "microlocation",
+        "exact_name_micro",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/66faa3e87a8d79118ccdd6a7c34c2b588e648587.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3c00dda929235e8de752c03114f8e74d7799cc3f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2899749b134fda5ae2b1dc419ced4e0a4bd799b9.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2db7398bf86ad8e40058f88d49b59ba366d64223.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/72a9d124803ed61ac034463e02d9beb522186179.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/cbb67ea3652d28419a3894a67671a4731987963b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/54c8de02a1393df0584b32207306a2addd43fbb6.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/752457a537e01602a4a2ef303012d29e9ae1cd41.webp"
+      ]
+    },
+    {
+      "csvName": "91Springboard",
+      "csvBrand": "91springboard",
+      "csvMicro": "Jhandewalan",
+      "listingId": "6a54a1d2515c8c041ddb0fe9",
+      "dbOperator": "91",
+      "dbCentreName": "91 Sprinjgboard ( Jhandewalan )",
+      "dbMicro": "Jhandewalan",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/ad8528be6d6c7d52c62ddfaca2fc51b3275a208d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1c801308fc8281d14e77253da24c61baa50fd029.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/051b33f81cf8decdfd976fee56226dc9ec3a2fe1.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/bd679e8c4bd4af51e86226fac18eefd7a4adb1ce.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0af364bae454602997b5eaf866fd87904f783a60.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/6d89d62bae237ed1252d0bdc8829b6eb0407a720.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a1b7b3d5c27f8a6415c5d9bbcb119cadc6602c40.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c3ec27a8c326f6ca7bb31f2ecc6b39a64029c480.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/969f8521d12407e72ff742ed227553ce23e123bb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d5f029683fd746d452f70502a4839ba6eff93d87.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/184c40729ef7b0283329394cd4527ca42f4b8b96.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5c3a1ed8fc24a65658de5791f531ffbd8c79c395.webp"
+      ]
+    },
+    {
+      "csvName": "Awfis Connaught Place",
+      "csvBrand": "Awfis",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c6515c8c041ddb0ed8",
+      "dbOperator": "Awfis",
+      "dbCentreName": "Awfis",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/2fe079021a645aaa91db2a49154e3bbb934188a6.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/aaded3ad2401948ee0372be3fa0bb9f24e6b39f5.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cf20c10f7ddce5c0432aaf1a0c4010b463596a00.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/736ec1250a359840d7a46f2bca681fa4e536e67c.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/311b1831a6d35b1d4d33cfe2e5d1b35a33225f52.webp",
+        "https://img.spacehaat.com/images/original/284b68fedb180cbd3fdde58409a209cc9d86e623.jpg",
+        "https://img.spacehaat.com/images/original/58e51731e20cd893e38b864010b9fab4d0cdb227.jpg",
+        "https://img.spacehaat.com/images/original/1c65a15d5cd652769832d038adda6663253940c9.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/c96a64ec992a70f134b5fb7c4602fffbee842454.webp",
+        "https://img.spacehaat.com/images/original/a9e4e4e0027b7403a097d85842847623fede1589.jpg"
+      ]
+    },
+    {
+      "csvName": "Buzz by Spacetime",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1cd515c8c041ddb0f7d",
+      "dbOperator": "Spacetime",
+      "dbCentreName": "Spacetime ( Buzz )",
+      "dbMicro": "Saket",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 17,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/d8d093d87e35c6b8e799b9455c1c6472723676eb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/461e299fc47523062862a2ed16867beb91f85d4d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/108e48a8fff88cf0fcc9b7da821ad6a4b18a07f0.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7d85d1e749bc449a1c185004c559fd290ef4c3c6.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c6a08e22ce5cebef67a559e2e7512984dbd019d5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/996dfdac81c1edcdf39f5e108374c78387d5f0cf.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c48348a1982c75e5841ba3def7247eae39be8b9a.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/41c907893ce6b10ca1092c007e097cfb78a21c32.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/b7e78f5a26a463e6f1126113f78bead1110bff84.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3a775bac4be0d1ad3493a11d8db9fb8988061db5.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/eb0b8ef48f3e88cdcccbeb32f86b898808797ab3.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4ce20f7a4303e867a6b569ebe186838bf7a5487f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/096c2bf7314cb09344afceda547d8d3176de513e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/49d88c583ac8e4220399a11488d19ace0715b5eb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/35e91007e5cfa5d54aff3958685d4cf4938c31fa.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/63514e5ef32162880f357aaa80f58aa35e070bb0.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4b1b4468a650ae6fce7aed4daabcf949a21c544f.webp"
+      ]
+    },
+    {
+      "csvName": "Empowerers DP House",
+      "csvBrand": "Empowerers",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1c2515c8c041ddb0e6f",
+      "dbOperator": "Empowerers",
+      "dbCentreName": "Empowerers (275)",
+      "dbMicro": "Saket",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/282c1b0a1da8adee1f2b4fdc53cba11189fa50ef.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/34e48c1bc430bb00ddc4bde296288fed3cdfe478.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1cdef35281e6ba573dc69d368f1886c21a6db1c6.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/779440f06613bfe32ae15f382706584f9c101bc8.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/29843d7052a2e1938414163504b1e03b598611cb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/210f48bdb40f8b5229a0a68e053401e818bc7e9b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6bb47f756b8a9b771847f975424ed8f3f9e27a05.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f94c6a0adb7e8f6c48f1768122426daa6c3a34e7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/830de5f8bc98ccb8348bacc80e75b2971ad0778f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2225bc1c1cc4fb00c59f405449b23a3ba65b6abb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b1d819e3c64a6fca2c5460123a59e2c5286dcc06.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5289bb12aceefd223fda4b02654634dc2e328589.webp"
+      ]
+    },
+    {
+      "csvName": "G Connect Spaces",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Mayapuri",
+      "listingId": "6a54a1d4515c8c041ddb102e",
+      "dbOperator": "G",
+      "dbCentreName": "G connect Space",
+      "dbMicro": "Mayapuri",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/27191571b47fed27a3b6b19b135af4ae6841828b.jpg",
+        "https://img.spacehaat.com/images/original/124073dfe25dde8beec8e2e61bae68f0051b52d4.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/6c7f75366107f47b1b0ca14434d3bd0db1c1f04e.webp",
+        "https://img.spacehaat.com/images/original/321245a22088cf530b531364fcac1d71e26f24ff.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/2fbd7cc95013e5c5a276713b6b6088831151a4dd.webp",
+        "https://img.spacehaat.com/images/original/4907f56bc63af5cfea57261beb406534e4fa467c.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a08c2eed423a25f04f82edf295c63b1af6fe12a4.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/21213db4a9d118d37028c8daae33266b159f3bd9.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/e619d628c0483517f9e613e5fdbed0b0461d5386.webp",
+        "https://img.spacehaat.com/images/original/d1b4f3ac7520a8adbea060f2daa152c490f00e46.jpg"
+      ]
+    },
+    {
+      "csvName": "Hub And Oak",
+      "csvBrand": "Hub and Oak",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1cf515c8c041ddb0fa4",
+      "dbOperator": "Hub",
+      "dbCentreName": "Hub & Oak",
+      "dbMicro": "Okhla",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/657b6cc97b0c69a947537e483cd35b0525d9909e.png",
+        "https://img.spacehaat.com/images/latest_images_2024/1034e0bffa28144b5b844efdb9d9e9e28d8c6858.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/07e74f34c1ea3b902588052c6efbfefbd797b9ae.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/81158c108ad0d35b167d6b90512d6e1386d03f8e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a2e55f3571b9da559c9e4a70bde5a131af0fa9ed.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/938a858dafe40ccad793bcb96efa6617d01e92a0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/38528775f569e9c1a8b88c9182816ba184c177be.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9d14229e4e28242b2b95542ff8037e037981e4f2.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/985bde7833e2c8587bd26fba01af903d3140ad1b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/fcc1180ca064595d59c05c3f5dd477de7965ce36.webp"
+      ]
+    },
+    {
+      "csvName": "Innov8 Old Fort",
+      "csvBrand": "Innov8",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1d0515c8c041ddb0fbf",
+      "dbOperator": "Innov8",
+      "dbCentreName": "Innov8 ( Old Fort )",
+      "dbMicro": "Saket",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/bfd090edd89c386659d2859896d646ab4907709f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cde708ff0b3c3a00ed13f3df2af6c775fab215af.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/36e25285ee12e5bcecf304f10852bb24d1f76280.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/094b5b6cea055c2f6a975f4ac6138f4652b54803.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d23e8bc4e05f30503ca2791cbe7e5c4335604828.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/57e07408a173ed77de9656cd74427df6c7c99853.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d3fdb9612ea4d9d70b18d19a32a04dfaeed6fbc9.webp",
+        "https://img.spacehaat.com/images/original/beb1ad85552a779f2cfe990e4895f5a6d8894b30.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/e21aa6300b77a93e67a38f0e92b432ad910f5213.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f3b35608d1a40cb38ae88324f2f2ded057d622cf.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/baa53abb8d26ce2f4f3b7cef636e9389dcf1eb12.webp"
+      ]
+    },
+    {
+      "csvName": "Innov8 Pride Plaza",
+      "csvBrand": "Innov8",
+      "csvMicro": "Aerocity",
+      "listingId": "6a54a1cc515c8c041ddb0f62",
+      "dbOperator": "Innov8",
+      "dbCentreName": "Innov8 ( Pride Plaza )",
+      "dbMicro": "Aerocity",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 12,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4859b2f32475c1d08ed1b5e3c2e552d550394a13.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/39a7faa4a25b025afbf369601a443623c10c35b3.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c926fcaf9d720e6cdfaa465c4027a5f3b6b62cd2.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1444d2e7100450412f60988cc214f47a61cb577a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/02a6b73994ab73342352da1e4febc3c63da1f288.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4f528d53e7e8672de9b8e21afe20e84c25ca0e21.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/502c1c54e34ece50181bdeae8cfa4e5e6a46381a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7f5a6bc0878f12653ccc2a23c7e1280af74431d7.webp",
+        "https://img.spacehaat.com/images/original/225fa372fcf6fecc9407ca9c51b3e86ee5f630ae.png",
+        "https://img.spacehaat.com/images/latest_images_2024/08397a9de5c4e0179f7bf8faeeda85111d70fc88.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f3efb3c5a4792f90ffc04bef1df04df6d5708ab8.webp",
+        "https://img.spacehaat.com/images/original/8f31d07b2b9947b30888b02eb2a70b0247a0e75f.png"
+      ]
+    },
+    {
+      "csvName": "Innov8 Regal",
+      "csvBrand": "Innov8",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c7515c8c041ddb0ede",
+      "dbOperator": "Innov8",
+      "dbCentreName": "Innov8 ( Regal )",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 15,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/18452a16b2a68004f7e68221b15c7dace98496fd.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1e20bd24c29b51b4e64cba28a4bd40b29cfb0505.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/deba043fd22a6f8782b0af5314916ca22e97f3eb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/94333ad2ea12c2c7340137822a983329e35eee12.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/5ad561c0cc6bd61968498af08455f72650506344.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0d9ff256b5e3dd94a5262186192ee653bd793b01.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/78640c42b3e184c3da374223eebcd80102147bfc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/62a972edc7818f8a77410b11977b6514c200a162.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/20e6c5317a784e7df1760718bb9d8e81eabca293.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ab576488b8b093a77109f96db0114c14eac6fd5f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8938edccf7c43f9ada59899dd91866321736e175.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2f2d9197319e5b07b23796a90759b08b1e2b129a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8246e5385d4a7a686a4f4f880bca000c3eccf9eb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/52b89e2be1f780e386450cedcea5a9029f933756.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/35f9d7998486f8fda7ba7ab82da326dd82dcd72e.webp"
+      ]
+    },
+    {
+      "csvName": "Invento Workspaces",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1ca515c8c041ddb0f35",
+      "dbOperator": "Invento",
+      "dbCentreName": "Invento Co-working 12A",
+      "dbMicro": "Dwarka",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/466d9b3f08d018dfde41d97a119bf75e28554b29.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3b667fd515e940a7d73757e9fb3b4d0c2e9d86a8.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/83a2ca841c3e38e82336ce912ad992e41c9690bb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c0536f0668f5c8977375b07f84559479b4809a90.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4b040c22f60e6c47a0feee19669a773a3f714460.webp",
+        "https://img.spacehaat.com/images/original/10c50063cb2aa98b8577f598a4e68b392c1e2b28.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/835dd3eee9413ea4eacff7e8cafb709582b6c5cc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3d677d898eff37e7e83a6afb7d3015d70a04b51e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3dd636f5c7cbc5ae4c275306e5084c1b810b03da.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/56da8f4695994a92bae2ccdd289d8e30a15c6613.webp"
+      ]
+    },
+    {
+      "csvName": "Nukleus Barakhamba Tower",
+      "csvBrand": "Nukleus",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c6515c8c041ddb0ed2",
+      "dbOperator": "Nukleus",
+      "dbCentreName": "Nukleus ( Barakhmaba tower )",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 9,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/2f5a64d7d6ef26a8a6d019872862c54d4cb2c242.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7fd9e204dc57780485c72d8b8d39a3357c884d40.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/62b9e3e43502d7b5a7c3fc892132ea65f0275b03.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9e691ef9d1ef01c48944192e9f5381a3d16eaf48.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a6d58f223f6eed84f1df4e63f2318e23fb316231.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/bde43797a84f322ae1258c8b5c8626868b1593e9.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/973c9b52b274794a70eac1e9c8ba70297dc70512.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/823be743662ba2349cc6c3f4aa8a7b7ed42b745c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/53680d7c1970ff07a8bc29eb752bbd947d06acfb.webp"
+      ]
+    },
+    {
+      "csvName": "Nukleus Salcon Rasvilas",
+      "csvBrand": "Nukleus",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1d1515c8c041ddb0fd1",
+      "dbOperator": "Nukleus",
+      "dbCentreName": "Nukleus ( Ras Villas )",
+      "dbMicro": "Saket",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 14,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/35e71807fc70747e462901ef89e0554c28ade0b5.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3db65dd4f4606e0aa504c114f5cdca9cad3b6dee.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b9da28c30fa72483039b10b1c8f0114eddf8e1d7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/09d1d56a9e79e94531e7c75d8235c95fbde780a8.webp",
+        "https://img.spacehaat.com/images/original/4379a9318c87cbab86b09b89dc393447be5cac23.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/8d003d78149bfaba07478bbf43da10a7c5e07037.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/9ae7913e049fcdf40c12968a8a085ffb93db7104.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/b2d4ed967bc85ffd1abfa37cc83bc5a7eb33c72f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/07ee72ca27fc27214747b0a2c930979419b65dab.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/92572203107e78afa932bd310771537ba9f86d1f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a065c0d369364246fb107d8d2600a86a46e7d24b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6d1e7fce37362f1f16b81e0b38ad45b544223171.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/537601497b5b9e581dca9349972880ba6ff0a238.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/263a2b15c5e9e9ca6e3f64831be97ad9aaf3fe71.webp"
+      ]
+    },
+    {
+      "csvName": "One Co Work",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c7515c8c041ddb0edb",
+      "dbOperator": "Nukleus",
+      "dbCentreName": "Nukleus Co-working (Regal)",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4d27209d6d24264023a6fadb33c6e94eb06c1e60.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cb6b1d88c210ae0cd3c0f0b0905d487e7cd82c06.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cb82a941f4f63b427eebc45a29a9031aef061e4d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7d3d77722f5801364068fc6d824a56ef8844b517.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0307208af093f5e79d31638af448537d890e2f1e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3e3fb8b5e3ee222fd8de3645ced1acc52487e059.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/78c44ce25d8ad98d700f43054866166235ffb08c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8c262f22347648f23e806e39408aced17e293d92.webp",
+        "https://img.spacehaat.com/images/original/836851c4234a0bbec7e95a9e5d86c7d38d080056.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/641fa388d432f90ba9a553903549a8e4120d9538.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3e09f1a4bd9bedef2052a4c912d841781e885749.webp"
+      ]
+    },
+    {
+      "csvName": "Onward Coworkx",
+      "csvBrand": "Onward workspaces",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1d3515c8c041ddb1019",
+      "dbOperator": "Onward",
+      "dbCentreName": "Onward Workspaces ( Mohan Cooperative )",
+      "dbMicro": "Okhla",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/2f5da50497aa120063d7b7a6a54a3b4adb2380ee.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a76bc4ff28c4eb383076aca211385ab5e276af0d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/dbdb282d5845827b5b5948e761b71c3b03c5afbb.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0eb776dcb56f69c042428202b59397dbdad33121.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d601c3d5a7082d5a3a8cee6dca9cce703cdcbbf2.webp"
+      ]
+    },
+    {
+      "csvName": "Solace Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Karol Bagh",
+      "listingId": "6a54a1c9515c8c041ddb0f23",
+      "dbOperator": "Solace",
+      "dbCentreName": "Solace",
+      "dbMicro": "Karol Bagh",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 11,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/525c9ed882031ba392488b5b5dc9f12ee5dbbf78.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/aecfb6f5482da9fcf627fb91fd7e5bb76483b410.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/02d40404ba7c2ab55226792c899a92000a2b30c8.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c5734ee63dc62a8ed357c3ddbe6d9736bd56e20b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1ae7a569238b42d6a66e4017ca874d2e38a30d3d.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/993906b759466cecbf7661fea4fcf007c5d27dd0.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cb9e35f2ea3927b1dfe1e5f39f30d6f06eac7418.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/d0dd1efebbfa02a0af6688260aacf2c6a9a7f599.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/27af143d7caf57f091a7bc1a67dfdd4336626051.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/598b83d6ffff784690712b9361ce041a5633fd96.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c4746e5fa0fb875481736a959ead3b3beaa867c3.webp"
+      ]
+    },
+    {
+      "csvName": "Spring House SHDL001",
+      "csvBrand": "Spring House",
+      "csvMicro": "Janakpuri",
+      "listingId": "6a54a1c3515c8c041ddb0e87",
+      "dbOperator": "Spring",
+      "dbCentreName": "Spring house Workspaces (Prem Nagar)",
+      "dbMicro": "Janakpuri",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/78ebc303fcaac70f525f8167c32a21f74341487f.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1f071cdc7544a764e8e17f8cd245438f87703a59.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/44671559dcd85135136587d68e4ea7131a490469.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/91724a81db356a2b6046d8fd3378afba7bfd1167.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/881f49280eec4c677ca6c2aa361fbfee823ff86d.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/6f055a9c324991e538812d120f2868c862b005ad.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cf5ec759f6e7407d38b9f786bff46a4600c5a86a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a360db675fcf732815b80a12b019f5fdf94c8f1b.webp"
+      ]
+    },
+    {
+      "csvName": "SupremeWork",
+      "csvBrand": "Supremework",
+      "csvMicro": "Bhikaji Cama Place",
+      "listingId": "6a54a1cf515c8c041ddb0fb3",
+      "dbOperator": "SupremeWork",
+      "dbCentreName": "SupremeWork",
+      "dbMicro": "Bhikaji Cama",
+      "score": 0.88,
+      "reasons": [
+        "centre_name",
+        "microlocation_fuzzy",
+        "brand",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/32b92af946bd9aa432dffdea6caac37a00ad5f9d.webp",
+        "https://img.spacehaat.com/images/original/f466996d409eafc01b3d1aaac142a8bc3cd4f63a.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/df33fd054b26fa126948e9b663bcf81b93035085.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/ef880b24dd228068bbccaee35f1416b7b3556f98.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f832fbf3b042198db9ada36195a3a293f5074bc3.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a5e387696975864831910f4024f6baf33e88eb6e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a65a87186486139b5bc6eac407cb3743c94020f1.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5b17fc92cb8e326b7a5d5147c87da6193ce0c227.webp"
+      ]
+    },
+    {
+      "csvName": "Team Station",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Rohini",
+      "listingId": "6a54a1c7515c8c041ddb0ef0",
+      "dbOperator": "Team",
+      "dbCentreName": "Team Station Co-working space",
+      "dbMicro": "Rohini",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cb9052d09f173088e656be237b275d24e0e98f04.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/254b7be29720eebca64d12d88050a268ddef5fa5.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/77a54c8428905d83790935c85164a6eaaab3c2d6.webp",
+        "https://img.spacehaat.com/images/original/94260310093128e8d03598da52d5067227ab36ec.jpg",
+        "https://img.spacehaat.com/images/original/8f412e247f0885f880d39c5ff2a7e0e7a0dad330.jpg",
+        "https://img.spacehaat.com/images/original/7e82693e3ac7e64f0fa65d68732179b5d22c5934.jpg",
+        "https://img.spacehaat.com/images/original/bea69b84fbda18ec528ea5055f4707efaa4843da.jpg",
+        "https://img.spacehaat.com/images/original/31a9c8b045bb633e25b377292574a057cc76683e.jpg"
+      ]
+    },
+    {
+      "csvName": "Workingdom Hamilton House",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c6515c8c041ddb0ed5",
+      "dbOperator": "Workingdom",
+      "dbCentreName": "Workingdom ( Harsha Bhawan )",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 13,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/feba193aa6e7e82d9a37820ad8925f8fd3111819.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/e8a44e850eecd960715f3e61de3bb38f928dba19.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3855e503ab03112470b336499954d7c7922e0a6e.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/841ecdeceb6543e54a2b7519b774438159d0bff6.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/efae4b5f3d4125e6ab28d2f3bbe518f54103346d.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4fc4a436a006640c4841ef9bd2c79a4fd950164c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/efff4918a7ff7678147b754d2956bb078c9ed0aa.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/9aeb39211befed4a2db631d35e19018fc9c073b2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7a800a70c10449023aae82eda53fd7c179977383.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6349759198da56bd1912adaf30349833ed22c3e5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/79b357fb8fe615c686f7ca6b7a95e9d416636df8.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/29741c5fdd05ac7ae7c7f7dc26bec8f0ed8d723c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/37607037812b8c885db250ee42f47f4380c29197.webp"
+      ]
+    },
+    {
+      "csvName": "Workly Hemkunt chambers",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1d1515c8c041ddb0fdd",
+      "dbOperator": "Workly",
+      "dbCentreName": "Workly",
+      "dbMicro": "Nehru Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/c75357d9425a29e961b8c217c7143bb7eaa8f322.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/3bd59be01f4b36a1303c75e82eaed453c13e3baa.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/36b63a2f7dd66e2787290c26610ec5a39de6370b.webp",
+        "https://img.spacehaat.com/images/original/77fb17161a610cf936e7b2c640de0767077e9966.jpg",
+        "https://img.spacehaat.com/images/original/68eba4efc41ce03fbdd6cd9653d16d231bea0c16.jpg",
+        "https://img.spacehaat.com/images/original/f787088319b0323779dfcffe0c7de60cb13560cd.jpg",
+        "https://img.spacehaat.com/images/original/e4489e99e792d7af981481341325fd853b8b6be5.jpg",
+        "https://img.spacehaat.com/images/original/b4ab7131774c2a605c6bfca1d0a7c4eb969a0f9d.jpg"
+      ]
+    },
+    {
+      "csvName": "YC Coworking",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1ca515c8c041ddb0f38",
+      "dbOperator": "YC",
+      "dbCentreName": "YC Space Co-working",
+      "dbMicro": "Dwarka",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 14,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/228332848ab4c05bc578090d80426736b8ed1e34.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e71693355597ac472f7ebfa440fd86a0a9a64273.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ab06141c61b6fb827e814bd2b8f7c0f1d0a83d9b.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/012ee5cacb01a47ba8a3047f96e921f83a027d14.webp",
+        "https://img.spacehaat.com/images/original/2c4417a8eadfbedf0aa0697026d8d5d445bbbd88.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/319d48b41c332d61acc23dedcc75135758c92f64.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/a6087edd64fc79e60cf80a74426c8268a02a0971.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/0bd169652d60d947e74ce0d4af637901c434cb83.webp",
+        "https://img.spacehaat.com/images/original/2cad774819a83d7965a67bd4a505cf9fb077550f.jpg",
+        "https://img.spacehaat.com/images/original/3ac09f09e88c546d4b24819dd92a7304026855ed.jpg",
+        "https://img.spacehaat.com/images/original/e2a34a8da4ed9940073034a7cf05f82a58724431.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/f2d4d1c2bacab53cbbc87c480aadd4d9e38a31f5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/491f22adf5106978b187af4feabfede5829a0628.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/76451dcf11c5fbdcbda520ba720e3999d4da9b16.webp"
+      ]
+    },
+    {
+      "csvName": "Avanta Business Centre",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1c4515c8c041ddb0e9f",
+      "dbOperator": "Zen",
+      "dbCentreName": "Zen Business Center",
+      "dbMicro": "Nehru Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 7,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/ea2827971877cce753e15d46d00627075d3cd2bc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/042e2ad0623a0d05ce90b23a7cc0464ddd3d2791.webp",
+        "https://img.spacehaat.com/images/original/42988a7cc6f6842a9fc093f158b7443a858e9973.jpg",
+        "https://img.spacehaat.com/images/original/e82cc63a5f5faf7fc97607623c43961e32f1aa35.jpg",
+        "https://img.spacehaat.com/images/original/cec2dad9b5dccb03dab1b6a387d281116a94c926.jpg",
+        "https://img.spacehaat.com/images/original/d88f5bb6d4e8cb4d9abb7a26089606d55eecc0cb.jpg",
+        "https://img.spacehaat.com/images/original/f1f0e48edf35499b625f499fc8570284a4f4c4de.jpg"
+      ]
+    },
+    {
+      "csvName": "Daftar Cowork",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Jhandewalan",
+      "listingId": "6a54a1ca515c8c041ddb0f26",
+      "dbOperator": "Daftar",
+      "dbCentreName": "Daftar ( 3.0 )",
+      "dbMicro": "Jhandewalan",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/04927c0ad4aed17bc48de422025f3aca9abb58a7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/968d8f80fa5a4e34985ee51b8fedec4430fabd2c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/002c4eb2c68efa71202d13b75107b0145c948124.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/58fe5632c10aec219d71f6e982e8c24855354dee.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e8756c089e9f8acbf82ef344a8993a55f35cf38f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/cf8e4893d900bf84b3a19af06a6ee58dd0be2382.webp"
+      ]
+    },
+    {
+      "csvName": "Gemba Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Greater Kailash II",
+      "listingId": "6a54a1c8515c8c041ddb0f05",
+      "dbOperator": "Gemba",
+      "dbCentreName": "Gemba coworks",
+      "dbMicro": "Greater Kailash",
+      "score": 0.88,
+      "reasons": [
+        "centre_name",
+        "microlocation_fuzzy",
+        "brand_fuzzy",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/7d37f260f0104760f0d6eb35f14e1e3063913131.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/fcc460bf35bbb6f662662a83d1eb0a8b22607a7b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/211ed408da34621b7585f289b4360cf15a5899cf.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/386ba5f5b6923476744de71095dc4ab83aa40237.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ef8e22ca7a0c426e3ce56dc4d4a25feacce1bda0.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/915c4c4da053705df63e2d5d7390177b337d3857.webp"
+      ]
+    },
+    {
+      "csvName": "Pinnacle Spaces",
+      "csvBrand": "",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c7515c8c041ddb0ee1",
+      "dbOperator": "Pinnacle",
+      "dbCentreName": "Pinnacle ( Regal )",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 4,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/f74b5bc79c407ab44916ea9cfb1973daab8abc31.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1aba3b87271326d6e01b9d0a1b2554ce652217db.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/58dc87fd09efccd205b008f60d132d24e4994028.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f80a2e523726dc6e987f6b71ad874c60f8906e1b.webp"
+      ]
+    },
+    {
+      "csvName": "Regus District Center",
+      "csvBrand": "Regus",
+      "csvMicro": "Mayur Vihar",
+      "listingId": "6a54a1d3515c8c041ddb1007",
+      "dbOperator": "Regus",
+      "dbCentreName": "Regus ( Mayur Vihar )",
+      "dbMicro": "Mayur Vihar",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/211bea9ee8f2558fed4791f5feecba021907ed53.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6fc8c7aaa415d6193a5c0c711a49f17fdda7b783.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/f988b0651f6c81ec8b95bbda71467fdd764fa8cb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/646c1c45ba841a080f89d28929d6acf1ec85e28e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1209fccc1168477f62cbcf8aa3017a7b85a6216a.webp"
+      ]
+    },
+    {
+      "csvName": "Rworkspaces Devika Towers",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1c4515c8c041ddb0e99",
+      "dbOperator": "Rworkspaces",
+      "dbCentreName": "Rworkspaces (Devika Tower)",
+      "dbMicro": "Nehru Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/bf3819b5e3373b9783342a545b847ad60a2d4bc0.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2ab262b840bfc2caf89cc8c5fa13ec81fd854aa6.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/e197def8c2026a676027b71a58c21411c8014d55.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8bbf7e9aae25b5b2b112ced9bf7fe75d3636033b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b3a946f6866aafa622d3d1b3f0e8ef2ea340e261.webp"
+      ]
+    },
+    {
+      "csvName": "TCW Unity Work Space",
+      "csvBrand": "tcw unity coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1d1515c8c041ddb0fe0",
+      "dbOperator": "TCW",
+      "dbCentreName": "TCW Unity Workspace ( 1st branch )",
+      "dbMicro": "Dwarka",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/f21b798647cc56ef03eda1b0de1b02db81109824.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b15153f2fc3ec5852b97f7fd558b6bdf5a81fc2e.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/36bf1eade48cff242e9f87f9e0c010cd6843c2e1.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2a7833657e5fb5b628ac0ba3957d6bde7dfc0abd.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/7b3b3208687e24482faecd8e2dab74687ef06fa2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0a1256e6f376205cebc05b6b50371bac7c3614dd.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/860e16a8cf0a47ece74d2052c555c3afc683dbf2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0e8edde7b11e2a53b6eab787f2791e467ba9e885.webp"
+      ]
+    },
+    {
+      "csvName": "Team CoWork",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Saket",
+      "listingId": "6a54a1c2515c8c041ddb0e75",
+      "dbOperator": "Mytime",
+      "dbCentreName": "Mytime Cowork",
+      "dbMicro": "Saket",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/82c85dabae9c63f488b56523f7f9bc1df73972ef.jpg",
+        "https://img.spacehaat.com/images/original/c555cd1a77e6c2a4f169a7e46f6d1f092b81c763.jpg",
+        "https://img.spacehaat.com/images/original/faa21f7a390764ec3e27f6b6d32802edc2c14f19.jpg",
+        "https://img.spacehaat.com/images/original/4304079e1224643c3644e515863152e290ac2c3e.jpg",
+        "https://img.spacehaat.com/images/original/e4dc08e435244c776fc442b7a710bbf7986c1468.jpg",
+        "https://img.spacehaat.com/images/original/0190cbaaabb6f379fc0a6373a4b73cfc8563884c.jpg"
+      ]
+    },
+    {
+      "csvName": "The Bivouac",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1cd515c8c041ddb0f80",
+      "dbOperator": "Bivouac",
+      "dbCentreName": "Bivouac",
+      "dbMicro": "Connaught Place",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 5,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/c817451fc404081effc105bf534db90357b9ffda.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ca336d8549d0aeee1cd60a99b76d32469b97c319.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/923358571e93ca0673185951c5fc40c41d1a697c.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ad103ba7aca753c44002f4ef86d21954ab3107f8.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/9b5de84667d6aaa3e09f6f4660a8eac97e03ca5e.webp"
+      ]
+    },
+    {
+      "csvName": "The Social Stays",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Okhla",
+      "listingId": "6a54a1d5515c8c041ddb1043",
+      "dbOperator": "The",
+      "dbCentreName": "The social stayz",
+      "dbMicro": "Okhla",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "csvImageCount": 4,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/d76c30528f9915070a9e568cf61738956b3b9cb2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a025d95a76ec471d224f5dbeafefcb833bc83566.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ec70a86a81bf71445cb51d6d611585c06019a780.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/db863d16386b8a18dd29a290f36a199936898d3d.webp"
+      ]
+    },
+    {
+      "csvName": "Vistara Co Work Space",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Rohini Sector 22",
+      "listingId": "6a54a1c7515c8c041ddb0eed",
+      "dbOperator": "Vistara",
+      "dbCentreName": "Vistara Co-work space",
+      "dbMicro": "Rohini",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation_fuzzy",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 9,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/69c34b8616b7aebb036b4a5cfaef920d324def81.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/235bcae3b50614eeadc3c1741cfa2aac6bcc255f.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/2c0a757e8cf40e393b6995a5959aa0d8d6c4c21b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/39fa8d66c17d94983c37fd3dc27ce5bda6b82cec.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/8141da294469a84baf67fde5e56a3d59fdf5c7ae.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/3bdf9ec4b980afe93d161911af100bfeabe35397.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/615d226d49378cf808974d1a61a8d48a46548573.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c346bbcaabba2fb8077a8b9f59666e916e2088fe.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0ed60e501aaf9cb418b2c7ac19573ada0803211c.webp"
+      ]
+    },
+    {
+      "csvName": "Work Exchange",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka Delhi",
+      "listingId": "6a54a1d4515c8c041ddb1025",
+      "dbOperator": "WorkExchange",
+      "dbCentreName": "WorkExchange ( Dwarka )",
+      "dbMicro": "Dwarka",
+      "score": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/94a5162a68da0a7739b5151a6b6e641d281c8646.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b26a7388450822bb4515d37b3ec550185147f3cd.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/0325b0da374eca287600f798169a0d998cb315bb.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/45feff3817c282a146a4ae88ea00057dd16b912b.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/4b61accc7c8a05e99ba3be847888fcb75bea6658.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/c7ae8a1ba820c634cfa72b97755f8efa44276dca.webp"
+      ]
+    },
+    {
+      "csvName": "91Springboard Chandra Bhavan",
+      "csvBrand": "91springboard",
+      "csvMicro": "Nehru Place",
+      "listingId": "6a54a1cb515c8c041ddb0f44",
+      "dbOperator": "91",
+      "dbCentreName": "91 Springboard ( Harsh Bhawan )",
+      "dbMicro": "Nehru Place",
+      "score": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand",
+        "brand_micro"
+      ],
+      "csvImageCount": 15,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/1d8cbf76354eb6059d2c6dbc63ad34cbb48d67ab.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5eb9bd57346c3b7c3f7a4a9d8208c98d5b3bb0bf.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b54eff756b078debd85ffd2bb177ee6cbc955d61.webp",
+        "https://img.spacehaat.com/images/original/43a625125c597b5ec5b3cf2383277c4740b30638.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/269d82a1265795e73651a79ffc3eac8bcf5ae626.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/775aa5505c53a2d41e49b83a889863b22b432c05.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1381af7a562e3c047828d38969ca70de833017ef.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/90b877e26f55f6619a7719b59c627071157645a3.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/984d97baab0164b66a7841557033d8224a1cfb81.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/706b55765c4562da7c3d21e8743cf5aa9d0c27dd.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/7d25548bbeceae0c5fde06cb0eae72588a803a23.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/844dcdf6c7013eaa5870f3ef95a09db19a0ccf15.webp",
+        "https://img.spacehaat.com/images/original/2ec72e6c83336130147c981d36b6eb2a8b5d8369.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/f43cb8c7a47e2fbf87211c93591d5187fd87d509.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/1b8f9595846c1bf6f923e4f2e1d1812140b5ad25.webp"
+      ]
+    },
+    {
+      "csvName": "Co Offiz",
+      "csvBrand": "Co Offiz",
+      "csvMicro": "Janakpuri",
+      "listingId": "6a54a1c3515c8c041ddb0e84",
+      "dbOperator": "Coffiz",
+      "dbCentreName": "Coffiz 632A ( 2nd floor, 3rd floor )",
+      "dbMicro": "Janakpuri",
+      "score": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "csvImageCount": 10,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/57ffc6e2d12fbea401e46ecc155296c9d1a9b550.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/cbaa64774f358bc32814e3bf9f7819c2d54748b7.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/4e179c773780d97ac300120580105367a1d3e7b2.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f8d29d27b869adaa770052c7443badeb2de2b8e8.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6ef79fab2c1fe2d5cd4b02c49dc23807248d2ac2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/330f0d77523b7dd63fd518ba8f353c96596a1e8a.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/a5b9eec607c65f8419b64ebdf6a8839160e31011.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/5fd330a87f71e814a9b7f30cc60ac45b19c80d0e.webp",
+        "https://img.spacehaat.com/images/original/461f6c54542eacbd61ce146ab1b03a01f1f77413.jpg",
+        "https://img.spacehaat.com/images/latest_images_2024/1dbbf5292ec3b020149bc696d0d729ab18e8ba85.webp"
+      ]
+    },
+    {
+      "csvName": "TRE Coworks",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Connaught Place",
+      "listingId": "6a54a1c6515c8c041ddb0ec9",
+      "dbOperator": "Connect",
+      "dbCentreName": "Connect HQ Co-working (CP)",
+      "dbMicro": "Connaught Place",
+      "score": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "csvImageCount": 7,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/original/ecec1773ae6ec153bf6a2f065857539d53c0effb.jpg",
+        "https://img.spacehaat.com/images/original/1ac84b6555fd588bee7e88daf7b1307026bf6154.jpg",
+        "https://img.spacehaat.com/images/original/1522b7adc23da066488269d1d642963b70f96e89.jpg",
+        "https://img.spacehaat.com/images/original/4f43d49c6bb51b37500af231a0858e590788380c.jpg",
+        "https://img.spacehaat.com/images/original/fe3a6d82c764d3cff6106537b0dec560f6b22b8b.jpg",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/e77a986bf45ef2d4c76193a3c92e4c3e670b1bdf.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/65f2706203074947c0d28be90139155f6d1b096e.webp"
+      ]
+    },
+    {
+      "csvName": "WorkingRise",
+      "csvBrand": "Other Coworking",
+      "csvMicro": "Dwarka",
+      "listingId": "6a54a1ca515c8c041ddb0f3b",
+      "dbOperator": "Work",
+      "dbCentreName": "Work & thrive",
+      "dbMicro": "Dwarka",
+      "score": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "csvImageCount": 8,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/e9c15fa622443fbaa7ad0b563ba8b06efdefbeb1.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/da166d215b0474c8762dbe80e0388150eb675eee.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/b54832a034c1afee06707e669b7ad75cf43a55b5.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/109c73ccacccc9b53580a02246ec125a244aaae9.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/1761601973c7d278a8e2e5006b042e1e6353cc6b.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/f9caec39ad7688596d143810718ec971ca642a58.webp",
+        "https://spacehaat-bucket.s3.ap-south-1.amazonaws.com/images/d5d13a050baca1d2e619b54c4375b02a652270b9.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/78e353573dce3d3d639235fc145f9b604943dbcf.webp"
+      ]
+    },
+    {
+      "csvName": "Spring House SHDL003",
+      "csvBrand": "Spring House",
+      "csvMicro": "Janakpuri",
+      "listingId": "6a54a1d4515c8c041ddb1028",
+      "dbOperator": "Springhouse",
+      "dbCentreName": "Springhouse ( SHDL006 / B1/62)",
+      "dbMicro": "Janakpuri",
+      "score": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "csvImageCount": 6,
+      "dbImageCount": 0,
+      "images_url": [
+        "https://img.spacehaat.com/images/latest_images_2024/eb9f32651231d6c4ef8a466a2a63e4a00c2a1583.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/9592e5ef3c786902e984719dc0599768caffa9a2.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6c1ac119aec3ba9554fab8221437279dab5e7efc.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/ee5b07ad31fcef2b652ad786c52db24d8e6903f7.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/6bf2641b64ac89f541ebaab9b44a3844b577eff4.webp",
+        "https://img.spacehaat.com/images/latest_images_2024/25811d0ec78d74d0f7d68f14fa0ad036eaa56a7e.webp"
+      ]
+    }
+  ],
+  "unmatchedCsv": [
+    {
+      "name": "91Springboard Mohan Estate",
+      "brand_name": "91springboard",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.34,
+      "reasons": [
+        "centre_name_partial",
+        "brand"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "ABL Workspace",
+      "brand_name": "ABL Workspaces",
+      "microlocation": "Okhla",
+      "bestScore": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "ABL Workspace",
+      "brand_name": "ABL Workspaces",
+      "microlocation": "Green Park",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "AltF Coworking Statesman House",
+      "brand_name": "AltF",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 12
+    },
+    {
+      "name": "AtWork",
+      "brand_name": "Other Coworking",
+      "microlocation": "Karol Bagh",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Aum Coworking Spaces",
+      "brand_name": "Other Coworking",
+      "microlocation": "South Extension",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Brain on Rent",
+      "brand_name": "Other Coworking",
+      "microlocation": "Malviya Nagar",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "COWRKS Worldmark 1",
+      "brand_name": "Cowrks",
+      "microlocation": "Aerocity",
+      "bestScore": 0.28,
+      "reasons": [
+        "microlocation"
+      ],
+      "imageCount": 12
+    },
+    {
+      "name": "Co Offiz HB Twin Tower",
+      "brand_name": "Co Offiz",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 14
+    },
+    {
+      "name": "CoVyom",
+      "brand_name": "Other Coworking",
+      "microlocation": "Chanakya Puri",
+      "bestScore": 0.22,
+      "reasons": [
+        "centre_name_partial"
+      ],
+      "imageCount": 12
+    },
+    {
+      "name": "Collative Global Foyer White House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Saket",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 14
+    },
+    {
+      "name": "Collective By Quattro",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 12
+    },
+    {
+      "name": "Control Workspace",
+      "brand_name": "Other Coworking",
+      "microlocation": "Uttam Nagar",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "Cosphere",
+      "brand_name": "Other Coworking",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "Coworkrz",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Delhi Co.",
+      "brand_name": "Other Coworking",
+      "microlocation": "Hauz Khas",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 14
+    },
+    {
+      "name": "Desker CoWorking",
+      "brand_name": "desker",
+      "microlocation": "Okhla",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "Dhandu Work Spaces",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Empowerers",
+      "brand_name": "Other Coworking",
+      "microlocation": "Green Park",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Empowerers Westend Marg",
+      "brand_name": "Empowerers",
+      "microlocation": "Saket",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "imageCount": 14
+    },
+    {
+      "name": "Engine house",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.22,
+      "reasons": [
+        "centre_name_partial"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Hub Hive 11",
+      "brand_name": "Bhive Workspace",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "Hub Hive 11",
+      "brand_name": "Bhive Workspace",
+      "microlocation": "Saket",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 12
+    },
+    {
+      "name": "Innov8 Salcon Rasvilas",
+      "brand_name": "Innov8",
+      "microlocation": "Saket",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Investopad",
+      "brand_name": "investopad",
+      "microlocation": "Hauz Khas",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Koworkspace",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "KraStay",
+      "brand_name": "Other Coworking",
+      "microlocation": "Saket",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Master Space",
+      "brand_name": "Other Coworking",
+      "microlocation": "Najafgarh",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Nukleus Regal",
+      "brand_name": "Nukleus",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "Onward Workspaces",
+      "brand_name": "Onward workspaces",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Peer 2 Desk",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Peer Share",
+      "brand_name": "Other Coworking",
+      "microlocation": "Sultanpur",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Prowork",
+      "brand_name": "Other Coworking",
+      "microlocation": "Karol Bagh",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Spacetime Savitri Premises",
+      "brand_name": "Spacetime",
+      "microlocation": "Greater Kailash II",
+      "bestScore": 0.52,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation_fuzzy",
+        "brand"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "Stirring Minds",
+      "brand_name": "stirring minds",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "Supreme Cowork DLF City Centre Mall",
+      "brand_name": "Supremework",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "SupremeWork",
+      "brand_name": "Supremework",
+      "microlocation": "Chattarpur",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "T Wrks",
+      "brand_name": "Other Coworking",
+      "microlocation": "KarKardooma",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "The Circle Work Omaxe Square",
+      "brand_name": "The Circle Work",
+      "microlocation": "Jasola",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "The Club Co",
+      "brand_name": "Other Coworking",
+      "microlocation": "Janakpuri",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "The Office Pass",
+      "brand_name": "The Office Pass",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 13
+    },
+    {
+      "name": "Thrive Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Nirman Vihar",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Wolk Bakshi House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Work Matrix",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Work Room",
+      "brand_name": "Other Coworking",
+      "microlocation": "Okhla",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Work With Us",
+      "brand_name": "Other Coworking",
+      "microlocation": "Janakpuri",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Work and Beyond",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Workhive",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mayur Vihar",
+      "bestScore": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "22 Workspace",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "91Springboard Prius Platinum",
+      "brand_name": "91springboard",
+      "microlocation": "Saket",
+      "bestScore": 0.34,
+      "reasons": [
+        "centre_name_partial",
+        "brand"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "ABL Workspace",
+      "brand_name": "ABL Workspaces",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "ABL Workspaces",
+      "brand_name": "ABL Workspaces",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "AltF Mohan Cooperative",
+      "brand_name": "AltF",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Anticube",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.08,
+      "reasons": [
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Anticube Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Apeejay Business Center Arunachal Building",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Avanta Business Centre",
+      "brand_name": "Other Coworking",
+      "microlocation": "Saket",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Avanta Business Centre Ambadeep Building",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Avanta Business Centre Statesman House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Awfis",
+      "brand_name": "Awfis",
+      "microlocation": "Shalimar Bagh",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Awfis Allied House",
+      "brand_name": "Awfis",
+      "microlocation": "Vasant Kunj",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Awfis Mohan Cooperative",
+      "brand_name": "Awfis",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Awfis Qutab",
+      "brand_name": "Awfis",
+      "microlocation": "Saket",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Awfis Uppal's Genesis",
+      "brand_name": "Awfis",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Business Magnets Workspaces",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "CoWork Vikas Kendra",
+      "brand_name": "Other Coworking",
+      "microlocation": "Janakpuri",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Cocoweave Work Cafe",
+      "brand_name": "Other Coworking",
+      "microlocation": "Preet Vihar",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "CorporatEdge HT House",
+      "brand_name": "Corporatedge",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Creativity Cove",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 14
+    },
+    {
+      "name": "Crescendo Cowork",
+      "brand_name": "Other Coworking",
+      "microlocation": "Okhla",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Cube 8",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Daftar Cowork",
+      "brand_name": "Other Coworking",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "EkAnek Spaces - Coworking Space & Business Centre",
+      "brand_name": "",
+      "microlocation": "Vasant Vihar",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 0
+    },
+    {
+      "name": "Friday Coworking Spaces",
+      "brand_name": "Other Coworking",
+      "microlocation": "Lado Sarai",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Get Set Office",
+      "brand_name": "Other Coworking",
+      "microlocation": "Yusuf Sarai",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 3
+    },
+    {
+      "name": "Hub And Oak",
+      "brand_name": "Hub and Oak",
+      "microlocation": "Defence Colony",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "IKSANA Workspaces by Pannal",
+      "brand_name": "Other Coworking",
+      "microlocation": "South Delhi",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Innov8 Harsha Bhawan",
+      "brand_name": "Innov8",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Kinnoti Hub",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.22,
+      "reasons": [
+        "centre_name_partial"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Leswishin Private limited",
+      "brand_name": "Other Coworking",
+      "microlocation": "Vikas Puri",
+      "bestScore": 0.08,
+      "reasons": [
+        "brand_fuzzy"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Lifewall Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Sultanpur",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Login Coworks",
+      "brand_name": "Other Coworking",
+      "microlocation": "West Delhi",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Magolpuri Co-Space",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mangolpuri",
+      "bestScore": 0.22,
+      "reasons": [
+        "centre_name_partial"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Nukleus",
+      "brand_name": "Nukleus",
+      "microlocation": "Rajinder Nagar",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Oahfeo Business Center",
+      "brand_name": "Other Coworking",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Office Area Available \u2013 Ideal for Startups & Freelancers",
+      "brand_name": "",
+      "microlocation": "Vikas Puri",
+      "bestScore": 0.0,
+      "reasons": [],
+      "imageCount": 11
+    },
+    {
+      "name": "Our Offices Gopal Heights",
+      "brand_name": "Other Coworking",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "ReOffice",
+      "brand_name": "ReOffice",
+      "microlocation": "Okhla",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Regus Caddie Commercial Tower",
+      "brand_name": "Regus",
+      "microlocation": "Aerocity",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Regus Delhi Rectangle",
+      "brand_name": "Regus",
+      "microlocation": "Saket",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Regus Elegance",
+      "brand_name": "Regus",
+      "microlocation": "Jasola",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Regus Eros Corporate Tower",
+      "brand_name": "Regus",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "Regus International Trade Tower",
+      "brand_name": "Regus",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Regus KLJ Tower",
+      "brand_name": "Regus",
+      "microlocation": "Netaji Subhash Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Regus Punj Essen House",
+      "brand_name": "Regus",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Regus Vasant Square Mall",
+      "brand_name": "Regus",
+      "microlocation": "Vasant Kunj",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Rworkspaces Vardhman Trade Centre",
+      "brand_name": "Other Coworking",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Sharedesk",
+      "brand_name": "Other Coworking",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Smart Square",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Spacetime",
+      "brand_name": "Spacetime",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Spacetime Deizen House",
+      "brand_name": "Spacetime",
+      "microlocation": "Greater Kailash",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Spacetime Regal Building",
+      "brand_name": "Spacetime",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand"
+      ],
+      "imageCount": 4
+    },
+    {
+      "name": "Spring House",
+      "brand_name": "Spring House",
+      "microlocation": "Naraina",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Sprint Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Mohan Cooperative",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Start CoWorks",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.84,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation",
+        "brand_fuzzy",
+        "brand_micro"
+      ],
+      "imageCount": 9
+    },
+    {
+      "name": "The Berry Coworks",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.46,
+      "reasons": [
+        "centre_name_fuzzy",
+        "brand_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "The Coworking Space",
+      "brand_name": "",
+      "microlocation": "Uttam Nagar",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 11
+    },
+    {
+      "name": "The Executive Centre Qutab",
+      "brand_name": "The Executive Center",
+      "microlocation": "Saket",
+      "bestScore": 0.28,
+      "reasons": [
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "The Executive Centre TEC DLF Centre",
+      "brand_name": "The Executive Center",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.28,
+      "reasons": [
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "The Executive Centre Worldmark",
+      "brand_name": "The Executive Center",
+      "microlocation": "Aerocity",
+      "bestScore": 0.28,
+      "reasons": [
+        "microlocation"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "The Nice",
+      "brand_name": "Other Coworking",
+      "microlocation": "Laxmi Nagar",
+      "bestScore": 0.3,
+      "reasons": [
+        "centre_name_partial",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "The Social Stays (formerly ArtBuzz)",
+      "brand_name": "Other Coworking",
+      "microlocation": "Okhla",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "brand_fuzzy",
+        "strong_name_micro",
+        "brand_micro"
+      ],
+      "imageCount": 10
+    },
+    {
+      "name": "Trinity Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka Delhi",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "U.S.Coworking",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "UnX Space",
+      "brand_name": "Other Coworking",
+      "microlocation": "South Delhi",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 6
+    },
+    {
+      "name": "Urban Cabin Cowork",
+      "brand_name": "urban cabin cowork",
+      "microlocation": "Pusa Road",
+      "bestScore": 0.62,
+      "reasons": [
+        "centre_name",
+        "brand"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "UrbanWrk Max House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Okhla",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Vatika Business Centre Thapar House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.38,
+      "reasons": [
+        "centre_name_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Wolk Punj House",
+      "brand_name": "Other Coworking",
+      "microlocation": "Nehru Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Work@100feet",
+      "brand_name": "Other Coworking",
+      "microlocation": "Chattarpur",
+      "bestScore": 0.28,
+      "reasons": [
+        "microlocation"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Workingdom Harsha Bhawan",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.88,
+      "reasons": [
+        "centre_name_fuzzy",
+        "microlocation",
+        "strong_name_micro"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "Worklikeboss",
+      "brand_name": "Other Coworking",
+      "microlocation": "Dwarka",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 5
+    },
+    {
+      "name": "Workspaze",
+      "brand_name": "Other Coworking",
+      "microlocation": "Connaught Place",
+      "bestScore": 0.36,
+      "reasons": [
+        "microlocation",
+        "brand_fuzzy"
+      ],
+      "imageCount": 7
+    },
+    {
+      "name": "ZO Space",
+      "brand_name": "Other Coworking",
+      "microlocation": "Saket",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name_partial",
+        "microlocation"
+      ],
+      "imageCount": 8
+    },
+    {
+      "name": "Zing Space",
+      "brand_name": "Other Coworking",
+      "microlocation": "South Delhi",
+      "bestScore": 0.5,
+      "reasons": [
+        "centre_name"
+      ],
+      "imageCount": 6
+    }
+  ],
+  "unmatchedDb": [
+    {
+      "id": "6a54a1c2515c8c041ddb0e6c",
+      "operator": "MY",
+      "centreName": "MY SMALL BUT SWEET OFFICE",
+      "micro": "COMMERCE SIX ROAD",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c3515c8c041ddb0e78",
+      "operator": "Empowers",
+      "centreName": "Empowers 133",
+      "micro": "Saket",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c3515c8c041ddb0e81",
+      "operator": "Purple",
+      "centreName": "Purple Co-working",
+      "micro": "Janakpuri",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c3515c8c041ddb0e8a",
+      "operator": "Cowynd",
+      "centreName": "Cowynd",
+      "micro": "Dwarka",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c3515c8c041ddb0e8d",
+      "operator": "Get",
+      "centreName": "Get set office",
+      "micro": "Green Park",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c4515c8c041ddb0e96",
+      "operator": "Delhi",
+      "centreName": "Delhi Co",
+      "micro": "Green Park",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c4515c8c041ddb0e9c",
+      "operator": "WOLK",
+      "centreName": "WOLK Co-working",
+      "micro": "Nehru Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c4515c8c041ddb0ea2",
+      "operator": "Avanta",
+      "centreName": "Avanta Co-working ( Eros Corporate Tower 5th floor)",
+      "micro": "Nehru Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c5515c8c041ddb0eb1",
+      "operator": "Galaxy",
+      "centreName": "Galaxy",
+      "micro": "Netaji Subhash Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c5515c8c041ddb0eb7",
+      "operator": "Coworkpad",
+      "centreName": "Coworkpad",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c5515c8c041ddb0eba",
+      "operator": "Hauz",
+      "centreName": "Hauz Khas Social",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c5515c8c041ddb0ec0",
+      "operator": "Spaced",
+      "centreName": "Spaced out Co-working & Cafe",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c6515c8c041ddb0ec3",
+      "operator": "Conscious",
+      "centreName": "Conscious coffee cravings(Co-work-out)",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c6515c8c041ddb0ec6",
+      "operator": "Co-offiz",
+      "centreName": "Co-offiz (NSP)",
+      "micro": "Netaji Subhash Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c6515c8c041ddb0ecc",
+      "operator": "Avanta",
+      "centreName": "Avanta ( Statesman house )",
+      "micro": "Barakhamba",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c6515c8c041ddb0ecf",
+      "operator": "Avanta",
+      "centreName": "Avanta ( Amba deep building )",
+      "micro": "Barakhamba",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c7515c8c041ddb0ee4",
+      "operator": "Workindom",
+      "centreName": "Workindom ( Hamilion )",
+      "micro": "Connaught Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c7515c8c041ddb0ee7",
+      "operator": "Start",
+      "centreName": "Start works",
+      "micro": "Barakhamba",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0ef3",
+      "operator": "Munim",
+      "centreName": "Munim Co-working",
+      "micro": "Pitampura",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0ef6",
+      "operator": "Linkup",
+      "centreName": "Linkup Co-working",
+      "micro": "Rohini",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0ef9",
+      "operator": "Amartya",
+      "centreName": "Amartya Co-working",
+      "micro": "Rohini",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0efc",
+      "operator": "Rosate",
+      "centreName": "Rosate Co-working space / Usptage Club",
+      "micro": "Aerocity",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0eff",
+      "operator": "Bollco",
+      "centreName": "Bollco Co-working",
+      "micro": "Greater Kailash",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0f02",
+      "operator": "Spacetime",
+      "centreName": "Spacetime ( GK2 ) Savitrii is primry ( 4th floor), Indure, Desein",
+      "micro": "Greater Kailash",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c8515c8c041ddb0f08",
+      "operator": "Third",
+      "centreName": "Third place ( india accelerator )",
+      "micro": "Greater Kailash",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f11",
+      "operator": "Supreme",
+      "centreName": "Supreme Co-work",
+      "micro": "Shalimarg Bagh",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f14",
+      "operator": "The",
+      "centreName": "The Co-work company",
+      "micro": "Pitampura",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f17",
+      "operator": "Oahfeo",
+      "centreName": "Oahfeo",
+      "micro": "Shalimarh bagh",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f1a",
+      "operator": "Shri",
+      "centreName": "Shri Ram Office Space",
+      "micro": "Rithala",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f1d",
+      "operator": "Atwork",
+      "centreName": "Atwork a",
+      "micro": "Jhandewalan",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1c9515c8c041ddb0f20",
+      "operator": "Berry",
+      "centreName": "Berry Coworks",
+      "micro": "Jhandewalan",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ca515c8c041ddb0f29",
+      "operator": "Daftar",
+      "centreName": "Daftar Cowork Momentum 5.0",
+      "micro": "Jhandewalan",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ca515c8c041ddb0f2c",
+      "operator": "Urban",
+      "centreName": "Urban Cabin Cowork",
+      "micro": "Rajender Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ca515c8c041ddb0f2f",
+      "operator": "Dynamic",
+      "centreName": "Dynamic Desks",
+      "micro": "Karol Bagh",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cb515c8c041ddb0f3e",
+      "operator": "Avanta",
+      "centreName": "Avanta Business Center",
+      "micro": "Nehru Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cb515c8c041ddb0f47",
+      "operator": "REGUS",
+      "centreName": "REGUS ( Eros toert )",
+      "micro": "Nerhu place 50 m",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cb515c8c041ddb0f4a",
+      "operator": "Circle.work",
+      "centreName": "Circle.work ( Jasola )",
+      "micro": "Jasola",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cb515c8c041ddb0f4d",
+      "operator": "Corporate",
+      "centreName": "Corporate Edge",
+      "micro": "Bikaji Kama Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cb515c8c041ddb0f50",
+      "operator": "Daftar",
+      "centreName": "Daftar Cowork (HQ, 1.0)",
+      "micro": "Derawal Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f53",
+      "operator": "Daftar",
+      "centreName": "Daftar Cowork ( 2.0 Elevate )",
+      "micro": "Delhi",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f56",
+      "operator": "Daftar",
+      "centreName": "Daftar Cowork 4.0 ( Explore )",
+      "micro": "Ashok Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f59",
+      "operator": "Oahfeo",
+      "centreName": "Oahfeo ( De Vibe, Ashok vihar ph 2 )",
+      "micro": "Shalimar Bagh",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f5c",
+      "operator": "Oahfeo",
+      "centreName": "Oahfeo ( Node )",
+      "micro": "Shashtri nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f5f",
+      "operator": "Cosphere",
+      "centreName": "Cosphere Spaces",
+      "micro": "Model town, New",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f65",
+      "operator": "Peer",
+      "centreName": "Peer Share ( Vasant Vihar )",
+      "micro": "Vasant Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cc515c8c041ddb0f6b",
+      "operator": "Ctrlflux",
+      "centreName": "Ctrlflux ( Sultanpur )",
+      "micro": "Sultanpur",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cd515c8c041ddb0f6e",
+      "operator": "Elegant",
+      "centreName": "Elegant Workspace ( Sultanpur)",
+      "micro": "Sultanpur",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cd515c8c041ddb0f71",
+      "operator": "Zing",
+      "centreName": "Zing Space ( 385 )",
+      "micro": "Ghitorni",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cd515c8c041ddb0f74",
+      "operator": "Iksana",
+      "centreName": "Iksana ( Panal )",
+      "micro": "Chattarpur",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cd515c8c041ddb0f77",
+      "operator": "Nearbydesk",
+      "centreName": "Nearbydesk",
+      "micro": "Vasant Kunj",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f86",
+      "operator": "Kuresu",
+      "centreName": "Kuresu",
+      "micro": "Kirti Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f89",
+      "operator": "Nyro",
+      "centreName": "Nyro Workclub",
+      "micro": "Moti Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f8c",
+      "operator": "Ojas",
+      "centreName": "Ojas Co-working",
+      "micro": "Patel Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f8f",
+      "operator": "RD",
+      "centreName": "RD Plus",
+      "micro": "Shadipur, Nariana vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f92",
+      "operator": "Flexpod",
+      "centreName": "Flexpod",
+      "micro": "South Extension",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f95",
+      "operator": "Cocoweave",
+      "centreName": "Cocoweave",
+      "micro": "Karkadurma",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f98",
+      "operator": "Co-offiz",
+      "centreName": "Co-offiz",
+      "micro": "Preet Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1ce515c8c041ddb0f9b",
+      "operator": "Bright",
+      "centreName": "Bright vibes co-working",
+      "micro": "Anand Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cf515c8c041ddb0f9e",
+      "operator": "Twrks",
+      "centreName": "Twrks",
+      "micro": "Preet Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cf515c8c041ddb0fa7",
+      "operator": "Desker",
+      "centreName": "Desker Co-working",
+      "micro": "Govindpuri",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cf515c8c041ddb0faa",
+      "operator": "Myworkroom",
+      "centreName": "Myworkroom Co-working space",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1cf515c8c041ddb0fb0",
+      "operator": "91",
+      "centreName": "91 Springboard",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fb9",
+      "operator": "Spot",
+      "centreName": "Spot space",
+      "micro": "Moti Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fbc",
+      "operator": "Kovark",
+      "centreName": "Kovark",
+      "micro": "Moti Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fc2",
+      "operator": "Collative",
+      "centreName": "Collative",
+      "micro": "Malviya Naga",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fc8",
+      "operator": "Brain",
+      "centreName": "Brain on rent",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fcb",
+      "operator": "Ambition",
+      "centreName": "Ambition Cowork",
+      "micro": "Hauz Khas",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d0515c8c041ddb0fce",
+      "operator": "ThinkHaus",
+      "centreName": "ThinkHaus Spaces",
+      "micro": "Saket",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d1515c8c041ddb0fd7",
+      "operator": "Flexihub",
+      "centreName": "Flexihub Space",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d1515c8c041ddb0fda",
+      "operator": "Wolk",
+      "centreName": "Wolk A Co-working space ( Punj House )",
+      "micro": "Nehru Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d1515c8c041ddb0fe3",
+      "operator": "Invento",
+      "centreName": "Invento B",
+      "micro": "Dwarka",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0fec",
+      "operator": "Sollace",
+      "centreName": "Sollace ( Karol Bagh )",
+      "micro": "Karol Bagh",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0fef",
+      "operator": "Atwork",
+      "centreName": "Atwork B",
+      "micro": "Jahndwalan",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0ff2",
+      "operator": "Covork",
+      "centreName": "Covork",
+      "micro": "Paschim Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0ff5",
+      "operator": "Folk",
+      "centreName": "Folk us",
+      "micro": "Paschim Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0ffb",
+      "operator": "Office",
+      "centreName": "Office On ( Laxmi Nagar )",
+      "micro": "Laxmi Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d2515c8c041ddb0ffe",
+      "operator": "Cloudspace",
+      "centreName": "Cloudspace (",
+      "micro": "Nirman Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d3515c8c041ddb100a",
+      "operator": "Altf",
+      "centreName": "Altf ( Mohan Cooperative )",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d3515c8c041ddb1010",
+      "operator": "Awfis",
+      "centreName": "Awfis ( Mohan Cooperative )",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d3515c8c041ddb1013",
+      "operator": "Spacetime",
+      "centreName": "Spacetime ( Mohan Cooperative )",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d3515c8c041ddb1016",
+      "operator": "Commune21",
+      "centreName": "Commune21",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d4515c8c041ddb101c",
+      "operator": "Avatna",
+      "centreName": "Avatna ( Saket )",
+      "micro": "Saket",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d4515c8c041ddb101f",
+      "operator": "Flexihub",
+      "centreName": "Flexihub ( Saket )",
+      "micro": "Saket",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d4515c8c041ddb1022",
+      "operator": "The",
+      "centreName": "The office pass ( Mohan Cooperative )",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d4515c8c041ddb102b",
+      "operator": "TCW",
+      "centreName": "TCW Unity ( 2nd branch )",
+      "micro": "Dwarka",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d4515c8c041ddb1031",
+      "operator": "Cozywork",
+      "centreName": "Cozywork",
+      "micro": "Tilak Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb1034",
+      "operator": "Office",
+      "centreName": "Office Cabin",
+      "micro": "Paschim Vihar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb1037",
+      "operator": "Vatika",
+      "centreName": "Vatika Business Center ( CP)",
+      "micro": "Janpath",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb103a",
+      "operator": "Central",
+      "centreName": "Central Business Center",
+      "micro": "Lajpat Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb103d",
+      "operator": "Hashtag",
+      "centreName": "Hashtag Co-working",
+      "micro": "Okhla",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb1046",
+      "operator": "Rworkspace",
+      "centreName": "Rworkspace ( Vardhmanz_",
+      "micro": "Nehru Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb1049",
+      "operator": "9",
+      "centreName": "9 to 5 workspace ( The olive )",
+      "micro": "Lajpat Nagar",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d5515c8c041ddb104c",
+      "operator": "Apeejay",
+      "centreName": "Apeejay busisne center",
+      "micro": "Connaught Place",
+      "imageCount": 0
+    },
+    {
+      "id": "6a54a1d6515c8c041ddb104f",
+      "operator": "STIRRING",
+      "centreName": "STIRRING MINDS ( Delhi )",
+      "micro": "Delhi Gate",
+      "imageCount": 0
+    }
+  ]
+}

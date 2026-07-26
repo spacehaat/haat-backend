@@ -14,13 +14,15 @@ type PushMessage = {
 
 const LEAD_ACCESS_PERMS = [PERMISSIONS.LEADS_READ, PERMISSIONS.LEADS_WRITE];
 
-async function sendExpoPush(tokens: string[], message: PushMessage) {
-  if (!tokens.length) return;
+async function sendExpoPush(tokens: string[], message: PushMessage): Promise<boolean> {
+  if (!tokens.length) return false;
 
   const chunks: string[][] = [];
   for (let i = 0; i < tokens.length; i += 100) {
     chunks.push(tokens.slice(i, i + 100));
   }
+
+  let delivered = false;
 
   await Promise.all(chunks.map(async (batch) => {
     const res = await fetch('https://exp.host/--/api/v2/push/send', {
@@ -53,6 +55,7 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
     const staleTokens: string[] = [];
     if (json?.data) {
       json.data.forEach((item, index) => {
+        if (item.status === 'ok') delivered = true;
         if (item.status === 'error') {
           // eslint-disable-next-line no-console
           console.error('[push] Expo send error:', item.message, item.details);
@@ -61,6 +64,8 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
           }
         }
       });
+    } else if (res.ok) {
+      delivered = true;
     }
 
     if (staleTokens.length) {
@@ -69,6 +74,8 @@ async function sendExpoPush(tokens: string[], message: PushMessage) {
       console.warn(`[push] removed ${staleTokens.length} stale device token(s)`);
     }
   }));
+
+  return delivered;
 }
 
 export async function registerDevice(input: DeviceRegisterInput, user: AuthUser) {
@@ -93,14 +100,14 @@ async function tokensForUser(userId: string) {
   return docs.map((d) => d.token).filter(Boolean);
 }
 
-export async function notifyUser(userId: string, message: PushMessage) {
+export async function notifyUser(userId: string, message: PushMessage): Promise<boolean> {
   const tokens = await tokensForUser(userId);
   if (!tokens.length) {
     // eslint-disable-next-line no-console
     console.warn(`[push] no registered devices for user ${userId} — skip "${message.title}"`);
-    return;
+    return false;
   }
-  await sendExpoPush(tokens, message);
+  return sendExpoPush(tokens, message);
 }
 
 export async function notifyLeadAssigned(assigneeId: string, leadTitle: string, leadId: string) {
@@ -173,7 +180,7 @@ export async function notifyMembersOfNewLead(input: {
 }
 
 export async function notifyLeadReminder(assigneeId: string, leadTitle: string, leadId: string) {
-  await notifyUser(assigneeId, {
+  return notifyUser(assigneeId, {
     title: 'Lead follow-up due',
     body: leadTitle,
     data: { type: 'lead_reminder', leadId },

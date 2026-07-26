@@ -1,0 +1,1587 @@
+{
+  "sourceFile": "data (14).csv",
+  "generatedAt": "2026-07-17T06:01:34.424513",
+  "totalCsvRows": 101,
+  "validRows": 101,
+  "toImport": 83,
+  "skippedNearDuplicates": 14,
+  "leads": [
+    {
+      "rowNum": 3,
+      "name": "ignify solutions",
+      "email": "ignifysolutions@gmail.com",
+      "contact": "7670839738",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-16T23:29:22",
+      "dedupeKey": "7670839738|2026-07-16T23:29:22",
+      "softKey": "7670839738|2026-07-16|Private office|andheri",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 4,
+      "name": "Isha Raut",
+      "email": "isha.raut1518@gmail.com",
+      "contact": "7506059398",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-16T19:38:24",
+      "dedupeKey": "7506059398|2026-07-16T19:38:24",
+      "softKey": "7506059398|2026-07-16|Private office|borivali",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Borivali\nAddress: Borivali, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 5,
+      "name": "Ravi Nimgulkar",
+      "email": "ravee.neem@gmail.com",
+      "contact": "9970185870",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Goregaon",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-16T12:39:12",
+      "dedupeKey": "9970185870|2026-07-16T12:39:12",
+      "softKey": "9970185870|2026-07-16|Private office|goregaon",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Goregaon\nAddress: Goregaon, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 6,
+      "name": "Pratik Singh",
+      "email": "pratiksinghkol@gmail.com",
+      "contact": "9831576868",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T22:18:19",
+      "dedupeKey": "9831576868|2026-07-15T22:18:19",
+      "softKey": "9831576868|2026-07-15|Private office|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 8,
+      "name": "Prince Valyani",
+      "email": "prince@safebooksglobal.com",
+      "contact": "9875162463",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Malad East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T18:52:00",
+      "dedupeKey": "9875162463|2026-07-15T18:52:00",
+      "softKey": "9875162463|2026-07-15|Dedicated desk|malad east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Malad East\nAddress: Malad East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 9,
+      "name": "Prince Valyani",
+      "email": "prince@safebooksglobal.com",
+      "contact": "9875162463",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Malad West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T18:48:41",
+      "dedupeKey": "9875162463|2026-07-15T18:48:41",
+      "softKey": "9875162463|2026-07-15|Dedicated desk|malad west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Malad West\nAddress: Malad West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 10,
+      "name": "Prince Valyani",
+      "email": "prince@safebooksglobal.com",
+      "contact": "9875162463",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Malad",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T18:48:01",
+      "dedupeKey": "9875162463|2026-07-15T18:48:01",
+      "softKey": "9875162463|2026-07-15|Dedicated desk|malad",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Malad\nAddress: Malad, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 11,
+      "name": "Danish Khalid Khan",
+      "email": "danish@alike.io",
+      "contact": "9920838866",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Powai",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-15T18:45:55",
+      "dedupeKey": "9920838866|2026-07-15T18:45:55",
+      "softKey": "9920838866|2026-07-15|Private office|powai",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Powai\nAddress: Powai, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 12,
+      "name": "Danish Khalid Khan",
+      "email": "danish@alike.io",
+      "contact": "9920838866",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-15T18:40:45",
+      "dedupeKey": "9920838866|2026-07-15T18:40:45",
+      "softKey": "9920838866|2026-07-15|Private office|andheri",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Andheri\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 13,
+      "name": "Abhishek Agrawal",
+      "email": "caabhisheka@live.com",
+      "contact": "9987361930",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T16:09:45",
+      "dedupeKey": "9987361930|2026-07-15T16:09:45",
+      "softKey": "9987361930|2026-07-15|Dedicated desk|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 14,
+      "name": "Vaishali",
+      "email": "vaishali@atheneplutus.com",
+      "contact": "9870587596",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-15T12:59:02",
+      "dedupeKey": "9870587596|2026-07-15T12:59:02",
+      "softKey": "9870587596|2026-07-15|Private office|andheri west",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 15,
+      "name": "Nishant Desai",
+      "email": "nishantdesai88@gmail.com",
+      "contact": "9167361618",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T11:45:58",
+      "dedupeKey": "9167361618|2026-07-15T11:45:58",
+      "softKey": "9167361618|2026-07-15|Private office|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 16,
+      "name": "Priyanshu",
+      "email": "priyanshurathore1607@gmail.com",
+      "contact": "9082954519",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-15T08:35:38",
+      "dedupeKey": "9082954519|2026-07-15T08:35:38",
+      "softKey": "9082954519|2026-07-15|Private office|andheri west",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 17,
+      "name": "Aishwarya",
+      "email": "aishwaryas.nair0@gmail.com",
+      "contact": "9611712410",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Powai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-15T07:40:29",
+      "dedupeKey": "9611712410|2026-07-15T07:40:29",
+      "softKey": "9611712410|2026-07-15|Private office|powai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Powai\nAddress: Powai, Mumbai.",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 18,
+      "name": "arsh",
+      "email": "arshzagade@yahoo.com",
+      "contact": "8369433347",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-14T12:52:14",
+      "dedupeKey": "8369433347|2026-07-14T12:52:14",
+      "softKey": "8369433347|2026-07-14|Hot desk|",
+      "rawEnquiry": "Interested in: Coworking",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 19,
+      "name": "Heena Nagadiya",
+      "email": "heenanagadiya24@gmail.com",
+      "contact": "9867036558",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-14T12:02:44",
+      "dedupeKey": "9867036558|2026-07-14T12:02:44",
+      "softKey": "9867036558|2026-07-14|Private office|",
+      "rawEnquiry": "Interested in: Private Office",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 20,
+      "name": "Deepak Mishra",
+      "email": "deepak@dmag.ae",
+      "contact": "9060036401",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-13T21:09:48",
+      "dedupeKey": "9060036401|2026-07-13T21:09:48",
+      "softKey": "9060036401|2026-07-13|Managed office|andheri",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Managed Office\nLocation: Andheri\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 21,
+      "name": "Roma shee",
+      "email": "roma.shee@ryanship.com",
+      "contact": "9664204085",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-13T19:01:24",
+      "dedupeKey": "9664204085|2026-07-13T19:01:24",
+      "softKey": "9664204085|2026-07-13|Private office|",
+      "rawEnquiry": "Interested in: Private Office",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 22,
+      "name": "Pranay Patel",
+      "email": "pranay.patel@urbanmoney.co.in",
+      "contact": "9820238791",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-13T18:22:28",
+      "dedupeKey": "9820238791|2026-07-13T18:22:28",
+      "softKey": "9820238791|2026-07-13|Dedicated desk|borivali",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Borivali\nAddress: Kandivali, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 23,
+      "name": "Saurabh",
+      "email": "geetu.tyagi79@gmail.com",
+      "contact": "9004398935",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-13T15:54:18",
+      "dedupeKey": "9004398935|2026-07-13T15:54:18",
+      "softKey": "9004398935|2026-07-13|Dedicated desk|andheri east",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Andheri East\nAddress: Andheri East, Mumbai.",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 24,
+      "name": "Krishna Saini",
+      "email": "krishna@cloudonesystem.com",
+      "contact": "9069074245",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "BKC",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-13T14:20:45",
+      "dedupeKey": "9069074245|2026-07-13T14:20:45",
+      "softKey": "9069074245|2026-07-13|Hot desk|bkc",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Virtual Office\nLocation: BKC\nAddress: BKC, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 25,
+      "name": "ANIL KUMAR",
+      "email": "akmoverseas6@gmail.com",
+      "contact": "9970308597",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Thane",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-13T14:04:07",
+      "dedupeKey": "9970308597|2026-07-13T14:04:07",
+      "softKey": "9970308597|2026-07-13|Dedicated desk|thane",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Thane\nAddress: Thane, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 26,
+      "name": "Trupti",
+      "email": "support@matilda.co.in",
+      "contact": "9004325454",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Kandivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-13T11:29:41",
+      "dedupeKey": "9004325454|2026-07-13T11:29:41",
+      "softKey": "9004325454|2026-07-13|Managed office|kandivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Enterprise Solution\nLocation: Kandivali West\nAddress: Kandivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 27,
+      "name": "Trupti",
+      "email": "support@matilda.co.in",
+      "contact": "9004325454",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-13T11:24:15",
+      "dedupeKey": "9004325454|2026-07-13T11:24:15",
+      "softKey": "9004325454|2026-07-13|Managed office|borivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Managed Office\nLocation: Borivali West\nAddress: Borivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 28,
+      "name": "Sunil Kumar Nelson",
+      "email": "sunleaap@gmail.com",
+      "contact": "9076085666",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-13T08:56:14",
+      "dedupeKey": "9076085666|2026-07-13T08:56:14",
+      "softKey": "9076085666|2026-07-13|Private office|borivali",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Borivali\nAddress: Borivali, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 29,
+      "name": "Bhoomi",
+      "email": "bhoomirajguru18@gmail.com",
+      "contact": "8286940307",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-12T15:40:31",
+      "dedupeKey": "8286940307|2026-07-12T15:40:31",
+      "softKey": "8286940307|2026-07-12|Dedicated desk|andheri east",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Andheri East\nAddress: Andheri East, Mumbai.",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 30,
+      "name": "Nishant Saini",
+      "email": "nishantsaini1990@yahoo.com",
+      "contact": "9911416305",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-12T13:57:43",
+      "dedupeKey": "9911416305|2026-07-12T13:57:43",
+      "softKey": "9911416305|2026-07-12|Private office|andheri",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Andheri\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 31,
+      "name": "Suraj",
+      "email": "dangbeverage@gmail.com",
+      "contact": "9823482342",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Thane",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T21:11:18",
+      "dedupeKey": "9823482342|2026-07-11T21:11:18",
+      "softKey": "9823482342|2026-07-11|Dedicated desk|thane",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Thane\nAddress: Thane, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 32,
+      "name": "Niral",
+      "email": "niral@showexp.com",
+      "contact": "9867789698",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Goregaon",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-11T19:55:22",
+      "dedupeKey": "9867789698|2026-07-11T19:55:22",
+      "softKey": "9867789698|2026-07-11|Managed office|goregaon",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Managed Office\nLocation: Goregaon\nAddress: Goregaon, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 33,
+      "name": "santosh",
+      "email": "santosh.channalwar@gmail.com",
+      "contact": "9987933332",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Vashi",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T18:01:52",
+      "dedupeKey": "9987933332|2026-07-11T18:01:52",
+      "softKey": "9987933332|2026-07-11|Dedicated desk|vashi",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Vashi\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 34,
+      "name": "LAXMI KUMARI",
+      "email": "ls.laxmisingh24@gmail.com",
+      "contact": "7503005200",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T17:15:44",
+      "dedupeKey": "7503005200|2026-07-11T17:15:44",
+      "softKey": "7503005200|2026-07-11|Dedicated desk|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 35,
+      "name": "Oindrila Roy",
+      "email": "roy.oinx@gmail.com",
+      "contact": "9867663018",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "BKC",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T17:06:11",
+      "dedupeKey": "9867663018|2026-07-11T17:06:11",
+      "softKey": "9867663018|2026-07-11|Private office|bkc",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: BKC\nAddress: Bandra East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 36,
+      "name": "Prasad",
+      "email": "prasadchitnis15@gmail.com",
+      "contact": "9819203834",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T16:39:13",
+      "dedupeKey": "9819203834|2026-07-11T16:39:13",
+      "softKey": "9819203834|2026-07-11|Private office|borivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Borivali West\nAddress: Borivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 37,
+      "name": "narendra soni",
+      "email": "aliasgar@accukeep.in",
+      "contact": "9892755257",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Dadar East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-11T14:31:52",
+      "dedupeKey": "9892755257|2026-07-11T14:31:52",
+      "softKey": "9892755257|2026-07-11|Private office|dadar east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Dadar East\nAddress: Dadar East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 38,
+      "name": "Mitul Mewada",
+      "email": "mitulmewada99@gmail.com",
+      "contact": "7021220951",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:44:41",
+      "dedupeKey": "7021220951|2026-07-10T18:44:41",
+      "softKey": "7021220951|2026-07-10|Private office|borivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Borivali West\nAddress: Borivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 39,
+      "name": "Mitul Mewada",
+      "email": "mitulmewada99@gmail.com",
+      "contact": "7021220951",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Kandivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:40:58",
+      "dedupeKey": "7021220951|2026-07-10T18:40:58",
+      "softKey": "7021220951|2026-07-10|Private office|kandivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Kandivali West\nAddress: Kandivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 40,
+      "name": "Siddhant Saraf",
+      "email": "sarafsv09@gmail.com",
+      "contact": "8378837111",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:38:38",
+      "dedupeKey": "8378837111|2026-07-10T18:38:38",
+      "softKey": "8378837111|2026-07-10|Dedicated desk|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Andheri East\nAddress: Andheri, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 41,
+      "name": "Mitul Mewada",
+      "email": "mitulmewada99@gmail.com",
+      "contact": "7021220951",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:38:07",
+      "dedupeKey": "7021220951|2026-07-10T18:38:07",
+      "softKey": "7021220951|2026-07-10|Private office|borivali",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Borivali\nAddress: Borivali, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 42,
+      "name": "Siddhant Saraf",
+      "email": "sarafsv09@gmail.com",
+      "contact": "8378837111",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:37:58",
+      "dedupeKey": "8378837111|2026-07-10T18:37:58",
+      "softKey": "8378837111|2026-07-10|Private office|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai.",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 43,
+      "name": "Mitul Mewada",
+      "email": "mitulmewada99@gmail.com",
+      "contact": "7021220951",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T18:27:37",
+      "dedupeKey": "7021220951|2026-07-10T18:27:37",
+      "softKey": "7021220951|2026-07-10|Private office|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 44,
+      "name": "Pakshal Lodha",
+      "email": "pakshallodha88@gmail.com",
+      "contact": "9833525053",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Dadar",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-10T17:38:52",
+      "dedupeKey": "9833525053|2026-07-10T17:38:52",
+      "softKey": "9833525053|2026-07-10|Dedicated desk|dadar",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Dadar\nAddress: Dadar West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 45,
+      "name": "ROLI SINGH",
+      "email": "ca.cdltv@gmail.com",
+      "contact": "7985260278",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-10T12:13:38",
+      "dedupeKey": "7985260278|2026-07-10T12:13:38",
+      "softKey": "7985260278|2026-07-10|Managed office|",
+      "rawEnquiry": "Interested in: Managed Office",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 48,
+      "name": "Rohit Gajbhiye",
+      "email": "rohitgajbhiye03@gmail.com",
+      "contact": "7406795633",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Bandra East",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-09T16:48:58",
+      "dedupeKey": "7406795633|2026-07-09T16:48:58",
+      "softKey": "7406795633|2026-07-09|Dedicated desk|bandra east",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Bandra East\nAddress: Bandra East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 55,
+      "name": "Rohit Gajbhiye",
+      "email": "rohitgajbhiye03@gmail.com",
+      "contact": "7406795633",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "BKC",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-09T16:44:35",
+      "dedupeKey": "7406795633|2026-07-09T16:44:35",
+      "softKey": "7406795633|2026-07-09|Dedicated desk|bkc",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: BKC\nAddress: BKC, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 56,
+      "name": "Prince Valyani",
+      "email": "prince@safebooksglobal.com",
+      "contact": "9875162463",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-09T16:17:43",
+      "dedupeKey": "9875162463|2026-07-09T16:17:43",
+      "softKey": "9875162463|2026-07-09|Dedicated desk|borivali",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Borivali\nAddress: Borivali, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 57,
+      "name": "Good To Go",
+      "email": "helloji@goodtogooo.in",
+      "contact": "7011806088",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-09T16:13:05",
+      "dedupeKey": "7011806088|2026-07-09T16:13:05",
+      "softKey": "7011806088|2026-07-09|Hot desk|",
+      "rawEnquiry": "Interested in: Coworking",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 58,
+      "name": "khushboo khandelwal",
+      "email": "khushbookhushi96@gmail.com",
+      "contact": "8080924578",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Mulund",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-09T16:05:16",
+      "dedupeKey": "8080924578|2026-07-09T16:05:16",
+      "softKey": "8080924578|2026-07-09|Dedicated desk|mulund",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Mulund\nAddress: Mulund West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 60,
+      "name": "Aalhad Sawant",
+      "email": "aalhad@giva.co",
+      "contact": "9833315049",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-09T13:37:17",
+      "dedupeKey": "9833315049|2026-07-09T13:37:17",
+      "softKey": "9833315049|2026-07-09|Dedicated desk|andheri",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Andheri\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 61,
+      "name": "Aalhad Sawant",
+      "email": "aalhad@giva.co",
+      "contact": "9833315049",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Borivali West",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-09T13:34:41",
+      "dedupeKey": "9833315049|2026-07-09T13:34:41",
+      "softKey": "9833315049|2026-07-09|Dedicated desk|borivali west",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Borivali West\nAddress: Borivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 62,
+      "name": "Aalhad Sawant",
+      "email": "aalhad@giva.co",
+      "contact": "9833315049",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-09T13:34:00",
+      "dedupeKey": "9833315049|2026-07-09T13:34:00",
+      "softKey": "9833315049|2026-07-09|Private office|",
+      "rawEnquiry": "Interested in: Private Office",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 63,
+      "name": "Vishwadeep",
+      "email": "thesuryawanshi.07@gmail.com",
+      "contact": "8600907346",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-08T17:36:13",
+      "dedupeKey": "8600907346|2026-07-08T17:36:13",
+      "softKey": "8600907346|2026-07-08|Dedicated desk|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Navi Mumbai\nAddress: Mahape, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 65,
+      "name": "Nishant Saini",
+      "email": "nishantsaini1990@yahoo.com",
+      "contact": "9911416305",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-08T16:26:07",
+      "dedupeKey": "9911416305|2026-07-08T16:26:07",
+      "softKey": "9911416305|2026-07-08|Private office|andheri west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 66,
+      "name": "Nishant Saini",
+      "email": "nishantsaini1990@yahoo.com",
+      "contact": "9911416305",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-08T16:10:29",
+      "dedupeKey": "9911416305|2026-07-08T16:10:29",
+      "softKey": "9911416305|2026-07-08|Hot desk|andheri west",
+      "rawEnquiry": "Interested in: Coworking\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 67,
+      "name": "Kartar Singh",
+      "email": "kartarskuntal@gmail.com",
+      "contact": "9717108108",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-08T15:59:02",
+      "dedupeKey": "9717108108|2026-07-08T15:59:02",
+      "softKey": "9717108108|2026-07-08|Hot desk|",
+      "rawEnquiry": "Interested in: Coworking",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 68,
+      "name": "Shrishti Kataria",
+      "email": "shrishti19kataria@gmail.com",
+      "contact": "9867919991",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-08T14:27:41",
+      "dedupeKey": "9867919991|2026-07-08T14:27:41",
+      "softKey": "9867919991|2026-07-08|Private office|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 69,
+      "name": "Forum Shah",
+      "email": "forumshah0102@gmail.com",
+      "contact": "9930727222",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Lower Parel",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-07T11:20:27",
+      "dedupeKey": "9930727222|2026-07-07T11:20:27",
+      "softKey": "9930727222|2026-07-07|Private office|lower parel",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Lower Parel\nAddress: Lower Parel, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 70,
+      "name": "Robin arya",
+      "email": "aryarobin@goalfi.app",
+      "contact": "9642555570",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "BKC",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-06T15:12:26",
+      "dedupeKey": "9642555570|2026-07-06T15:12:26",
+      "softKey": "9642555570|2026-07-06|Dedicated desk|bkc",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: BKC\nAddress: BKC, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 71,
+      "name": "Shruti Gavankar",
+      "email": "kalasaaroffic@gamil.com",
+      "contact": "9082658954",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Kandivali West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-06T14:35:28",
+      "dedupeKey": "9082658954|2026-07-06T14:35:28",
+      "softKey": "9082658954|2026-07-06|Private office|kandivali west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Kandivali West\nAddress: Kandivali West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 72,
+      "name": "sagar patil",
+      "email": "sgrptl43@rediffmail.com",
+      "contact": "9167474472",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Thane",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-06T13:58:02",
+      "dedupeKey": "9167474472|2026-07-06T13:58:02",
+      "softKey": "9167474472|2026-07-06|Hot desk|thane",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Virtual Office\nLocation: Thane\nAddress: Thane, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 73,
+      "name": "Rachel fernandes",
+      "email": "rfernandes@iotap.com",
+      "contact": "9820633234",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Bandra (West)",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-06T13:02:34",
+      "dedupeKey": "9820633234|2026-07-06T13:02:34",
+      "softKey": "9820633234|2026-07-06|Private office|bandra (west)",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Bandra (West)\nAddress: Bandra West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 74,
+      "name": "Sgarad",
+      "email": "ottsseries@gmail.com",
+      "contact": "7349721599",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "",
+      "seatRange": "",
+      "seats": 0,
+      "leadDate": "2026-07-06T11:12:27",
+      "dedupeKey": "7349721599|2026-07-06T11:12:27",
+      "softKey": "7349721599|2026-07-06|Private office|",
+      "rawEnquiry": "Interested in: Private Office",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 75,
+      "name": "Tanisha",
+      "email": "tanisha@legacygrowth.com",
+      "contact": "8879284189",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Dadar",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-05T17:11:00",
+      "dedupeKey": "8879284189|2026-07-05T17:11:00",
+      "softKey": "8879284189|2026-07-05|Private office|dadar",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Private Office\nLocation: Dadar\nAddress: Dadar, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 76,
+      "name": "Gurpreet singh",
+      "email": "silversnow.sgs@gmail.com",
+      "contact": "7009804494",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-05T16:51:06",
+      "dedupeKey": "7009804494|2026-07-05T16:51:06",
+      "softKey": "7009804494|2026-07-05|Private office|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 77,
+      "name": "Pankaj",
+      "email": "pankajsingh21111@gmail.com",
+      "contact": "8171416288",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-05T15:49:27",
+      "dedupeKey": "8171416288|2026-07-05T15:49:27",
+      "softKey": "8171416288|2026-07-05|Private office|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Navi Mumbai\nAddress: Navi Mumbai, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 78,
+      "name": "Binoy",
+      "email": "binoy.jariwala@gmail.com",
+      "contact": "9920189383",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Worli",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-04T22:16:33",
+      "dedupeKey": "9920189383|2026-07-04T22:16:33",
+      "softKey": "9920189383|2026-07-04|Dedicated desk|worli",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Worli\nAddress: Badhwar Park, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 79,
+      "name": "Khushi Khare",
+      "email": "hr@greenday.co",
+      "contact": "8810783709",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "6-10",
+      "seats": 0,
+      "leadDate": "2026-07-04T16:31:24",
+      "dedupeKey": "8810783709|2026-07-04T16:31:24",
+      "softKey": "8810783709|2026-07-04|Dedicated desk|andheri west",
+      "rawEnquiry": "Seats: 6-10\nInterested in: Dedicated Desk\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 80,
+      "name": "Mohit",
+      "email": "mohit.singh.star@gmail.com",
+      "contact": "9321944327",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-03T22:09:23",
+      "dedupeKey": "9321944327|2026-07-03T22:09:23",
+      "softKey": "9321944327|2026-07-03|Hot desk|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Virtual Office\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 81,
+      "name": "upendra",
+      "email": "upendrasinghthakur26@gmail.com",
+      "contact": "9821526187",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-03T15:17:07",
+      "dedupeKey": "9821526187|2026-07-03T15:17:07",
+      "softKey": "9821526187|2026-07-03|Private office|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai.",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 82,
+      "name": "Zahida",
+      "email": "zahida1712@gmail.com",
+      "contact": "9594806188",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Worli",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T19:36:37",
+      "dedupeKey": "9594806188|2026-07-02T19:36:37",
+      "softKey": "9594806188|2026-07-02|Private office|worli",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Worli\nAddress: Worli, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 83,
+      "name": "Kushal lotlikar",
+      "email": "kushallotlikar0@gmail.com",
+      "contact": "9137078913",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri East",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T17:00:07",
+      "dedupeKey": "9137078913|2026-07-02T17:00:07",
+      "softKey": "9137078913|2026-07-02|Hot desk|andheri east",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Virtual Office\nLocation: Andheri East\nAddress: Andheri East, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 85,
+      "name": "sanket kamat",
+      "email": "spotsanket@gmail.com",
+      "contact": "9819431184",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Goregaon West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T14:36:10",
+      "dedupeKey": "9819431184|2026-07-02T14:36:10",
+      "softKey": "9819431184|2026-07-02|Dedicated desk|goregaon west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Goregaon West\nAddress: Goregaon West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 86,
+      "name": "sanket kamat",
+      "email": "spotsanket@gmail.com",
+      "contact": "9819431184",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Goregaon",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T14:32:15",
+      "dedupeKey": "9819431184|2026-07-02T14:32:15",
+      "softKey": "9819431184|2026-07-02|Dedicated desk|goregaon",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Goregaon\nAddress: Goregaon, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 91,
+      "name": "sanket kamat",
+      "email": "spotsanket@gmail.com",
+      "contact": "9819431184",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Malad",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T14:30:00",
+      "dedupeKey": "9819431184|2026-07-02T14:30:00",
+      "softKey": "9819431184|2026-07-02|Dedicated desk|malad",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Malad\nAddress: Malad, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 92,
+      "name": "Prathamesh",
+      "email": "olivesindiacompany@gmail.com",
+      "contact": "7738863974",
+      "interestedIn": [
+        "Hot desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Dadar",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T14:13:22",
+      "dedupeKey": "7738863974|2026-07-02T14:13:22",
+      "softKey": "7738863974|2026-07-02|Hot desk|dadar",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Any/Other Solution\nLocation: Dadar\nAddress: Dadar West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 93,
+      "name": "Verma Dipak",
+      "email": "dipakpverm@enercap.in",
+      "contact": "9867647085",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-02T01:29:34",
+      "dedupeKey": "9867647085|2026-07-02T01:29:34",
+      "softKey": "9867647085|2026-07-02|Private office|andheri west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 94,
+      "name": "Jeenal Jain",
+      "email": "jeenalj25@gmail.com",
+      "contact": "8290677920",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Worli",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T22:42:17",
+      "dedupeKey": "8290677920|2026-07-01T22:42:17",
+      "softKey": "8290677920|2026-07-01|Dedicated desk|worli",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Worli\nAddress: Badhwar Park, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 95,
+      "name": "Manoj Nair",
+      "email": "manoj@modoin.com",
+      "contact": "9833546135",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Navi Mumbai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T20:06:14",
+      "dedupeKey": "9833546135|2026-07-01T20:06:14",
+      "softKey": "9833546135|2026-07-01|Dedicated desk|navi mumbai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Navi Mumbai\nAddress: Vashi, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 96,
+      "name": "Viren Vekaria",
+      "email": "vekariaviren@gmail.com",
+      "contact": "9886994243",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Powai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T15:07:31",
+      "dedupeKey": "9886994243|2026-07-01T15:07:31",
+      "softKey": "9886994243|2026-07-01|Dedicated desk|powai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Powai\nAddress: Powai, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 97,
+      "name": "Aditya Kamlesh Valera",
+      "email": "aditya@bmtagency.in",
+      "contact": "9222131914",
+      "interestedIn": [
+        "Managed office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Andheri West",
+      "seatRange": "11-20",
+      "seats": 0,
+      "leadDate": "2026-07-01T11:13:14",
+      "dedupeKey": "9222131914|2026-07-01T11:13:14",
+      "softKey": "9222131914|2026-07-01|Managed office|andheri west",
+      "rawEnquiry": "Seats: 11-20\nInterested in: Enterprise Solution\nLocation: Andheri West\nAddress: Andheri West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 98,
+      "name": "Shabeen Narang",
+      "email": "shabeeny@gmail.com",
+      "contact": "9987500330",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Powai",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T10:55:56",
+      "dedupeKey": "9987500330|2026-07-01T10:55:56",
+      "softKey": "9987500330|2026-07-01|Dedicated desk|powai",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Powai\nAddress: Powai, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 99,
+      "name": "Tejasvi Vashishtha",
+      "email": "tejasviauthor@gmail.com",
+      "contact": "9045652809",
+      "interestedIn": [
+        "Private office"
+      ],
+      "city": "Mumbai",
+      "microlocation": "churchgate",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T10:01:05",
+      "dedupeKey": "9045652809|2026-07-01T10:01:05",
+      "softKey": "9045652809|2026-07-01|Private office|churchgate",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Private Office\nLocation: churchgate",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 100,
+      "name": "Adwait Ambekar",
+      "email": "adwait.ambekar@uh-architects.com",
+      "contact": "8104514503",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Dadar West",
+      "seatRange": "20-50",
+      "seats": 0,
+      "leadDate": "2026-07-01T09:18:10",
+      "dedupeKey": "8104514503|2026-07-01T09:18:10",
+      "softKey": "8104514503|2026-07-01|Dedicated desk|dadar west",
+      "rawEnquiry": "Seats: 20-50\nInterested in: Dedicated Desk\nLocation: Dadar West\nAddress: Dadar West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    },
+    {
+      "rowNum": 101,
+      "name": "Priya Tiwari",
+      "email": "pt9136769137@gmail.com",
+      "contact": "9136769137",
+      "interestedIn": [
+        "Dedicated desk"
+      ],
+      "city": "Mumbai",
+      "microlocation": "Ghatkopar West",
+      "seatRange": "1-5",
+      "seats": 0,
+      "leadDate": "2026-07-01T08:21:49",
+      "dedupeKey": "9136769137|2026-07-01T08:21:49",
+      "softKey": "9136769137|2026-07-01|Dedicated desk|ghatkopar west",
+      "rawEnquiry": "Seats: 1-5\nInterested in: Dedicated Desk\nLocation: Ghatkopar West\nAddress: Ghatkopar West, Mumbai",
+      "source": "website",
+      "stage": "new"
+    }
+  ]
+}

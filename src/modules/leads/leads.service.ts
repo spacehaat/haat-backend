@@ -20,6 +20,7 @@ import {
 import { buildParseContext } from '../smart-match/smart-match.service.js';
 import { listListings } from '../listings/listings.service.js';
 import { notifyLeadAssigned, notifyMembersOfNewLead } from '../devices/devices.service.js';
+import { scheduleLeadReminder } from './lead-reminders.scheduler.js';
 
 type LegacyLeadDoc = LeadDoc & {
   title?: string;
@@ -112,6 +113,18 @@ function buildDisplayTitle(lead: {
 function activeReminderFilter() {
   return { reminderSetAt: { $exists: true, $ne: null } };
 }
+
+function upcomingReminderFilter(now = new Date()) {
+  return {
+    ...activeReminderFilter(),
+    dueAt: { $gte: now },
+  };
+}
+
+const STAGE_ACTIVITY_LABEL: Record<string, string> = {
+  cna: 'call not attend',
+  cmb: 'call me back',
+};
 
 async function logLeadActivity(who: string, text: string, sub: string) {
   await Activity.create({ kind: 'lead', who, text, sub });
@@ -358,6 +371,7 @@ export async function listLeads(
     source?: string;
     dateFrom?: string;
     dateTo?: string;
+    reminder?: string;
   } = {},
 ) {
   const page = Math.max(1, options.page ?? 1);
@@ -389,6 +403,15 @@ export async function listLeads(
     });
   }
   if (Object.keys(searchFilter).length) listFilters.push(searchFilter);
+  if (options.reminder === 'upcoming') {
+    listFilters.push(upcomingReminderFilter());
+    listFilters.push({
+      $or: [
+        { stage: { $nin: ['won', 'lost'] } },
+        { status: { $nin: ['won', 'lost'] } },
+      ],
+    });
+  }
 
   const q = asLeadFilter(combineFilters(...listFilters));
   const countBaseFilters = [...baseFilters];
@@ -576,7 +599,8 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
     await upsertClientDirectory(normalized, actor.id);
   }
   if (input.stage && input.stage !== prevStage) {
-    await logLeadActivity(actor.name, `moved lead to ${input.stage.replace(/_/g, ' ')}`, buildDisplayTitle(normalized));
+    const stageLabel = STAGE_ACTIVITY_LABEL[input.stage] || input.stage.replace(/_/g, ' ');
+    await logLeadActivity(actor.name, `moved lead to ${stageLabel}`, buildDisplayTitle(normalized));
   }
   if (input.assigneeId !== undefined) {
     await logLeadActivity(actor.name, 'updated lead assignment', buildDisplayTitle(normalized));
@@ -613,6 +637,16 @@ export async function setLeadReminder(id: string, input: LeadReminderInput, acto
     'set a follow-up reminder on',
     buildDisplayTitle(normalized),
   );
+
+  scheduleLeadReminder({
+    _id: doc._id,
+    assigneeId: doc.assigneeId,
+    dueAt: doc.dueAt,
+    name: doc.name,
+    company: doc.company,
+    stage: doc.stage,
+    reminderSetAt: doc.reminderSetAt,
+  });
 
   const [item] = await attachAssigneeNames([toLeadDetail(doc)]);
   return item;
