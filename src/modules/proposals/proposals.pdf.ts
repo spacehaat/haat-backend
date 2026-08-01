@@ -1,4 +1,7 @@
 import PDFDocument from 'pdfkit';
+import sharp from 'sharp';
+import { env } from '../../config/env.js';
+import { downloadBuffer } from '../uploads/uploads.service.js';
 
 const ORANGE = '#E8541A';
 const ORANGE_SOFT = '#FDEEE7';
@@ -7,6 +10,10 @@ const MUTED = '#6B6B6B';
 const BORDER = '#EFEDE8';
 const FRESH = '#2E9E5B';
 const FRESH_SOFT = '#E6F4EC';
+
+const IMAGE_FETCH_TIMEOUT_MS = 20_000;
+const IMAGE_FETCH_CONCURRENCY = 4;
+const IMAGE_FETCH_RETRIES = 2;
 
 export type PdfGalleryPhoto = { src: string; label: string };
 
@@ -40,25 +47,148 @@ function inr(n: number) {
   return `Rs.${Number(n).toLocaleString('en-IN')}`;
 }
 
-// PDFKit only supports JPEG and PNG. Detect by magic bytes so an unsupported
-// format (or an HTML/error body) is dropped rather than crashing doc.image().
-function isSupportedImage(buf: Buffer): boolean {
-  if (buf.length < 4) return false;
-  const isJpeg = buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
-  const isPng = buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47;
-  return isJpeg || isPng;
+type ImageKind = 'jpeg' | 'png' | 'webp' | 'gif' | 'unknown';
+
+function detectImageKind(buf: Buffer): ImageKind {
+  if (buf.length < 12) return 'unknown';
+  if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return 'jpeg';
+  if (buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return 'png';
+  // RIFF....WEBP
+  if (
+    buf[0] === 0x52 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x46
+    && buf[8] === 0x57 && buf[9] === 0x45 && buf[10] === 0x42 && buf[11] === 0x50
+  ) return 'webp';
+  if (buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x38) return 'gif';
+  return 'unknown';
+}
+
+/** PDFKit only embeds JPEG/PNG — convert WebP/GIF (and other sharp-readable formats) to JPEG. */
+async function toPdfCompatibleImage(buf: Buffer): Promise<Buffer | null> {
+  if (!buf?.length) return null;
+  const kind = detectImageKind(buf);
+  if (kind === 'jpeg' || kind === 'png') return buf;
+  try {
+    return await sharp(buf)
+      .rotate()
+      .jpeg({ quality: 85, mozjpeg: true })
+      .toBuffer();
+  } catch (err) {
+    console.warn('[proposal-pdf] image convert failed:', (err as Error)?.message || err);
+    return null;
+  }
+}
+
+function s3KeyFromUrl(url: string): string | null {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.toLowerCase();
+    const bucket = env.AWS_S3_BUCKET.toLowerCase();
+    const region = env.AWS_REGION.toLowerCase();
+    const pathname = decodeURIComponent(u.pathname.replace(/^\/+/, ''));
+
+    if (env.AWS_S3_PUBLIC_URL) {
+      const base = new URL(env.AWS_S3_PUBLIC_URL);
+      if (host === base.hostname.toLowerCase()) {
+        const basePath = base.pathname.replace(/^\/+|\/+$/g, '');
+        if (!basePath) return pathname || null;
+        if (pathname.startsWith(`${basePath}/`)) return pathname.slice(basePath.length + 1) || null;
+      }
+    }
+
+    // virtual-hosted–style: bucket.s3.region.amazonaws.com/key
+    if (
+      host === `${bucket}.s3.${region}.amazonaws.com`
+      || host === `${bucket}.s3.amazonaws.com`
+      || host === `${bucket}.s3.${region}.amazonaws.com`
+    ) {
+      return pathname || null;
+    }
+
+    // path-style: s3.region.amazonaws.com/bucket/key
+    if (host === `s3.${region}.amazonaws.com` || host === 's3.amazonaws.com') {
+      if (pathname.startsWith(`${env.AWS_S3_BUCKET}/`)) {
+        return pathname.slice(env.AWS_S3_BUCKET.length + 1) || null;
+      }
+    }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+async function fetchViaHttp(url: string): Promise<Buffer | null> {
+  const res = await fetch(url, {
+    signal: AbortSignal.timeout(IMAGE_FETCH_TIMEOUT_MS),
+    redirect: 'follow',
+    headers: { Accept: 'image/*,*/*' },
+  });
+  if (!res.ok) {
+    console.warn(`[proposal-pdf] HTTP ${res.status} for image: ${url}`);
+    return null;
+  }
+  const buf = Buffer.from(await res.arrayBuffer());
+  return buf.length ? buf : null;
+}
+
+async function fetchViaS3(url: string): Promise<Buffer | null> {
+  const key = s3KeyFromUrl(url);
+  if (!key) return null;
+  try {
+    return await downloadBuffer(key);
+  } catch (err) {
+    console.warn(`[proposal-pdf] S3 get failed for ${key}:`, (err as Error)?.message || err);
+    return null;
+  }
+}
+
+async function loadRawImage(url: string): Promise<Buffer | null> {
+  if (!url || typeof url !== 'string') return null;
+  const trimmed = url.trim();
+  if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://')) return null;
+
+  // Prefer S3 SDK for our own bucket (avoids private-object / CDN flakes).
+  const fromS3 = await fetchViaS3(trimmed);
+  if (fromS3?.length) return fromS3;
+
+  return fetchViaHttp(trimmed);
 }
 
 async function fetchImageBuffer(url: string): Promise<Buffer | null> {
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-    if (!res.ok) return null;
-    const buf = Buffer.from(await res.arrayBuffer());
-    if (buf.length === 0 || !isSupportedImage(buf)) return null;
-    return buf;
-  } catch {
-    return null;
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= IMAGE_FETCH_RETRIES; attempt += 1) {
+    try {
+      const raw = await loadRawImage(url);
+      const ready = raw ? await toPdfCompatibleImage(raw) : null;
+      if (ready?.length) return ready;
+      lastErr = new Error('empty or unsupported image');
+    } catch (err) {
+      lastErr = err;
+    }
+    if (attempt < IMAGE_FETCH_RETRIES) {
+      await new Promise((r) => setTimeout(r, 400 * attempt));
+    }
   }
+  console.warn(
+    `[proposal-pdf] giving up on image after ${IMAGE_FETCH_RETRIES} tries: ${url}`,
+    (lastErr as Error)?.message || lastErr,
+  );
+  return null;
+}
+
+async function mapPool<T, R>(items: T[], concurrency: number, worker: (item: T, index: number) => Promise<R>): Promise<R[]> {
+  const results: R[] = [];
+  let next = 0;
+  async function run() {
+    while (next < items.length) {
+      const i = next;
+      next += 1;
+      const item = items[i] as T;
+      results[i] = await worker(item, i);
+    }
+  }
+  const runners = Array.from({ length: Math.min(concurrency, Math.max(items.length, 1)) }, () => run());
+  await Promise.all(runners);
+  return results;
 }
 
 function clientLabel(name: string, company: string) {
@@ -135,8 +265,8 @@ function pageBottom(doc: PDFKit.PDFDocument) {
   return doc.page.height - doc.page.margins.bottom;
 }
 
-// Flows every photo in a 2-per-row grid, advancing doc.y and breaking to a new
-// page only when a row genuinely doesn't fit — so pages stay filled, never blank.
+// Flows every successfully loaded photo in a 2-per-row grid. Failed downloads
+// are omitted (not drawn as empty beige boxes) so clients never see blank slots.
 function drawGalleryFlow(
   doc: PDFKit.PDFDocument,
   left: number,
@@ -144,25 +274,31 @@ function drawGalleryFlow(
   photos: PdfGalleryPhoto[],
   buffers: (Buffer | null)[],
 ) {
-  if (!photos.length) return;
+  const loaded = photos
+    .map((photo, i) => ({ photo, buf: buffers[i] ?? null }))
+    .filter((item): item is { photo: PdfGalleryPhoto; buf: Buffer } => Boolean(item.buf?.length));
 
-  if (photos.length === 1) {
+  if (!loaded.length) return;
+
+  if (loaded.length === 1) {
+    const only = loaded[0]!;
     const { cellH } = galleryCellSize(innerW, true);
     if (doc.y + cellH > pageBottom(doc)) doc.addPage();
-    drawImageCell(doc, buffers[0] ?? null, left, doc.y, innerW, cellH, photos[0]?.label || '');
+    drawImageCell(doc, only.buf, left, doc.y, innerW, cellH, only.photo.label || '');
     doc.y += cellH;
     return;
   }
 
   const { cellW, cellH } = galleryCellSize(innerW, false);
-  for (let i = 0; i < photos.length; i += 2) {
+  for (let i = 0; i < loaded.length; i += 2) {
     if (doc.y + cellH > pageBottom(doc)) doc.addPage();
     const rowY = doc.y;
+    const leftPhoto = loaded[i]!;
 
-    drawImageCell(doc, buffers[i] ?? null, left, rowY, cellW, cellH, photos[i]?.label || '');
-    const b = photos[i + 1];
-    if (b) {
-      drawImageCell(doc, buffers[i + 1] ?? null, left + cellW + GAL_GAP, rowY, cellW, cellH, b.label || '');
+    drawImageCell(doc, leftPhoto.buf, left, rowY, cellW, cellH, leftPhoto.photo.label || '');
+    const next = loaded[i + 1];
+    if (next) {
+      drawImageCell(doc, next.buf, left + cellW + GAL_GAP, rowY, cellW, cellH, next.photo.label || '');
     }
     doc.y = rowY + cellH + GAL_GAP;
   }
@@ -305,7 +441,18 @@ export async function buildProposalPdf(data: PdfProposal): Promise<{ buffer: Buf
   });
 
   const allPhotoUrls = data.listings.flatMap((l) => l.gallery.map((g) => g.src));
-  const allBuffers = await Promise.all(allPhotoUrls.map((url) => fetchImageBuffer(url)));
+  const allBuffers = await mapPool(
+    allPhotoUrls,
+    IMAGE_FETCH_CONCURRENCY,
+    (url) => fetchImageBuffer(url),
+  );
+
+  const loadedCount = allBuffers.filter(Boolean).length;
+  if (allPhotoUrls.length && loadedCount < allPhotoUrls.length) {
+    console.warn(
+      `[proposal-pdf] loaded ${loadedCount}/${allPhotoUrls.length} gallery images`,
+    );
+  }
 
   let bufIdx = 0;
   const listingBuffers = data.listings.map((l) => {
