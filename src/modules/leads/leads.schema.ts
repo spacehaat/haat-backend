@@ -85,6 +85,7 @@ export const LeadFromMatchSchema = z.object({
   contact: z.string().optional().default(''),
   email: z.string().optional().default(''),
   company: z.string().optional().default(''),
+  assigneeId: z.string().optional(),
   client: z.object({
     name: z.string().optional().default(''),
     company: z.string().optional().default(''),

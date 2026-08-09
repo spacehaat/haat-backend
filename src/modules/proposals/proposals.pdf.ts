@@ -1,15 +1,47 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import PDFDocument from 'pdfkit';
 import sharp from 'sharp';
 import { env } from '../../config/env.js';
 import { downloadBuffer } from '../uploads/uploads.service.js';
+import { DEFAULT_PROPOSAL_AMENITIES, PROPOSAL_AVAILABLE_NOW } from './proposalAmenities.js';
 
 const ORANGE = '#E8541A';
 const ORANGE_SOFT = '#FDEEE7';
+const BRAND = '#4CAF50';
 const INK = '#1A1A1A';
 const MUTED = '#6B6B6B';
 const BORDER = '#EFEDE8';
 const FRESH = '#2E9E5B';
 const FRESH_SOFT = '#E6F4EC';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function resolveLogoPath(): string | null {
+  const candidates = [
+    path.resolve(process.cwd(), 'assets/spacehaat-logo.png'),
+    path.resolve(__dirname, '../../../assets/spacehaat-logo.png'),
+    path.resolve(__dirname, '../../../../assets/spacehaat-logo.png'),
+  ];
+  return candidates.find((p) => fs.existsSync(p)) || null;
+}
+
+function drawBrandMark(doc: PDFKit.PDFDocument, left: number, y: number) {
+  const logoPath = resolveLogoPath();
+  if (logoPath) {
+    try {
+      doc.image(logoPath, left, y, { width: 28, height: 28 });
+      return;
+    } catch (err) {
+      console.warn('[proposal-pdf] logo embed failed:', (err as Error)?.message || err);
+    }
+  }
+  // Fallback: green rounded square with white S (matches app brand mark)
+  doc.roundedRect(left, y, 28, 28, 6).fill(BRAND);
+  doc.fillColor('#fff').fontSize(16).font('Helvetica-Bold')
+    .text('S', left, y + 6, { width: 28, align: 'center' });
+}
 
 const IMAGE_FETCH_TIMEOUT_MS = 20_000;
 const IMAGE_FETCH_CONCURRENCY = 4;
@@ -322,7 +354,8 @@ function drawInfoPanel(doc: PDFKit.PDFDocument, left: number, pageW: number, lis
   doc.font('Helvetica').fontSize(9);
   const factsH = facts.length ? doc.heightOfString(factsStr, { width: innerW, lineGap: 2 }) + 12 : 0;
 
-  const amenText = (listing.amenities || []).map((a) => `✓  ${a}`).join('      ');
+  const amenities = [...DEFAULT_PROPOSAL_AMENITIES];
+  const amenText = amenities.map((a) => `✓  ${a}`).join('      ');
   doc.font('Helvetica').fontSize(8.5);
   const amenH = amenText ? doc.heightOfString(amenText, { width: innerW, lineGap: 4 }) + 6 : 0;
 
@@ -336,15 +369,13 @@ function drawInfoPanel(doc: PDFKit.PDFDocument, left: number, pageW: number, lis
   let y = boxTop + pad;
   const ix = left + pad;
 
-  // Metrics bar (white panel inside the soft container)
+  // Metrics bar — Price + Availability only
   doc.roundedRect(ix, y, innerW, metH, 8).fill('#FFFFFF');
   doc.roundedRect(ix, y, innerW, metH, 8).strokeColor(BORDER).lineWidth(1).stroke();
-  const colW = innerW / 4;
+  const colW = innerW / 2;
   const metrics = [
-    { label: 'CAPACITY', value: `${listing.seats} seats`, highlight: false },
     { label: 'PRICE / SEAT', value: `${inr(listing.price)}/mo`, highlight: true },
-    { label: 'CARPET AREA', value: `${Number(listing.carpet || 0).toLocaleString('en-IN')} sq ft`, highlight: false },
-    { label: 'AVAILABILITY', value: listing.avail, highlight: false },
+    { label: 'AVAILABILITY', value: PROPOSAL_AVAILABLE_NOW, highlight: false },
   ];
   metrics.forEach((m, i) => {
     const mx = ix + i * colW;
@@ -472,9 +503,7 @@ export async function buildProposalPdf(data: PdfProposal): Promise<{ buffer: Buf
     const left = doc.page.margins.left;
     let y = doc.page.margins.top;
 
-    doc.rect(left, y, 28, 28).fill(ORANGE);
-    doc.fillColor('#fff').fontSize(16).font('Helvetica-Bold')
-      .text('C', left + 8, y + 6, { width: 28, align: 'center' });
+    drawBrandMark(doc, left, y);
     doc.fillColor(INK).fontSize(17).font('Helvetica-Bold').text('Spacehaat', left + 36, y + 2);
     doc.fillColor(MUTED).fontSize(9).font('Helvetica').text('WORKSPACE PROPOSAL', left + 36, y + 20);
     doc.fillColor(MUTED).fontSize(10).font('Helvetica')
@@ -637,9 +666,9 @@ export function mapListingToPdf(l: {
     micro: l.micro,
     seats: l.seats,
     price: l.price,
-    avail: l.avail || 'Available now',
+    avail: PROPOSAL_AVAILABLE_NOW,
     freshLabel: l.fresh?.label || 'Verified',
-    amenities: l.amenities || [],
+    amenities: [...DEFAULT_PROPOSAL_AMENITIES],
     buildingType: identity.buildingType || '',
     nearestMetro: identity.nearestMetro || '',
     carpet: identity.carpet || 0,

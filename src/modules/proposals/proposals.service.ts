@@ -7,6 +7,7 @@ import { Listing } from '../listings/listings.model.js';
 import { downloadBuffer, uploadProposalPdf } from '../uploads/uploads.service.js';
 import { Proposal } from './proposals.model.js';
 import { buildProposalPdf, mapListingToPdf, type PdfListing } from './proposals.pdf.js';
+import { DEFAULT_PROPOSAL_AMENITIES, PROPOSAL_AVAILABLE_NOW } from './proposalAmenities.js';
 import type { AuthUser } from '../auth/permissions.js';
 import type {
   PublicProposalFeedbackInput,
@@ -208,9 +209,9 @@ function renderToPdfListings(render: ProposalRenderInput): PdfListing[] {
     micro: l.micro,
     seats: l.seats,
     price: l.price,
-    avail: l.avail,
+    avail: PROPOSAL_AVAILABLE_NOW,
     freshLabel: l.freshLabel,
-    amenities: l.amenities,
+    amenities: [...DEFAULT_PROPOSAL_AMENITIES],
     buildingType: l.buildingType,
     nearestMetro: l.nearestMetro,
     carpet: l.carpet,
@@ -575,8 +576,8 @@ function publicListingCard(listing: Record<string, any>) {
     micro: listing.micro || '',
     seats: listing.seats || 0,
     price: listing.price || 0,
-    avail: listing.avail || '',
-    amenities: listing.amenities || [],
+    avail: PROPOSAL_AVAILABLE_NOW,
+    amenities: [...DEFAULT_PROPOSAL_AMENITIES],
     images,
     address: identity.address || '',
     nearestMetro: identity.nearestMetro || '',

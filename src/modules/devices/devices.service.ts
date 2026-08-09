@@ -1,6 +1,5 @@
 import { Types } from 'mongoose';
 import type { AuthUser } from '../auth/permissions.js';
-import { PERMISSIONS } from '../auth/permissions.js';
 import { User } from '../users/users.model.js';
 import { Device } from './devices.model.js';
 import { Lead } from '../leads/leads.model.js';
@@ -11,8 +10,6 @@ type PushMessage = {
   body: string;
   data?: Record<string, string>;
 };
-
-const LEAD_ACCESS_PERMS = [PERMISSIONS.LEADS_READ, PERMISSIONS.LEADS_WRITE];
 
 async function sendExpoPush(tokens: string[], message: PushMessage): Promise<boolean> {
   if (!tokens.length) return false;
@@ -119,9 +116,9 @@ export async function notifyLeadAssigned(assigneeId: string, leadTitle: string, 
 }
 
 /**
- * Notify members about a newly created lead.
+ * Notify about a newly created lead.
+ * Only the assignee is notified (not every member who shares the city).
  * Excludes the creator (e.g. admin who added the lead).
- * Assignee gets a stronger "assigned" message; other city members get "new lead".
  */
 export async function notifyMembersOfNewLead(input: {
   leadId: string;
@@ -132,51 +129,24 @@ export async function notifyMembersOfNewLead(input: {
 }) {
   const { leadId, leadTitle, city, excludeUserId, assigneeId } = input;
 
-  const query: Record<string, unknown> = {
+  if (!assigneeId || assigneeId === excludeUserId || !Types.ObjectId.isValid(assigneeId)) {
+    return;
+  }
+
+  const assignee = await User.findOne({
+    _id: assigneeId,
     status: 'active',
-    role: 'member',
-    permissions: { $in: LEAD_ACCESS_PERMS },
-    _id: { $ne: new Types.ObjectId(excludeUserId) },
-  };
-  if (city) {
-    query.cities = city;
-  }
+  }).select('_id role').lean().exec();
+  if (!assignee) return;
 
-  const members = await User.find(query).select('_id').lean().exec();
-  const memberIds = members.map((m) => String(m._id));
-
-  // Always include the assignee (if a member and not the creator), even if city scope missed them.
-  if (
-    assigneeId
-    && assigneeId !== excludeUserId
-    && Types.ObjectId.isValid(assigneeId)
-    && !memberIds.includes(assigneeId)
-  ) {
-    const assignee = await User.findOne({
-      _id: assigneeId,
-      status: 'active',
-      role: 'member',
-    }).select('_id').lean().exec();
-    if (assignee) memberIds.push(String(assignee._id));
-  }
-
-  await Promise.all(
-    memberIds.map(async (userId) => {
-      const isAssignee = assigneeId === userId;
-      await notifyUser(userId, {
-        title: isAssignee ? 'New lead assigned' : 'New lead added',
-        body: isAssignee
-          ? leadTitle
-          : city
-            ? `${leadTitle} · ${city}`
-            : leadTitle,
-        data: {
-          type: isAssignee ? 'lead_assigned' : 'lead_created',
-          leadId,
-        },
-      });
-    }),
-  );
+  await notifyUser(String(assignee._id), {
+    title: 'New lead assigned',
+    body: city ? `${leadTitle} · ${city}` : leadTitle,
+    data: {
+      type: 'lead_assigned',
+      leadId,
+    },
+  });
 }
 
 export async function notifyLeadReminder(assigneeId: string, leadTitle: string, leadId: string) {

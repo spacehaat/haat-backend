@@ -161,16 +161,14 @@ async function upsertClientDirectory(
 
 function leadQueryForUser(user: AuthUser) {
   if (isAdmin(user)) return {};
-  const scope = cityScope(user);
-  const or: Record<string, unknown>[] = [
-    { assigneeId: new Types.ObjectId(user.id) },
-    { createdBy: new Types.ObjectId(user.id) },
-  ];
-  // Members scoped to cities can see leads in those cities (e.g. admin-created leads).
-  if (scope && scope.length) {
-    or.push({ city: { $in: scope } });
-  }
-  return { $or: or };
+  // Members only see leads assigned to them (or that they created).
+  // Shared city access does NOT grant visibility to another user's leads.
+  return {
+    $or: [
+      { assigneeId: new Types.ObjectId(user.id) },
+      { createdBy: new Types.ObjectId(user.id) },
+    ],
+  };
 }
 
 function combineFilters(...filters: Record<string, unknown>[]): Record<string, unknown> {
@@ -349,9 +347,7 @@ async function getLeadDoc(id: string, actor: AuthUser) {
   if (!isAdmin(actor)) {
     const owner = String(doc.createdBy) === actor.id;
     const assignee = doc.assigneeId && String(doc.assigneeId) === actor.id;
-    const scope = cityScope(actor);
-    const inCity = !!(scope && scope.length && doc.city && scope.includes(doc.city));
-    if (!owner && !assignee && !inCity) {
+    if (!owner && !assignee) {
       throw new ApiError(403, 'You do not have access to this lead', 'FORBIDDEN');
     }
   }
@@ -510,6 +506,7 @@ export async function createLeadFromMatch(input: LeadFromMatchInput, actor: Auth
       interestedIn,
       rawEnquiry: input.enquiry || '',
       listingIds: input.listingIds,
+      assigneeId: input.assigneeId,
     },
     actor,
   );
