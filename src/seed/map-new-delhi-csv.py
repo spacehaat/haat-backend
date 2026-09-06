@@ -120,7 +120,7 @@ def row_to_listing(row: dict, index: int) -> dict | None:
 
     name = centre_name(space, building)
     address = clean(row.get("Address"))
-    micro = clean(row.get("location")) or "New Delhi"
+    micro = clean(row.get("location")) or "Delhi"
     connectivity = clean(row.get("connectivityDetails"))
     region = clean(row.get("region"))
     brand = clean(row.get("brand"))
@@ -132,9 +132,9 @@ def row_to_listing(row: dict, index: int) -> dict | None:
     closing = money[1] if len(money) > 1 else 0
     seats = layout["totalSeats"] or 0
 
-    if not address:
-        parts = [p for p in [building, micro, "New Delhi"] if p]
-        address = ", ".join(parts)
+    # Prefer CSV address; otherwise building only (location/city live in micro/city fields).
+    if not address and building:
+        address = building
 
     identity: dict = {
         "centreName": name,
@@ -187,7 +187,7 @@ def row_to_listing(row: dict, index: int) -> dict | None:
         "csvSpaceName": space,
         "csvBuildingName": building,
         "operator": operator_from(brand, space),
-        "city": "New Delhi",
+        "city": "Delhi",
         "micro": micro,
         "type": "Coworking",
         "seats": seats,
