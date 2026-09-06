@@ -221,11 +221,11 @@ async function main() {
   }
 
   const total = await Listing.countDocuments({ source: 'csv-new-delhi' }).exec();
-  const cityTotal = await Listing.countDocuments({ city: 'Delhi', source: 'csv-new-delhi' }).exec();
+  const cityTotal = await Listing.countDocuments({ city: 'New Delhi' }).exec();
   const delhiLeft = await Listing.countDocuments({ city: 'Delhi' }).exec();
 
   console.log(`[seed-new-delhi] inserted=${inserted} total csv-new-delhi=${total}`);
-  console.log(`[seed-new-delhi] Delhi (from this CSV)=${cityTotal} (Delhi total=${delhiLeft})`);
+  console.log(`[seed-new-delhi] New Delhi city listings=${cityTotal} (Delhi untouched=${delhiLeft})`);
   console.log(`[seed-new-delhi] images uploaded=${totalUploaded} cached=${totalCached} failed=${totalFailed}`);
   console.log(`[seed-new-delhi] db=${env.MONGODB_URI.replace(/\/\/([^:]+):([^@]+)@/, '//$1:***@')}`);
   process.exit(0);
