@@ -1,10 +1,12 @@
 import { Types, type FilterQuery } from 'mongoose';
 import { ApiError } from '../../utils/apiError.js';
 import { Activity } from '../activity/activity.model.js';
-import { cityScope, hasPermission, isAdmin, PERMISSIONS, type AuthUser } from '../auth/permissions.js';
+import { cityScope, hasPermission, isAdmin, PERMISSIONS, spaceTypeScope, type AuthUser } from '../auth/permissions.js';
 import {
   ClientDirectory,
+  DEFAULT_LEAD_SPACE_TYPE,
   LEAD_INTERESTED_IN,
+  LEAD_SPACE_TYPES,
   Lead,
   type LeadDoc,
 } from './leads.model.js';
@@ -204,6 +206,23 @@ function cityFilterForUser(user: AuthUser, city?: string) {
   return {};
 }
 
+function spaceTypeFilterForUser(user: AuthUser, spaceType?: string) {
+  const scope = spaceTypeScope(user);
+  if (scope !== null) {
+    // Include legacy leads with no spaceType as CW
+    return {
+      $or: [
+        { spaceType: { $in: scope } },
+        ...(scope.includes('CW') ? [{ spaceType: { $exists: false } }, { spaceType: null }, { spaceType: '' }] : []),
+      ],
+    };
+  }
+  if (spaceType && LEAD_SPACE_TYPES.includes(spaceType as typeof LEAD_SPACE_TYPES[number])) {
+    return { spaceType };
+  }
+  return {};
+}
+
 function parseLeadDateBound(value?: string, endExclusive = false) {
   if (!value) return null;
   const d = new Date(value);
@@ -240,6 +259,7 @@ function buildLeadListFilters(
   options: {
     assignee?: string;
     city?: string;
+    spaceType?: string;
     source?: string;
     dateFrom?: string;
     dateTo?: string;
@@ -248,6 +268,7 @@ function buildLeadListFilters(
   const filters: Record<string, unknown>[] = [
     leadQueryForUser(actor),
     cityFilterForUser(actor, options.city),
+    spaceTypeFilterForUser(actor, options.spaceType),
   ];
 
   if (options.assignee) {
@@ -294,6 +315,7 @@ function toLeadSummary(doc: LegacyLeadDoc) {
     email: lead.email || '',
     company: lead.company || '',
     interestedIn: lead.interestedIn || [],
+    spaceType: lead.spaceType || DEFAULT_LEAD_SPACE_TYPE,
     city: lead.city || '',
     microlocation: lead.microlocation || '',
     seats: lead.seats || 0,
@@ -364,6 +386,7 @@ export async function listLeads(
     status?: string;
     assignee?: string;
     city?: string;
+    spaceType?: string;
     source?: string;
     dateFrom?: string;
     dateTo?: string;
@@ -378,6 +401,7 @@ export async function listLeads(
   const baseFilters = buildLeadListFilters(actor, {
     assignee: options.assignee,
     city: options.city,
+    spaceType: options.spaceType,
     source: options.source,
     dateFrom: options.dateFrom,
     dateTo: options.dateTo,
@@ -433,7 +457,14 @@ export async function listLeads(
 
 export async function createLead(input: LeadCreateInput, actor: AuthUser) {
   const city = input.city || '';
-  const assigneeId = await resolveLeadAssignee(city, actor, input.assigneeId || null);
+  const spaceType = input.spaceType || DEFAULT_LEAD_SPACE_TYPE;
+
+  const memberTypes = spaceTypeScope(actor);
+  if (memberTypes && !memberTypes.includes(spaceType)) {
+    throw new ApiError(403, `You are not scoped to space type ${spaceType}`, 'FORBIDDEN');
+  }
+
+  const assigneeId = await resolveLeadAssignee(city, actor, input.assigneeId || null, spaceType);
 
   const listingIds = (input.listingIds || [])
     .filter((id) => Types.ObjectId.isValid(id))
@@ -446,6 +477,7 @@ export async function createLead(input: LeadCreateInput, actor: AuthUser) {
     email: input.email || '',
     company: input.company || '',
     interestedIn: input.interestedIn || [],
+    spaceType,
     city: input.city || '',
     microlocation: input.microlocation || '',
     seats: input.seats || 0,
@@ -504,6 +536,7 @@ export async function createLeadFromMatch(input: LeadFromMatchInput, actor: Auth
       moveIn: input.moveIn || '',
       amenities: input.amenities || [],
       interestedIn,
+      spaceType: input.spaceType || DEFAULT_LEAD_SPACE_TYPE,
       rawEnquiry: input.enquiry || '',
       listingIds: input.listingIds,
       assigneeId: input.assigneeId,
@@ -520,8 +553,8 @@ export async function parseLeadPaste(enquiry: string, actor: AuthUser) {
   return { fields, source };
 }
 
-export async function getLeadAssignees(city: string, actor: AuthUser) {
-  return listLeadAssignees(city, actor);
+export async function getLeadAssignees(city: string, actor: AuthUser, spaceType?: string) {
+  return listLeadAssignees(city, actor, spaceType);
 }
 
 export async function getLead(id: string, actor: AuthUser) {
@@ -546,11 +579,12 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
     if (!hasPermission(actor, PERMISSIONS.LEADS_ASSIGN) && !isAdmin(actor)) {
       throw new ApiError(403, 'You cannot reassign leads', 'FORBIDDEN');
     }
+    const nextSpaceType = input.spaceType || doc.spaceType || DEFAULT_LEAD_SPACE_TYPE;
     if (input.assigneeId) {
-      await assertAssigneeEligible(input.assigneeId, doc.city || '');
+      await assertAssigneeEligible(input.assigneeId, doc.city || '', nextSpaceType);
       doc.assigneeId = new Types.ObjectId(input.assigneeId);
     } else {
-      const autoId = await resolveLeadAssignee(doc.city || '', actor, null);
+      const autoId = await resolveLeadAssignee(doc.city || '', actor, null, nextSpaceType);
       doc.assigneeId = new Types.ObjectId(autoId);
     }
   }
@@ -562,6 +596,13 @@ export async function updateLead(id: string, input: LeadUpdateInput, actor: Auth
   if (input.email !== undefined) doc.email = input.email;
   if (input.company !== undefined) doc.company = input.company;
   if (input.interestedIn !== undefined) doc.interestedIn = input.interestedIn;
+  if (input.spaceType !== undefined) {
+    const memberTypes = spaceTypeScope(actor);
+    if (memberTypes && !memberTypes.includes(input.spaceType)) {
+      throw new ApiError(403, `You are not scoped to space type ${input.spaceType}`, 'FORBIDDEN');
+    }
+    doc.spaceType = input.spaceType;
+  }
   if (input.city !== undefined) doc.city = input.city;
   if (input.microlocation !== undefined) doc.microlocation = input.microlocation;
   if (input.seats !== undefined) doc.seats = input.seats;

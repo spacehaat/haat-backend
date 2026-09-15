@@ -16,6 +16,8 @@ const UserSchema = new Schema(
     permissions: { type: [String], enum: ALL_PERMISSIONS, default: [] },
     // City-scope dimension (members are limited to these cities).
     cities: { type: [String], default: [] },
+    // Space-type scope (CW / VO / CL / OS). Empty = no restriction (legacy users).
+    spaceTypes: { type: [String], default: [] },
 
     status: { type: String, enum: ['active', 'disabled'], default: 'active', index: true },
     lastLoginAt: { type: Date },
@@ -41,6 +43,7 @@ export function toPublicUser(doc: UserDoc) {
     role: doc.role,
     permissions: doc.permissions || [],
     cities: doc.cities || [],
+    spaceTypes: doc.spaceTypes || [],
     status: doc.status || 'active',
     lastLoginAt: doc.lastLoginAt || null,
     createdAt: (doc as unknown as { createdAt?: Date }).createdAt || null,

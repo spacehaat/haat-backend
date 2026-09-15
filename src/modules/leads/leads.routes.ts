@@ -38,6 +38,7 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
       : undefined;
   const assignee = typeof req.query.assignee === 'string' ? req.query.assignee : undefined;
   const city = typeof req.query.city === 'string' ? req.query.city : undefined;
+  const spaceType = typeof req.query.spaceType === 'string' ? req.query.spaceType : undefined;
   const source = typeof req.query.source === 'string' ? req.query.source : undefined;
   const dateFrom = typeof req.query.dateFrom === 'string' ? req.query.dateFrom : undefined;
   const dateTo = typeof req.query.dateTo === 'string' ? req.query.dateTo : undefined;
@@ -50,6 +51,7 @@ leadsRouter.get('/leads', requirePermission(PERMISSIONS.LEADS_READ), async (req,
     stage,
     assignee,
     city,
+    spaceType,
     source,
     dateFrom,
     dateTo,
@@ -85,7 +87,8 @@ leadsRouter.post(
 
 leadsRouter.get('/leads/assignees', requirePermission(PERMISSIONS.LEADS_READ), async (req, res) => {
   const city = typeof req.query.city === 'string' ? req.query.city : '';
-  const result = await getLeadAssignees(city, req.user!);
+  const spaceType = typeof req.query.spaceType === 'string' ? req.query.spaceType : '';
+  const result = await getLeadAssignees(city, req.user!, spaceType || undefined);
   res.json(result);
 });
 

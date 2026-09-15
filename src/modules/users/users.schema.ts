@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { ALL_PERMISSIONS } from '../auth/permissions.js';
+import { LEAD_SPACE_TYPES } from '../leads/leads.model.js';
 
 const permissionsArray = z
   .array(z.string())
@@ -7,6 +8,10 @@ const permissionsArray = z
   .refine((arr) => arr.every((p) => (ALL_PERMISSIONS as string[]).includes(p)), {
     message: 'Contains an unknown permission',
   });
+
+const spaceTypesArray = z
+  .array(z.enum(LEAD_SPACE_TYPES))
+  .default([]);
 
 const genderEnum = z.enum(['male', 'female', 'other', 'unspecified']);
 const roleEnum = z.enum(['admin', 'member']);
@@ -20,6 +25,7 @@ export const UserCreateSchema = z.object({
   role: roleEnum.optional().default('member'),
   permissions: permissionsArray,
   cities: z.array(z.string()).default([]),
+  spaceTypes: spaceTypesArray,
 });
 
 export const UserUpdateSchema = z
@@ -34,6 +40,7 @@ export const UserUpdateSchema = z
       { message: 'Contains an unknown permission' },
     ).optional(),
     cities: z.array(z.string()).optional(),
+    spaceTypes: z.array(z.enum(LEAD_SPACE_TYPES)).optional(),
     status: z.enum(['active', 'disabled']).optional(),
   })
   .refine((data) => Object.keys(data).length > 0, { message: 'No fields to update' });

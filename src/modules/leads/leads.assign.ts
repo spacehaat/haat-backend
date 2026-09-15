@@ -10,12 +10,24 @@ function userCanTakeLeads(permissions: string[] = []) {
   return LEAD_ACCESS_PERMS.some((p) => permissions.includes(p));
 }
 
-export async function assertAssigneeEligible(assigneeId: string, city: string) {
+function memberMatchesSpaceType(user: { role?: string; spaceTypes?: string[] }, spaceType?: string) {
+  if (!spaceType || user.role === 'admin') return true;
+  const types = user.spaceTypes || [];
+  // Empty spaceTypes = legacy unrestricted
+  if (!types.length) return true;
+  return types.includes(spaceType);
+}
+
+export async function assertAssigneeEligible(
+  assigneeId: string,
+  city: string,
+  spaceType?: string,
+) {
   if (!Types.ObjectId.isValid(assigneeId)) {
     throw new ApiError(400, 'Invalid assignee', 'INVALID_INPUT');
   }
 
-  const user = await User.findById(assigneeId).select('name role cities permissions status').lean().exec();
+  const user = await User.findById(assigneeId).select('name role cities spaceTypes permissions status').lean().exec();
   if (!user || user.status !== 'active') {
     throw new ApiError(400, 'Assignee must be an active user', 'INVALID_INPUT');
   }
@@ -30,10 +42,17 @@ export async function assertAssigneeEligible(assigneeId: string, city: string) {
     throw new ApiError(400, `Assignee is not scoped to ${city}`, 'INVALID_INPUT');
   }
 
+  if (spaceType && !memberMatchesSpaceType(user, spaceType)) {
+    throw new ApiError(400, `Assignee is not scoped to space type ${spaceType}`, 'INVALID_INPUT');
+  }
+
   return user;
 }
 
-export async function findAutoAssigneeForCity(city: string): Promise<string | null> {
+export async function findAutoAssigneeForCity(
+  city: string,
+  spaceType?: string,
+): Promise<string | null> {
   if (!city) return null;
 
   const members = await User.find({
@@ -41,11 +60,13 @@ export async function findAutoAssigneeForCity(city: string): Promise<string | nu
     role: 'member',
     cities: city,
     permissions: { $in: LEAD_ACCESS_PERMS },
-  }).select('_id').lean().exec();
+  }).select('_id spaceTypes').lean().exec();
 
-  if (members.length) {
+  const eligible = members.filter((m) => memberMatchesSpaceType(m, spaceType));
+
+  if (eligible.length) {
     const scored = await Promise.all(
-      members.map(async (member) => {
+      eligible.map(async (member) => {
         const openLeads = await Lead.countDocuments({
           assigneeId: member._id,
           city,
@@ -69,16 +90,17 @@ export async function resolveLeadAssignee(
   city: string,
   actor: AuthUser,
   requestedAssigneeId?: string | null,
+  spaceType?: string,
 ): Promise<string> {
   if (requestedAssigneeId && Types.ObjectId.isValid(requestedAssigneeId)) {
     if (hasPermission(actor, PERMISSIONS.LEADS_ASSIGN) || isAdmin(actor)) {
-      await assertAssigneeEligible(requestedAssigneeId, city);
+      await assertAssigneeEligible(requestedAssigneeId, city, spaceType);
       return requestedAssigneeId;
     }
     if (requestedAssigneeId === actor.id) return actor.id;
   }
 
-  const auto = await findAutoAssigneeForCity(city);
+  const auto = await findAutoAssigneeForCity(city, spaceType);
   if (auto) return auto;
 
   return actor.id;
@@ -90,13 +112,15 @@ export type LeadAssigneeOption = {
   email: string;
   role: string;
   cities: string[];
+  spaceTypes: string[];
   openLeads: number;
   matchesCity: boolean;
+  matchesSpaceType: boolean;
 };
 
-export async function listLeadAssignees(city: string, actor: AuthUser) {
+export async function listLeadAssignees(city: string, actor: AuthUser, spaceType?: string) {
   const users = await User.find({ status: 'active' })
-    .select('name email role cities permissions')
+    .select('name email role cities spaceTypes permissions')
     .sort({ name: 1 })
     .lean()
     .exec();
@@ -104,8 +128,9 @@ export async function listLeadAssignees(city: string, actor: AuthUser) {
   const eligible = users.filter((u) => {
     if (u.role === 'admin') return true;
     if (!userCanTakeLeads(u.permissions || [])) return false;
-    if (!city) return true;
-    return (u.cities || []).includes(city);
+    if (city && !(u.cities || []).includes(city)) return false;
+    if (spaceType && !memberMatchesSpaceType(u, spaceType)) return false;
+    return true;
   });
 
   const items: LeadAssigneeOption[] = await Promise.all(
@@ -124,19 +149,22 @@ export async function listLeadAssignees(city: string, actor: AuthUser) {
         email: u.email || '',
         role: u.role || 'member',
         cities: u.cities || [],
+        spaceTypes: u.spaceTypes || [],
         openLeads,
         matchesCity: !city || u.role === 'admin' || (u.cities || []).includes(city),
+        matchesSpaceType: memberMatchesSpaceType(u, spaceType),
       };
     }),
   );
 
   items.sort((a, b) => {
     if (a.matchesCity !== b.matchesCity) return a.matchesCity ? -1 : 1;
+    if (a.matchesSpaceType !== b.matchesSpaceType) return a.matchesSpaceType ? -1 : 1;
     return a.openLeads - b.openLeads || a.name.localeCompare(b.name);
   });
 
   const suggestedId = city
-    ? (await findAutoAssigneeForCity(city))
+    ? (await findAutoAssigneeForCity(city, spaceType))
     : (items[0]?.id || null);
 
   if (!hasPermission(actor, PERMISSIONS.LEADS_ASSIGN) && !isAdmin(actor)) {
@@ -148,14 +176,12 @@ export async function listLeadAssignees(city: string, actor: AuthUser) {
 
 export async function attachAssigneeNames<T extends { assigneeId?: string }>(items: T[]) {
   const ids = [...new Set(items.map((i) => i.assigneeId).filter(Boolean))] as string[];
-  if (!ids.length) {
-    return items.map((i) => ({ ...i, assigneeName: '' }));
-  }
+  if (!ids.length) return items.map((i) => ({ ...i, assigneeName: '' }));
 
   const users = await User.find({ _id: { $in: ids } }).select('name').lean().exec();
-  const map = new Map(users.map((u) => [String(u._id), u.name || '']));
+  const byId = new Map(users.map((u) => [String(u._id), u.name || '']));
   return items.map((i) => ({
     ...i,
-    assigneeName: i.assigneeId ? (map.get(i.assigneeId) || '') : '',
+    assigneeName: i.assigneeId ? (byId.get(i.assigneeId) || '') : '',
   }));
 }

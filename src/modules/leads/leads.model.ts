@@ -32,6 +32,17 @@ export const LEAD_INTERESTED_IN = [
   'Managed office',
 ] as const;
 
+/** Product-line space type on every lead (access + routing). */
+export const LEAD_SPACE_TYPES = ['CW', 'VO', 'CL', 'OS'] as const;
+export type LeadSpaceType = (typeof LEAD_SPACE_TYPES)[number];
+export const LEAD_SPACE_TYPE_LABELS: Record<LeadSpaceType, string> = {
+  CW: 'Coworking Space',
+  VO: 'Virtual Office',
+  CL: 'Coliving Space',
+  OS: 'Office Space',
+};
+export const DEFAULT_LEAD_SPACE_TYPE: LeadSpaceType = 'CW';
+
 const LeadNoteSchema = new Schema(
   {
     text: { type: String, required: true },
@@ -49,6 +60,7 @@ export const LeadSchema = new Schema(
     email: { type: String, default: '', trim: true, index: true },
     company: { type: String, default: '', trim: true, index: true },
     interestedIn: [{ type: String, enum: LEAD_INTERESTED_IN }],
+    spaceType: { type: String, enum: LEAD_SPACE_TYPES, default: 'CW', index: true },
     city: { type: String, default: '', trim: true, index: true },
     microlocation: { type: String, default: '', trim: true, index: true },
     seats: { type: Number, default: 0, min: 0 },

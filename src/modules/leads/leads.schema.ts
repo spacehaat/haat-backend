@@ -1,12 +1,15 @@
 import { z } from 'zod';
 import {
+  DEFAULT_LEAD_SPACE_TYPE,
   LEAD_INTERESTED_IN,
   LEAD_PRIORITIES,
   LEAD_SOURCES,
+  LEAD_SPACE_TYPES,
   LEAD_STAGES,
 } from './leads.model.js';
 
 const interestedInSchema = z.array(z.enum(LEAD_INTERESTED_IN)).optional().default([]);
+const spaceTypeSchema = z.enum(LEAD_SPACE_TYPES).optional().default(DEFAULT_LEAD_SPACE_TYPE);
 
 export const LeadCreateSchema = z.object({
   leadDate: z.string().optional(),
@@ -15,6 +18,7 @@ export const LeadCreateSchema = z.object({
   email: z.string().optional().default(''),
   company: z.string().optional().default(''),
   interestedIn: interestedInSchema,
+  spaceType: spaceTypeSchema,
   city: z.string().optional().default(''),
   microlocation: z.string().optional().default(''),
   seats: z.number().optional().default(0),
@@ -38,6 +42,7 @@ export const LeadUpdateSchema = z.object({
   email: z.string().optional(),
   company: z.string().optional(),
   interestedIn: interestedInSchema,
+  spaceType: z.enum(LEAD_SPACE_TYPES).optional(),
   city: z.string().optional(),
   microlocation: z.string().optional(),
   seats: z.number().optional(),
@@ -80,6 +85,7 @@ export const LeadFromMatchSchema = z.object({
   amenities: z.array(z.string()).optional().default([]),
   interestedIn: interestedInSchema,
   spaceTypes: z.array(z.string()).optional(),
+  spaceType: z.enum(LEAD_SPACE_TYPES).optional(),
   listingIds: z.array(z.string()).min(1),
   name: z.string().optional().default(''),
   contact: z.string().optional().default(''),

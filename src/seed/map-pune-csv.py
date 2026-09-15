@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Map Pune workspace CSV → listing JSON for seed-pune-csv.ts."""
+"""Map Pune workspace CSV → listing JSON for seed-pune-csv.ts.
+
+Images stay as source (Cloudinary) URLs; the TS seed downloads + uploads to S3.
+"""
 from __future__ import annotations
 
 import csv
@@ -7,16 +10,21 @@ import json
 import re
 from pathlib import Path
 
-CSV_PATH = Path(__file__).resolve().parents[4] / "pune-workspaces-2026-07-24.csv"
+CSV_PATH = Path(__file__).resolve().parents[3] / "pune_workspaces_cleaned_with_images.csv"
 OUT_PATH = Path(__file__).resolve().parent / "pune-csv-listings.json"
 
 BRAND_CANON = {
     "91springboard": "91Springboard",
-    "altf": "AltF",
     "awfis": "Awfis",
     "indiqube": "IndiQube",
     "smartworks": "Smartworks",
     "wework": "WeWork",
+    "cowrks": "COWRKS",
+    "innov8": "Innov8",
+    "regus": "Regus",
+    "altf": "AltF",
+    "devx": "DevX",
+    "efc": "EFC",
 }
 
 
@@ -24,31 +32,81 @@ def clean(s: str | None) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
 
 
-def parse_money(s: str | None) -> int | None:
-    t = clean(s)
-    if not t:
-        return None
-    tl = t.lower().replace(",", "")
-    nums = re.findall(r"\d+(?:\.\d+)?", tl)
-    if not nums:
-        return None
-    vals = [float(n) for n in nums]
-    big = [v for v in vals if v >= 100]
-    pick = big[0] if big else vals[0]
-    return int(round(pick))
-
-
 def parse_images(raw: str | None) -> list[str]:
     if not raw:
         return []
-    parts = re.split(r"\s*\|\s*", raw.strip())
-    return [p.strip() for p in parts if p.strip().lower().startswith("http")]
+    parts = re.split(r"[\n|]+", raw)
+    out = []
+    seen = set()
+    for p in parts:
+        u = p.strip()
+        if not u.lower().startswith("http"):
+            continue
+        if u in seen:
+            continue
+        seen.add(u)
+        out.append(u)
+    return out
 
 
-def operator_from_row(name: str, brand: str) -> str:
+def parse_money_values(s: str | None) -> list[int]:
+    t = clean(s)
+    if not t:
+        return []
+    tl = t.lower().replace(",", "")
+    nums = re.findall(r"\d+(?:\.\d+)?", tl)
+    vals = []
+    for n in nums:
+        v = float(n)
+        if v >= 100:  # ignore tiny tokens
+            vals.append(int(round(v)))
+    return vals
+
+
+def parse_layout(raw: str | None) -> dict:
+    text = (raw or "").strip()
+    floors = ""
+    area = 0
+    seats = 0
+    included = ""
+
+    m = re.search(r"Total building floors:\s*([^\n]+)", text, re.I)
+    if m:
+        floors = clean(m.group(1))
+
+    m = re.search(r"Total area:\s*([\d,]+)", text, re.I)
+    if m:
+        area = int(m.group(1).replace(",", ""))
+
+    m = re.search(r"Total seating capacity:\s*([\d,]+)", text, re.I)
+    if m:
+        seats = int(m.group(1).replace(",", ""))
+
+    m = re.search(r"Included floor:\s*([^\n]+)", text, re.I)
+    if m:
+        included = clean(m.group(1))
+
+    return {
+        "floors": floors,
+        "superBuiltUp": area,
+        "totalSeats": seats,
+        "includedFloor": included,
+        "raw": text,
+    }
+
+
+def centre_name(space: str, building: str) -> str:
+    space = clean(space)
+    building = clean(building)
+    if space and building:
+        return f"{space} – {building}"
+    return space or building
+
+
+def operator_from(brand: str, space: str) -> str:
     brand_clean = clean(brand)
     if not brand_clean or brand_clean.lower() in {"other coworking", "other"}:
-        return clean(name)
+        return clean(space) or "Coworking"
     key = brand_clean.lower()
     if key in BRAND_CANON:
         return BRAND_CANON[key]
@@ -57,54 +115,99 @@ def operator_from_row(name: str, brand: str) -> str:
     return brand_clean
 
 
-def row_to_listing(row: dict) -> dict | None:
-    name = clean(row.get("name"))
-    if not name:
+def row_to_listing(row: dict, index: int) -> dict | None:
+    space = clean(row.get("Space name"))
+    building = clean(row.get("Building Name"))
+    if not space and not building:
         return None
 
-    address = clean(row.get("address"))
-    micro = clean(row.get("microlocation"))
-    brand = clean(row.get("brand_name"))
-    images = parse_images(row.get("images_url"))
-    dedicated = parse_money(row.get("dedicated_desk_price"))
-    private_cabin = parse_money(row.get("private_cabin_price"))
-    status = clean(row.get("status")).lower()
+    name = centre_name(space, building)
+    address = clean(row.get("Address"))
+    micro = clean(row.get("location")) or "Pune"
+    connectivity = clean(row.get("connectivityDetails"))
+    region = clean(row.get("region"))
+    brand = clean(row.get("brand"))
+    layout = parse_layout(row.get("propertyLayout"))
+    images = parse_images(row.get("spaceImages"))
+    money = parse_money_values(row.get("price"))
 
-    price = dedicated if dedicated is not None else (private_cabin or 0)
+    dedicated = money[0] if money else 0
+    closing = money[1] if len(money) > 1 else 0
+    seats = layout["totalSeats"] or 0
 
-    identity: dict = {"centreName": name}
-    if address:
-        identity["address"] = address
+    if not address:
+        parts = [p for p in [building, micro, "Pune"] if p]
+        address = ", ".join(parts)
+
+    identity: dict = {
+        "centreName": name,
+        "address": address,
+    }
+    if connectivity:
+        identity["nearestMetro"] = connectivity
+    if layout["floors"]:
+        identity["floors"] = layout["floors"]
+    if layout["superBuiltUp"]:
+        identity["superBuiltUp"] = layout["superBuiltUp"]
+    if region:
+        identity["zoning"] = region
+    if building:
+        identity["buildingType"] = building
+    if layout["raw"]:
+        identity["layoutType"] = layout["raw"]
+    if layout["includedFloor"]:
+        identity["deskSize"] = layout["includedFloor"]
+
+    capacity: dict = {}
+    if seats:
+        capacity["totalSeats"] = seats
+        capacity["totalWorkstations"] = seats
 
     pricing: dict = {}
-    if dedicated is not None:
+    if dedicated:
         pricing["dedicatedDesk"] = dedicated
-    if private_cabin is not None:
-        pricing["privateCabin"] = private_cabin
+    if closing:
+        pricing["privateCabin"] = closing
+
+    sales: dict = {}
+    if dedicated:
+        sales["pitchingPrice"] = dedicated
+    if closing:
+        sales["closingPrice"] = closing
 
     profile: dict = {"identity": identity}
+    if capacity:
+        profile["capacity"] = capacity
     if pricing:
         profile["pricing"] = pricing
+    if sales:
+        profile["salesIntel"] = sales
     if images:
-        profile["contactsMedia"] = {"gallery": images}
-
-    avail = "Available now" if status == "approve" else "In progress"
+        profile["contactsMedia"] = {"gallery": images}  # replaced after S3 upload
 
     return {
-        "operator": operator_from_row(name, brand),
+        "csvIndex": index,
+        "csvSpaceName": space,
+        "csvBuildingName": building,
+        "operator": operator_from(brand, space),
         "city": "Pune",
-        "micro": micro or "Pune",
+        "micro": micro,
         "type": "Coworking",
-        "seats": 0,
-        "price": price,
+        "seats": seats,
+        "price": dedicated or closing or 0,
         "amenities": [],
-        "avail": avail,
+        "avail": "Available now",
         "source": "csv-pune",
-        "images": images,
+        "sourceImages": images,
+        "images": [],
         "photoMeta": [],
         "profile": profile,
         "csvCentreName": name,
         "csvMicro": micro,
+        "csvRegion": region,
+        "csvConnectivity": connectivity,
+        "csvPriceRaw": clean(row.get("price")),
+        "csvLayoutRaw": layout["raw"],
     }
 
 
@@ -117,24 +220,20 @@ def main():
 
     listings = []
     skipped = 0
-    for row in rows:
-        doc = row_to_listing(row)
+    for i, row in enumerate(rows):
+        doc = row_to_listing(row, i)
         if not doc:
             skipped += 1
             continue
         listings.append(doc)
 
     OUT_PATH.write_text(json.dumps(listings, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    with_images = sum(1 for L in listings if L.get("images"))
-    with_dd = sum(1 for L in listings if L.get("profile", {}).get("pricing", {}).get("dedicatedDesk"))
-    with_pc = sum(1 for L in listings if L.get("profile", {}).get("pricing", {}).get("privateCabin"))
-
+    with_images = sum(1 for L in listings if L.get("sourceImages"))
+    total_imgs = sum(len(L.get("sourceImages") or []) for L in listings)
     print(f"wrote {len(listings)} listings → {OUT_PATH}")
     print(f"skipped empty rows: {skipped}")
     print(f"with images: {with_images}")
-    print(f"with dedicated desk price: {with_dd}")
-    print(f"with private cabin price: {with_pc}")
+    print(f"total source images: {total_imgs}")
 
 
 if __name__ == "__main__":

@@ -20,6 +20,7 @@ export async function createUser(input: UserCreateInput, createdById: string) {
   // Admins implicitly hold every permission, so we don't persist a list for them.
   const permissions = input.role === 'admin' ? [] : input.permissions;
   const cities = input.role === 'admin' ? [] : input.cities;
+  const spaceTypes = input.role === 'admin' ? [] : input.spaceTypes;
 
   const doc = await User.create({
     name: input.name.trim(),
@@ -30,6 +31,7 @@ export async function createUser(input: UserCreateInput, createdById: string) {
     role: input.role || 'member',
     permissions,
     cities,
+    spaceTypes,
     status: 'active',
     createdBy: createdById,
   });
@@ -73,9 +75,11 @@ export async function updateUser(id: string, input: UserUpdateInput, actingUserI
   if (effectiveRole === 'admin') {
     doc.permissions = [];
     doc.cities = [];
+    doc.spaceTypes = [];
   } else {
     if (input.permissions !== undefined) doc.permissions = input.permissions as Permission[];
     if (input.cities !== undefined) doc.cities = input.cities;
+    if (input.spaceTypes !== undefined) doc.spaceTypes = input.spaceTypes;
   }
 
   if (input.password) {

@@ -41,6 +41,7 @@ export type AccessUser = {
   role: Role;
   permissions?: string[];
   cities?: string[];
+  spaceTypes?: string[];
 };
 
 // The authenticated principal attached to each request (req.user).
@@ -51,6 +52,7 @@ export interface AuthUser {
   role: Role;
   permissions: string[];
   cities: string[];
+  spaceTypes: string[];
 }
 
 export function isAdmin(user: AccessUser | undefined | null): boolean {
@@ -69,4 +71,11 @@ export function cityScope(user: AccessUser | undefined | null): string[] | null 
   if (!user || user.role === 'admin') return null;
   const cities = (user.cities || []).filter(Boolean);
   return cities.length ? cities : [];
+}
+
+/** Space-type scope for members. Empty/unset = no restriction (back-compat). */
+export function spaceTypeScope(user: AccessUser | undefined | null): string[] | null {
+  if (!user || user.role === 'admin') return null;
+  const types = (user.spaceTypes || []).filter(Boolean);
+  return types.length ? types : null;
 }

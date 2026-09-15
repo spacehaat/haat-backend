@@ -50,6 +50,7 @@ function toAuthUser(doc: UserDoc): AuthUser {
     role: doc.role as Role,
     permissions: doc.permissions || [],
     cities: doc.cities || [],
+    spaceTypes: doc.spaceTypes || [],
   };
 }
 
